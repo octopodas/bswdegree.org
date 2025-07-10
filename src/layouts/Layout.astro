@@ -103,40 +103,43 @@ const { seo } = Astro.props;
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "BSW Navigator",
-    "description": "Comprehensive guide to Bachelor of Social Work education and career information",
-    "url": "https://bswdegree.org/",
-    "sameAs": [],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "BSW Degree Information",
-      "itemListElement": [
-        {
-          "@type": "Course",
-          "name": "Bachelor of Social Work",
-          "description": "Professional degree preparing students for entry-level social work practice",
-          "provider": {
-            "@type": "Organization",
-            "name": "CSWE Accredited Programs"
-          },
-          "educationalCredentialAwarded": "Bachelor of Social Work (BSW)",
-          "offers": {
-            "@type": "Offer",
-            "category": "Bachelor's Degree",
-            "priceCurrency": "USD"
-          },
-          "hasCourseInstance": {
-            "@type": "CourseInstance",
-            "courseMode": "full-time",
-            "duration": "P4Y",
-            "instructor": {
-              "@type": "Organization",
-              "name": "CSWE Accredited Institutions"
-            }
-          }
+    "@type": "Article",
+    "headline": "Complete Guide to Bachelor of Social Work (BSW) Degree",
+    "description": "Comprehensive guide to Bachelor of Social Work education, career paths, salary expectations, and program requirements",
+    "author": {
+      "@type": "Organization",
+      "name": "BSW Navigator"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "BSW Navigator"
+    },
+    "datePublished": "2025-07-10",
+    "dateModified": "2025-07-10",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bswdegree.org/"
+    },
+    "about": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Bachelor of Social Work",
+      "description": "Professional degree preparing students for entry-level social work practice",
+      "credentialCategory": "Bachelor's Degree",
+      "educationalLevel": "Undergraduate",
+      "occupationType": {
+        "@type": "Occupation",
+        "name": "Social Worker",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "estimatedSalary": {
+          "@type": "MonetaryAmountDistribution",
+          "name": "Social Worker Salary",
+          "currency": "USD",
+          "median": 61330
         }
-      ]
+      }
     }
   }
   </script>
