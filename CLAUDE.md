@@ -4,46 +4,57 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a multi-page static website that provides an interactive guide to the Bachelor of Social Work (BSW) degree. The site is built as separate HTML pages with embedded CSS and JavaScript, designed to help prospective students explore career paths, academic requirements, and financial considerations for social work education.
+This is a multi-page static website that provides an interactive guide to the Bachelor of Social Work (BSW) degree. The site is built entirely with Astro as a static site generator, designed to help prospective students explore career paths, academic requirements, and financial considerations for social work education.
 
 ## Architecture
 
 **Technology Stack:**
-- Pure HTML5 with semantic structure
+- Astro static site generator
+- HTML5 with semantic structure
 - Vanilla JavaScript (ES6+) for interactivity
-- Tailwind CSS via CDN for styling
+- Tailwind CSS (optimized and bundled by Astro)
 - Chart.js for data visualization
-- No build process or package management
+- Build process generates optimized static files
 
 **Key Design Patterns:**
 - Multi-page application with standard navigation
+- Astro components for shared layouts and functionality
 - Modular data structure in `appData` object on each page
-- Shared header/footer/navigation across all pages
+- Shared header/footer/navigation across all pages via Astro layouts
 - Page-specific JavaScript for interactive features
 
 ## File Structure
 
 ```
 /
-├── index.html                      # Home page
-├── is-it-for-me/
-│   └── index.html                 # Self-discovery page
-├── the-degree/
-│   └── index.html                 # Academic curriculum page
-├── career-and-salary/
-│   └── index.html                 # Career paths and salary data
-├── next-steps/
-│   └── index.html                 # Program selection and licensure
-└── CLAUDE.md                      # This file
+├── src/                           # Astro source files
+│   ├── pages/                     # Astro pages
+│   │   ├── index.astro           # Home page
+│   │   ├── is-it-for-me.astro    # Self-discovery page
+│   │   ├── the-degree.astro      # Academic curriculum page
+│   │   ├── career-and-salary.astro # Career paths and salary data
+│   │   └── next-steps.astro      # Program selection and licensure
+│   └── layouts/                   # Shared Astro layouts
+├── dist/                          # Astro-generated static files
+│   ├── index.html                # Built home page
+│   ├── is-it-for-me/index.html   # Built self-discovery page
+│   ├── the-degree/index.html     # Built academic curriculum page
+│   ├── career-and-salary/index.html # Built career paths page
+│   └── next-steps/index.html     # Built program selection page
+├── astro.config.mjs              # Astro configuration
+├── package.json                  # Dependencies and scripts
+└── CLAUDE.md                     # This file
 ```
 
 ## Development Commands
 
-This project requires no build commands - it runs directly in the browser:
+This project uses Astro as a static site generator:
 
-- **Development**: Open `index.html` in any modern web browser
+- **Development**: `npm run dev` - Start development server with hot reload
+- **Build**: `npm run build` - Generate static files in `dist/` directory
+- **Preview**: `npm run preview` - Preview built site locally
 - **Testing**: Manual testing across different browsers and screen sizes
-- **Deployment**: Host the single HTML file on any web server
+- **Deployment**: Host the generated `dist/` directory on any web server
 
 ## Content Structure
 
@@ -81,10 +92,12 @@ Content is stored in page-specific `appData` objects within each page's script t
 
 ## Performance Considerations
 
+- Astro generates optimized static HTML with minimal JavaScript
 - Page-specific JavaScript loads only required functionality
 - Chart.js initialization on Career & Salary page load
 - Counter animations trigger immediately on Home page load
-- Minimal external dependencies (Tailwind CSS, Chart.js, Google Fonts)
+- CSS and JavaScript are automatically optimized and bundled during build
+- Minimal external dependencies are bundled efficiently
 - No lazy loading needed due to separate pages
 
 ## Responsive Design
