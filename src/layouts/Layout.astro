@@ -56,8 +56,9 @@ const { seo } = Astro.props;
     .nav-link.active { color: #047857; border-bottom-color: #047857; }
     .fade-in { animation: fadeIn 0.5s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .chart-container { position: relative; width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; height: 400px; max-height: 50vh; }
-    @media (min-width: 768px) { .chart-container { height: 450px; } }
+    .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 500px; }
+    @media (min-width: 768px) { .chart-container { height: 600px; } }
+    @media (min-width: 1024px) { .chart-container { height: 500px; } }
   </style>
 </head>
 <body class="bg-stone-50 text-stone-800">
