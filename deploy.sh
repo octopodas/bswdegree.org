@@ -33,6 +33,8 @@ aws s3 sync . s3://$S3_BUCKET/ \
     --exclude "README.md" \
     --exclude ".gitignore" \
     --exclude "node_modules/*" \
+    --exclude "cloudformation/*" \
+    --exclude ".claude/*" \
     --delete
 
 # Invalidate CloudFront cache

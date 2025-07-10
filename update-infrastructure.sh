@@ -8,7 +8,7 @@
 set -e
 
 # Configuration
-STACK_NAME="bswdegree.org"
+STACK_NAME="BswDegreeOrg"
 TEMPLATE_FILE="./cloudformation/template.yaml"
 AWS_PROFILE="learntechstack"
 
@@ -32,12 +32,20 @@ if [ ! -f "$TEMPLATE_FILE" ]; then
     exit 1
 fi
 
-# Create imports file for existing CloudFront distribution
+# Create imports file for the CloudFront distribution
 CLOUDFRONT_DIST_ID="E1DPKTG96SLOP7"
+BUCKET_NAME="bswdegree.org"
 IMPORTS_FILE="./cloudformation/imports.json"
 
 cat > $IMPORTS_FILE << EOF
 [
+  {
+    "ResourceType": "AWS::S3::Bucket",
+    "LogicalResourceId": "WebsiteBucket",
+    "ResourceIdentifier": {
+      "BucketName": "$BUCKET_NAME"
+    }
+  },
   {
     "ResourceType": "AWS::CloudFront::Distribution",
     "LogicalResourceId": "WebsiteDistribution",
@@ -51,28 +59,111 @@ EOF
 # Check if the stack exists
 if aws cloudformation describe-stacks --stack-name $STACK_NAME --profile $AWS_PROFILE &> /dev/null; then
     echo "Stack $STACK_NAME exists. Updating..."
+    
     # Update existing stack
     aws cloudformation update-stack \
         --stack-name $STACK_NAME \
         --template-body file://$TEMPLATE_FILE \
         --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
-        --resource-types "AWS::S3::Bucket" "AWS::S3::BucketPolicy" "AWS::CloudFront::CloudFrontOriginAccessIdentity" "AWS::CloudFront::Distribution" \
-        --profile $AWS_PROFILE
+        --profile $AWS_PROFILE || true
         
-    echo "Waiting for stack update to complete..."
-    aws cloudformation wait stack-update-complete \
-        --stack-name $STACK_NAME \
-        --profile $AWS_PROFILE
-    
-    echo "Stack updated successfully! S3 bucket and CloudFront distribution have been updated."
+    # Check if there are changes to be updated
+    UPDATE_STATUS=$?
+    if [ $UPDATE_STATUS -eq 0 ]; then
+        echo "Waiting for stack update to complete..."
+        aws cloudformation wait stack-update-complete \
+            --stack-name $STACK_NAME \
+            --profile $AWS_PROFILE
+        
+        echo "Stack updated successfully! CloudFront configuration has been updated."
+    else
+        echo "No updates are to be performed."
+    fi
 else
     echo "Stack $STACK_NAME does not exist. Creating..."
-    # Create new stack with resource import
+    
+    # Skip CloudFront direct update - will be handled by CloudFormation
+    echo "Skipping direct CloudFront update - will be handled by CloudFormation import..."
+    
+    # Create minimal template for import
+    IMPORT_TEMPLATE="./cloudformation/import-template.yaml"
+    cat > $IMPORT_TEMPLATE << 'EOF'
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Import template for existing bswdegree.org infrastructure'
+
+Resources:
+  # S3 bucket for website hosting
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: bswdegree.org
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+              - HEAD
+            AllowedOrigins:
+              - '*'
+            MaxAge: 3000
+        
+  # CloudFront distribution - will be imported
+  WebsiteDistribution:
+    Type: AWS::CloudFront::Distribution
+    DependsOn: WebsiteBucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      DistributionConfig:
+        Comment: CloudFront distribution for bswdegree.org
+        Enabled: true
+        HttpVersion: http2
+        PriceClass: PriceClass_100
+        Origins:
+          - DomainName: !GetAtt WebsiteBucket.DomainName
+            Id: S3Origin
+            S3OriginConfig:
+              OriginAccessIdentity: ''
+        DefaultRootObject: index.html
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+            ErrorCachingMinTTL: 300
+          - ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+            ErrorCachingMinTTL: 300
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          CachedMethods:
+            - GET
+            - HEAD
+          Compress: true
+          DefaultTTL: 86400
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: false
+          MaxTTL: 31536000
+          MinTTL: 0
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+EOF
+
+    # Create new stack with imported resources
+    echo "Creating CloudFormation stack with imported resources..."
     aws cloudformation create-change-set \
         --stack-name $STACK_NAME \
         --change-set-name ImportChangeSet \
         --change-set-type IMPORT \
-        --template-body file://$TEMPLATE_FILE \
+        --template-body file://$IMPORT_TEMPLATE \
         --resources-to-import file://$IMPORTS_FILE \
         --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
         --profile $AWS_PROFILE
@@ -94,7 +185,21 @@ else
         --stack-name $STACK_NAME \
         --profile $AWS_PROFILE
     
-    echo "Stack created successfully! S3 bucket has been configured and CloudFront distribution has been imported."
+    echo "Stack created successfully! Now updating with full template..."
+    
+    # Update stack with full template including bucket policy
+    aws cloudformation update-stack \
+        --stack-name $STACK_NAME \
+        --template-body file://$TEMPLATE_FILE \
+        --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
+        --profile $AWS_PROFILE
+        
+    echo "Waiting for stack update to complete..."
+    aws cloudformation wait stack-update-complete \
+        --stack-name $STACK_NAME \
+        --profile $AWS_PROFILE
+    
+    echo "Stack updated successfully! CloudFront distribution has been imported and configured."
 fi
 
 # Display stack outputs

@@ -1,0 +1,16 @@
+[
+  {
+    "ResourceType": "AWS::S3::Bucket",
+    "LogicalResourceId": "WebsiteBucket",
+    "ResourceIdentifier": {
+      "BucketName": "bswdegree.org"
+    }
+  },
+  {
+    "ResourceType": "AWS::CloudFront::Distribution",
+    "LogicalResourceId": "WebsiteDistribution",
+    "ResourceIdentifier": {
+      "Id": "E1DPKTG96SLOP7"
+    }
+  }
+]
