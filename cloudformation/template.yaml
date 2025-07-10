@@ -37,45 +37,20 @@ Resources:
     Properties:
       Bucket: !Ref WebsiteBucket
       PolicyDocument:
-        Version: '2012-10-17'
+        Version: '2008-10-17'
+        Id: 'PolicyForCloudFrontPrivateContent'
         Statement:
           - Sid: 'AllowCloudFrontServicePrincipal'
             Effect: 'Allow'
             Principal:
               Service: 'cloudfront.amazonaws.com'
             Action: 's3:GetObject'
-            Resource: !Sub '${WebsiteBucket}/*'
+            Resource: 'arn:aws:s3:::bswdegree.org/*'
             Condition:
               StringEquals:
-                'AWS:SourceArn': !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${WebsiteDistribution}'
+                'AWS:SourceArn': 'arn:aws:cloudfront::795714918442:distribution/E1DPKTG96SLOP7'
 
-  # CloudFront function for URL rewriting to add index.html
-  IndexRewriteFunction:
-    Type: AWS::CloudFront::Function
-    Properties:
-      Name: !Sub '${AWS::StackName}-index-rewrite'
-      AutoPublish: true
-      FunctionConfig:
-        Comment: 'Rewrite URLs to add index.html for directory requests'
-        Runtime: cloudfront-js-1.0
-      FunctionCode: |
-        function handler(event) {
-          var request = event.request;
-          var uri = request.uri;
-          
-          // Check if URI ends with a slash or has no extension
-          if (uri.endsWith('/') || (uri.indexOf('.') === -1 && uri !== '/')) {
-            // If it doesn't end with slash, add one
-            if (!uri.endsWith('/') && uri !== '/') {
-              uri += '/';
-            }
-            // Add index.html
-            uri += 'index.html';
-            request.uri = uri;
-          }
-          
-          return request;
-        }
+  # CloudFront function for URL rewriting to add index.html - using existing function
         
   # CloudFront distribution - will be imported
   WebsiteDistribution:
@@ -133,7 +108,7 @@ Resources:
           ViewerProtocolPolicy: redirect-to-https
           FunctionAssociations:
             - EventType: viewer-request
-              FunctionARN: !GetAtt IndexRewriteFunction.FunctionARN
+              FunctionARN: 'arn:aws:cloudfront::795714918442:function/BswDegreeOrg-index-rewrite'
 
 
 Outputs:
