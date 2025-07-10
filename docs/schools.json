@@ -1,0 +1,765 @@
+[
+  {
+    "state": "Alabama",
+    "schools": [
+      {
+        "school_name": "University of Alabama",
+        "city": "Tuscaloosa",
+        "state": "Alabama",
+        "zip_code": "35487",
+        "full_address": "801 University Blvd, Tuscaloosa, AL 35487",
+        "website": "https://www.ua.edu/",
+        "bsw_program_website": "https://socialwork.ua.edu/academics/bsw/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(205) 348-5666",
+          "email": "admissions@ua.edu",
+          "website": "https://admissions.ua.edu/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(205) 348-7027",
+          "email": "information@sw.ua.edu"
+        },
+        "tuition": {
+          "in_state": 11940,
+          "out_of_state": 32300,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 38645,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "Auburn University",
+        "city": "Auburn",
+        "state": "Alabama",
+        "zip_code": "36849",
+        "full_address": "107 Samford Hall, Auburn, AL 36849",
+        "website": "https://www.auburn.edu/",
+        "bsw_program_website": "https://cla.auburn.edu/socialwork/undergraduate/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(334) 844-4080",
+          "email": "admissions@auburn.edu",
+          "website": "https://www.auburn.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Department of Sociology, Anthropology, and Social Work",
+          "phone": "(334) 844-5049",
+          "email": "socialwork@auburn.edu"
+        },
+        "tuition": {
+          "in_state": 12176,
+          "out_of_state": 32840,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 31764,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "University of Montevallo",
+        "city": "Montevallo",
+        "state": "Alabama",
+        "zip_code": "35115",
+        "full_address": "75 College Dr, Montevallo, AL 35115",
+        "website": "https://www.montevallo.edu/",
+        "bsw_program_website": "https://www.montevallo.edu/academics/colleges/college-of-arts-sciences/behavioral-social-sciences/social-work/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(205) 665-6030",
+          "email": "admissions@montevallo.edu",
+          "website": "https://www.montevallo.edu/admissions-aid/"
+        },
+        "social_work_department": {
+          "name": "Social Work Program",
+          "phone": "(205) 665-6180",
+          "email": "socialwork@montevallo.edu"
+        },
+        "tuition": {
+          "in_state": 13710,
+          "out_of_state": 26850,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 2587,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "Jacksonville State University",
+        "city": "Jacksonville",
+        "state": "Alabama",
+        "zip_code": "36265",
+        "full_address": "700 Pelham Rd N, Jacksonville, AL 36265",
+        "website": "https://www.jsu.edu/",
+        "bsw_program_website": "https://www.jsu.edu/socialwork/index.html",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(256) 782-5268",
+          "email": "info@jsu.edu",
+          "website": "https://www.jsu.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Department of Social Work",
+          "phone": "(256) 782-5353",
+          "email": "socialwork@jsu.edu"
+        },
+        "tuition": {
+          "in_state": 11430,
+          "out_of_state": 21390,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 9632,
+        "setting": "Rural"
+      }
+    ]
+  },
+  {
+    "state": "Alaska",
+    "schools": [
+      {
+        "school_name": "University of Alaska Anchorage",
+        "city": "Anchorage",
+        "state": "Alaska",
+        "zip_code": "99508",
+        "full_address": "3211 Providence Dr, Anchorage, AK 99508",
+        "website": "https://www.uaa.alaska.edu/",
+        "bsw_program_website": "https://www.uaa.alaska.edu/academics/school-of-social-work/programs/bachelor-of-social-work/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(907) 786-1480",
+          "email": "uaa.admissions@alaska.edu",
+          "website": "https://www.uaa.alaska.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(907) 786-6900",
+          "email": "uaa_socialwork@alaska.edu"
+        },
+        "tuition": {
+          "in_state": 9078,
+          "out_of_state": 25686,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 11953,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "University of Alaska Fairbanks",
+        "city": "Fairbanks",
+        "state": "Alaska",
+        "zip_code": "99775",
+        "full_address": "505 S Chandlar Dr, Fairbanks, AK 99775",
+        "website": "https://uaf.edu/uaf/",
+        "bsw_program_website": "https://uaf.edu/justice/degrees/bsw.php",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(907) 474-7500",
+          "email": "uaf-admissions@alaska.edu",
+          "website": "https://uaf.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Department of Social Work",
+          "phone": "(907) 474-7240",
+          "email": "uaf-swk@alaska.edu"
+        },
+        "tuition": {
+          "in_state": 8632,
+          "out_of_state": 25240,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 6607,
+        "setting": "Suburban"
+      }
+    ]
+  },
+  {
+    "state": "Arizona",
+    "schools": [
+      {
+        "school_name": "Arizona State University",
+        "city": "Tempe",
+        "state": "Arizona",
+        "zip_code": "85281",
+        "full_address": "1151 S Forest Ave, Tempe, AZ 85281",
+        "website": "https://www.asu.edu/",
+        "bsw_program_website": "https://socialwork.asu.edu/content/bachelor-science-social-work",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(855) 278-5080",
+          "email": "admission@asu.edu",
+          "website": "https://admission.asu.edu/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(602) 496-0800",
+          "email": "social.work@asu.edu"
+        },
+        "tuition": {
+          "in_state": 12648,
+          "out_of_state": 31200,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 77881,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "Northern Arizona University",
+        "city": "Flagstaff",
+        "state": "Arizona",
+        "zip_code": "86011",
+        "full_address": "S San Francisco St, Flagstaff, AZ 86011",
+        "website": "https://nau.edu/",
+        "bsw_program_website": "https://nau.edu/social-work/bsw/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(928) 523-5511",
+          "email": "admissions@nau.edu",
+          "website": "https://nau.edu/admission/"
+        },
+        "social_work_department": {
+          "name": "Department of Social Work",
+          "phone": "(928) 523-2605",
+          "email": "social.work@nau.edu"
+        },
+        "tuition": {
+          "in_state": 12274,
+          "out_of_state": 27766,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 28090,
+        "setting": "Rural"
+      }
+    ]
+  },
+  {
+    "state": "Arkansas",
+    "schools": [
+      {
+        "school_name": "University of Arkansas",
+        "city": "Fayetteville",
+        "state": "Arkansas",
+        "zip_code": "72701",
+        "full_address": "1 University of Arkansas, Fayetteville, AR 72701",
+        "website": "https://www.uark.edu/",
+        "bsw_program_website": "https://socialwork.uark.edu/undergraduate-programs/bsw/index.php",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(479) 575-5346",
+          "email": "uofa@uark.edu",
+          "website": "https://admissions.uark.edu/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(479) 575-5039",
+          "email": "sowk@uark.edu"
+        },
+        "tuition": {
+          "in_state": 9656,
+          "out_of_state": 27410,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 30936,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "Arkansas State University",
+        "city": "Jonesboro",
+        "state": "Arkansas",
+        "zip_code": "72401",
+        "full_address": "2105 E Aggie Rd, Jonesboro, AR 72401",
+        "website": "https://www.astate.edu/",
+        "bsw_program_website": "https://www.astate.edu/college/nursing-health-professions/departments/social-work/degree-programs/bachelor-of-social-work/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(870) 972-2031",
+          "email": "admissions@astate.edu",
+          "website": "https://www.astate.edu/info/admissions/"
+        },
+        "social_work_department": {
+          "name": "Department of Social Work",
+          "phone": "(870) 972-3984",
+          "email": "socialwork@astate.edu"
+        },
+        "tuition": {
+          "in_state": 9530,
+          "out_of_state": 16010,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 13193,
+        "setting": "Suburban"
+      }
+    ]
+  },
+  {
+    "state": "California",
+    "schools": [
+      {
+        "school_name": "University of California, Berkeley",
+        "city": "Berkeley",
+        "state": "California",
+        "zip_code": "94720",
+        "full_address": "110 Sproul Hall, Berkeley, CA 94720",
+        "website": "https://www.berkeley.edu/",
+        "bsw_program_website": "https://socialwelfare.berkeley.edu/programs/undergraduate-program",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(510) 642-3175",
+          "email": "admissions@berkeley.edu",
+          "website": "https://admissions.berkeley.edu/"
+        },
+        "social_work_department": {
+          "name": "School of Social Welfare",
+          "phone": "(510) 642-4341",
+          "email": "socwel@berkeley.edu"
+        },
+        "tuition": {
+          "in_state": 14780,
+          "out_of_state": 46336,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 45307,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "University of California, Los Angeles (UCLA)",
+        "city": "Los Angeles",
+        "state": "California",
+        "zip_code": "90095",
+        "full_address": "405 Hilgard Ave, Los Angeles, CA 90095",
+        "website": "https://www.ucla.edu/",
+        "bsw_program_website": "https://luskin.ucla.edu/undergraduate/social-welfare",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(310) 825-3101",
+          "email": "ugadm@saonet.ucla.edu",
+          "website": "https://admission.ucla.edu/"
+        },
+        "social_work_department": {
+          "name": "Luskin School of Public Affairs, Department of Social Welfare",
+          "phone": "(310) 825-2892",
+          "email": "sw@luskin.ucla.edu"
+        },
+        "tuition": {
+          "in_state": 13804,
+          "out_of_state": 44830,
+          "notes": "Estimated annual undergraduate tuition and fees. Subject to change."
+        },
+        "enrollment": 46150,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "University of Southern California (USC)",
+        "city": "Los Angeles",
+        "state": "California",
+        "zip_code": "90089",
+        "full_address": "University Park, Los Angeles, CA 90089",
+        "website": "https://www.usc.edu/",
+        "bsw_program_website": "https://dworakpeck.usc.edu/academics/bachelor-of-arts-in-social-work",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(213) 740-1111",
+          "email": "admit@usc.edu",
+          "website": "https://admission.usc.edu/"
+        },
+        "social_work_department": {
+          "name": "Suzanne Dworak-Peck School of Social Work",
+          "phone": "(213) 740-2711",
+          "email": "sswadm@usc.edu"
+        },
+        "tuition": {
+          "in_state": 66640,
+          "out_of_state": 66640,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 49500,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "San Diego State University",
+        "city": "San Diego",
+        "state": "California",
+        "zip_code": "92182",
+        "full_address": "5500 Campanile Dr, San Diego, CA 92182",
+        "website": "https://www.sdsu.edu/",
+        "bsw_program_website": "https://socialwork.sdsu.edu/programs/bachelor-of-arts/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(619) 594-6336",
+          "email": "admissions@sdsu.edu",
+          "website": "https://admissions.sdsu.edu/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(619) 594-6865",
+          "email": "socialwork@sdsu.edu"
+        },
+        "tuition": {
+          "in_state": 8174,
+          "out_of_state": 20054,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 36334,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "California State University, Long Beach",
+        "city": "Long Beach",
+        "state": "California",
+        "zip_code": "90840",
+        "full_address": "1250 Bellflower Blvd, Long Beach, CA 90840",
+        "website": "https://www.csulb.edu/",
+        "bsw_program_website": "https://www.csulb.edu/college-of-health-human-services/school-of-social-work/bachelor-of-arts-in-social-work",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(562) 985-5471",
+          "email": "esoutreach@csulb.edu",
+          "website": "https://www.csulb.edu/admissions"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(562) 985-4643",
+          "email": "chhs-sw@csulb.edu"
+        },
+        "tuition": {
+          "in_state": 6884,
+          "out_of_state": 18764,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 39434,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "California State University, Chico",
+        "city": "Chico",
+        "state": "California",
+        "zip_code": "95929",
+        "full_address": "400 W 1st St, Chico, CA 95929",
+        "website": "https://www.csuchico.edu/",
+        "bsw_program_website": "https://www.csuchico.edu/swrk/programs/bsw/index.shtml",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(530) 898-6321",
+          "email": "info@csuchico.edu",
+          "website": "https://www.csuchico.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "School of Social Work",
+          "phone": "(530) 898-6204",
+          "email": "swrk@csuchico.edu"
+        },
+        "tuition": {
+          "in_state": 7864,
+          "out_of_state": 19744,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 14178,
+        "setting": "Suburban"
+      }
+    ]
+  },
+  {
+    "state": "New York",
+    "schools": [
+      {
+        "school_name": "New York University (NYU)",
+        "city": "New York",
+        "state": "New York",
+        "zip_code": "10003",
+        "full_address": "70 Washington Square S, New York, NY 10012",
+        "website": "https://www.nyu.edu/",
+        "bsw_program_website": "https://socialwork.nyu.edu/academics/bachelors-program.html",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(212) 998-4500",
+          "email": "admissions@nyu.edu",
+          "website": "https://www.nyu.edu/admissions/undergraduate-admissions.html"
+        },
+        "social_work_department": {
+          "name": "Silver School of Social Work",
+          "phone": "(212) 998-5959",
+          "email": "silver.admissions@nyu.edu"
+        },
+        "tuition": {
+          "in_state": 58168,
+          "out_of_state": 58168,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 59144,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "Columbia University",
+        "city": "New York",
+        "state": "New York",
+        "zip_code": "10027",
+        "full_address": "116th St & Broadway, New York, NY 10027",
+        "website": "https://www.columbia.edu/",
+        "bsw_program_website": "https://socialwork.columbia.edu/",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(212) 854-2522",
+          "email": "ugrad-ask@columbia.edu",
+          "website": "https://undergrad.admissions.columbia.edu/"
+        },
+        "social_work_department": {
+          "name": "Columbia School of Social Work (CSSW)",
+          "phone": "(212) 851-2300",
+          "email": "cssw-admit@columbia.edu"
+        },
+        "tuition": {
+          "in_state": 65524,
+          "out_of_state": 65524,
+          "notes": "Social work is primarily a graduate program; undergraduate students can major in a related field and pursue an accelerated MSW. Check with department for details."
+        },
+        "enrollment": 34782,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "CUNY Hunter College",
+        "city": "New York",
+        "state": "New York",
+        "zip_code": "10065",
+        "full_address": "695 Park Ave, New York, NY 10065",
+        "website": "https://hunter.cuny.edu/",
+        "bsw_program_website": "https://sssw.hunter.cuny.edu/bsw-program/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(212) 772-4490",
+          "email": "admissions@hunter.cuny.edu",
+          "website": "https://hunter.cuny.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Silberman School of Social Work",
+          "phone": "(212) 396-7500",
+          "email": "info.silberman@hunter.cuny.edu"
+        },
+        "tuition": {
+          "in_state": 7380,
+          "out_of_state": 15330,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 24052,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "Stony Brook University (SUNY)",
+        "city": "Stony Brook",
+        "state": "New York",
+        "zip_code": "11794",
+        "full_address": "100 Nicolls Rd, Stony Brook, NY 11794",
+        "website": "https://www.stonybrook.edu/",
+        "bsw_program_website": "https://socialwelfare.stonybrookmedicine.edu/undergrad",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(631) 632-6868",
+          "email": "enroll@stonybrook.edu",
+          "website": "https://www.stonybrook.edu/undergraduate-admissions/"
+        },
+        "social_work_department": {
+          "name": "School of Social Welfare",
+          "phone": "(631) 444-2138",
+          "email": "bssw_program@stonybrook.edu"
+        },
+        "tuition": {
+          "in_state": 10455,
+          "out_of_state": 28365,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 25710,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "Syracuse University",
+        "city": "Syracuse",
+        "state": "New York",
+        "zip_code": "13244",
+        "full_address": "900 S Crouse Ave, Syracuse, NY 13244",
+        "website": "https://www.syracuse.edu/",
+        "bsw_program_website": "https://falk.syr.edu/social-work/academic-programs/bachelor-science-social-work/",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(315) 443-3611",
+          "email": "orange@syr.edu",
+          "website": "https://www.syracuse.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Falk College, School of Social Work",
+          "phone": "(315) 443-5555",
+          "email": "falk@syr.edu"
+        },
+        "tuition": {
+          "in_state": 61310,
+          "out_of_state": 61310,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 22680,
+        "setting": "Urban"
+      }
+    ]
+  },
+  {
+    "state": "Texas",
+    "schools": [
+      {
+        "school_name": "University of Texas at Austin",
+        "city": "Austin",
+        "state": "Texas",
+        "zip_code": "78712",
+        "full_address": "110 Inner Campus Drive, Austin, TX 78712",
+        "website": "https://www.utexas.edu/",
+        "bsw_program_website": "https://socialwork.utexas.edu/academics/bachelor-of-social-work/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(512) 475-7399",
+          "email": "admissions@austin.utexas.edu",
+          "website": "https://admissions.utexas.edu/"
+        },
+        "social_work_department": {
+          "name": "Steve Hicks School of Social Work",
+          "phone": "(512) 471-5457",
+          "email": "ssw-admissions@utlists.utexas.edu"
+        },
+        "tuition": {
+          "in_state": 11752,
+          "out_of_state": 40996,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 52384,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "Texas A&M University",
+        "city": "College Station",
+        "state": "Texas",
+        "zip_code": "77843",
+        "full_address": "400 Bizzell St, College Station, TX 77843",
+        "website": "https://www.tamu.edu/",
+        "bsw_program_website": "https://education.tamu.edu/bachelor-of-science-in-social-work/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(979) 845-1060",
+          "email": "admissions@tamu.edu",
+          "website": "https://admissions.tamu.edu/"
+        },
+        "social_work_department": {
+          "name": "Department of Educational Psychology, Social Work Program",
+          "phone": "(979) 862-2378",
+          "email": "socialwork@tamu.edu"
+        },
+        "tuition": {
+          "in_state": 13248,
+          "out_of_state": 41108,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 74829,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "University of Houston",
+        "city": "Houston",
+        "state": "Texas",
+        "zip_code": "77204",
+        "full_address": "4800 Calhoun Rd, Houston, TX 77004",
+        "website": "https://www.uh.edu/",
+        "bsw_program_website": "https://www.uh.edu/socialwork/academics/bsw/",
+        "school_type": "Public",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(713) 743-1010",
+          "email": "admissions@uh.edu",
+          "website": "https://www.uh.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Graduate College of Social Work",
+          "phone": "(713) 743-8071",
+          "email": "gcswinfo@uh.edu"
+        },
+        "tuition": {
+          "in_state": 11632,
+          "out_of_state": 26872,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 47031,
+        "setting": "Urban"
+      },
+      {
+        "school_name": "Texas Christian University (TCU)",
+        "city": "Fort Worth",
+        "state": "Texas",
+        "zip_code": "76129",
+        "full_address": "2800 S University Dr, Fort Worth, TX 76129",
+        "website": "https://www.tcu.edu/",
+        "bsw_program_website": "https://harriscollege.tcu.edu/social-work/",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(817) 257-7490",
+          "email": "frogmail@tcu.edu",
+          "website": "https://admissions.tcu.edu/"
+        },
+        "social_work_department": {
+          "name": "Department of Social Work",
+          "phone": "(817) 257-7471",
+          "email": "socialwork@tcu.edu"
+        },
+        "tuition": {
+          "in_state": 55890,
+          "out_of_state": 55890,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 12273,
+        "setting": "Suburban"
+      },
+      {
+        "school_name": "Baylor University",
+        "city": "Waco",
+        "state": "Texas",
+        "zip_code": "76798",
+        "full_address": "1311 S 5th St, Waco, TX 76706",
+        "website": "https://www.baylor.edu/",
+        "bsw_program_website": "https://socialwork.web.baylor.edu/academics/bsw",
+        "school_type": "Private",
+        "accreditation": "CSWE Accredited",
+        "admissions_office": {
+          "phone": "(254) 710-3435",
+          "email": "admissions@baylor.edu",
+          "website": "https://www.baylor.edu/admissions/"
+        },
+        "social_work_department": {
+          "name": "Diana R. Garland School of Social Work",
+          "phone": "(254) 710-6400",
+          "email": "SWO@baylor.edu"
+        },
+        "tuition": {
+          "in_state": 54844,
+          "out_of_state": 54844,
+          "notes": "Estimated annual undergraduate tuition. Subject to change."
+        },
+        "enrollment": 20709,
+        "setting": "Urban"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+Of course. I have analyzed the website and understood its purpose is to guide prospective students interested 
+in a Bachelor of Social Work (BSW) degree. The page you linked lists states where these programs are available.
+
+Based on your request, I have conducted extensive research to create a comprehensive JSON file. 
+This file lists a significant number of CSWE-accredited (or candidate status) BSW programs for each state 
+you provided. The data for each school is enriched with details crucial for a potential student's 
+decision-making process.
+
+Methodology:
+
+The primary source for program accreditation is the official Council on Social Work Education (CSWE) directory. 
+This ensures the listed programs meet national standards.
+
+Each school's official website was then visited to gather specific details like contact information, 
+departmental websites, and tuition estimates.
+
+Data such as tuition and enrollment figures are estimates based on the most recently available 
+information and are subject to change. They are included to provide a general comparison point.
+
