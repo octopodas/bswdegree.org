@@ -1,0 +1,144 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Chart from '../../components/Chart.astro';
+import { seoData } from '../../data/seo';
+import { salaryData } from '../../data/salary';
+---
+
+<Layout seo={seoData['career-and-salary']}>
+  <Header currentPage="career-and-salary" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">
+        Career Paths & <span class="text-emerald-700">Salary Expectations</span>
+      </h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+        Explore social work specializations, salary ranges, and the return on investment for your BSW degree. Understand the financial landscape of social work careers.
+      </p>
+    </div>
+
+    <!-- Salary Chart Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6 text-center">Median Salaries by Specialization</h2>
+      <p class="text-stone-600 text-center mb-6">
+        Based on U.S. Bureau of Labor Statistics data for social workers in various practice settings.
+      </p>
+      <Chart data={salaryData} chartId="salary-chart" />
+    </div>
+
+    <!-- Career Paths Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Popular Career Paths</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">School Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Help students overcome barriers to academic success</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: K-12 schools</p>
+            <p>Median: $62,920</p>
+          </div>
+        </div>
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">Healthcare Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Support patients and families in medical settings</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: Hospitals, clinics</p>
+            <p>Median: $72,030</p>
+          </div>
+        </div>
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">Mental Health Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Provide therapy and support for mental health conditions</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: Community centers</p>
+            <p>Median: $68,290</p>
+          </div>
+        </div>
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">Child & Family Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Protect children and strengthen families</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: Government agencies</p>
+            <p>Median: $51,270</p>
+          </div>
+        </div>
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">Community Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Address community-wide social problems</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: Non-profits</p>
+            <p>Median: $43,940</p>
+          </div>
+        </div>
+        <div class="border border-stone-200 rounded-lg p-6">
+          <h3 class="font-semibold text-emerald-800 mb-2">Substance Abuse Social Worker</h3>
+          <p class="text-stone-600 text-sm mb-3">Help individuals overcome addiction</p>
+          <div class="text-xs text-stone-500">
+            <p>Setting: Treatment centers</p>
+            <p>Median: $68,290</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROI Analysis Section -->
+    <div class="mt-12 bg-emerald-50 p-8 rounded-xl border border-emerald-200">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-6">Return on Investment (ROI)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">BSW Degree Investment</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• Average cost: $40,000-$80,000 total</li>
+            <li>• Entry-level salary: $35,000-$50,000</li>
+            <li>• Career progression potential</li>
+            <li>• Loan forgiveness opportunities</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Advanced Standing MSW</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• 1-year program (vs. 2-year)</li>
+            <li>• Higher salary potential: $55,000-$85,000</li>
+            <li>• Clinical practice opportunities</li>
+            <li>• Leadership and supervision roles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Benefits Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Financial Benefits & Opportunities</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🎓</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Loan Forgiveness</h3>
+          <p class="text-stone-600 text-sm mt-1">Public Service Loan Forgiveness for qualified positions</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">📈</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Job Growth</h3>
+          <p class="text-stone-600 text-sm mt-1">7% growth rate, faster than average</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">💼</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Benefits Package</h3>
+          <p class="text-stone-600 text-sm mt-1">Many positions offer comprehensive benefits</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

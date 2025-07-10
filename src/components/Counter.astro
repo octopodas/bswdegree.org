@@ -1,0 +1,47 @@
+---
+import type { CounterConfig } from '../types';
+
+interface Props {
+  config: CounterConfig;
+  className?: string;
+}
+
+const { config, className = '' } = Astro.props;
+---
+
+<div 
+  class={`text-5xl font-bold text-emerald-700 ${className}`}
+  data-counter-target={config.target}
+  data-counter-prefix={config.prefix || ''}
+  data-counter-suffix={config.suffix || ''}
+  data-counter-duration={config.duration || 1500}
+>
+  0
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function animateCounters() {
+      const counters = document.querySelectorAll('[data-counter-target]');
+      counters.forEach(counter => {
+        const target = +(counter as HTMLElement).dataset.counterTarget!;
+        const prefix = (counter as HTMLElement).dataset.counterPrefix || '';
+        const suffix = (counter as HTMLElement).dataset.counterSuffix || '';
+        const duration = +(counter as HTMLElement).dataset.counterDuration! || 1500;
+        let count = 0;
+        
+        const timer = setInterval(() => {
+          count += Math.ceil(target / (duration / 20));
+          if(count > target) count = target;
+          counter.textContent = prefix + count.toLocaleString() + suffix;
+          if (count === target) {
+            clearInterval(timer);
+          }
+        }, 20);
+      });
+    }
+
+    // Initialize counters on page load
+    animateCounters();
+  });
+</script>

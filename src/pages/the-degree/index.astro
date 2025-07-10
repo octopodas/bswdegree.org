@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { seoData } from '../../data/seo';
+import { degreeComparisons } from '../../data/degrees';
+---
+
+<Layout seo={seoData['the-degree']}>
+  <Header currentPage="the-degree" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">
+        The BSW <span class="text-emerald-700">Degree</span>
+      </h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+        Understand the curriculum, requirements, and structure of the Bachelor of Social Work degree. Learn how it compares to other human service degrees.
+      </p>
+    </div>
+
+    <!-- Core Curriculum Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Core BSW Curriculum</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Foundation Courses</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• Introduction to Social Work</li>
+            <li>• Social Welfare Policy</li>
+            <li>• Human Behavior & Social Environment (HBSE)</li>
+            <li>• Diversity & Social Justice</li>
+            <li>• Research Methods</li>
+            <li>• Social Work Ethics</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Practice Courses</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• Social Work Practice with Individuals</li>
+            <li>• Social Work Practice with Groups</li>
+            <li>• Social Work Practice with Communities</li>
+            <li>• Case Management</li>
+            <li>• Assessment & Intervention</li>
+            <li>• Field Practicum (400+ hours)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fieldwork Section -->
+    <div class="mt-12 bg-emerald-50 p-8 rounded-xl border border-emerald-200">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-6">Field Education Experience</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-semibold text-emerald-800 mb-2">400+ Hours</h3>
+          <p class="text-stone-700 text-sm">Minimum required supervised practice in social work agency</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-semibold text-emerald-800 mb-2">Real World Practice</h3>
+          <p class="text-stone-700 text-sm">Apply classroom learning in professional settings</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-semibold text-emerald-800 mb-2">Supervised Learning</h3>
+          <p class="text-stone-700 text-sm">Mentorship from experienced social work professionals</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Degree Comparison Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">How Does BSW Compare to Other Degrees?</h2>
+      <div class="mb-6">
+        <div class="flex flex-wrap gap-2 justify-center">
+          <button id="bsw-tab" class="px-4 py-2 bg-emerald-600 text-white rounded-lg transition-colors hover:bg-emerald-700">
+            BSW
+          </button>
+          <button id="psych-tab" class="px-4 py-2 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400">
+            Psychology
+          </button>
+          <button id="soc-tab" class="px-4 py-2 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400">
+            Sociology
+          </button>
+          <button id="hum-tab" class="px-4 py-2 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400">
+            Human Services
+          </button>
+        </div>
+      </div>
+      <div id="degree-content" class="bg-stone-50 p-6 rounded-lg">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- CSWE Accreditation Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">CSWE Accreditation Matters</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Why Choose CSWE-Accredited Programs?</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• Required for licensure in most states</li>
+            <li>• Ensures quality education standards</li>
+            <li>• Enables Advanced Standing MSW admission</li>
+            <li>• Recognized by employers nationwide</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Key Statistics</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between">
+              <span class="text-stone-700">Accredited BSW Programs:</span>
+              <span class="font-semibold text-emerald-800">600+</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-700">States Recognizing CSWE:</span>
+              <span class="font-semibold text-emerald-800">All 50</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-700">Years of Standards:</span>
+              <span class="font-semibold text-emerald-800">Since 1952</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<script define:vars={{ degreeComparisons }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = {
+      'bsw-tab': 'bsw',
+      'psych-tab': 'psych',
+      'soc-tab': 'soc',
+      'hum-tab': 'hum'
+    };
+    
+    const content = document.getElementById('degree-content');
+    
+    function showDegreeInfo(degreeKey) {
+      // Reset all tabs
+      Object.keys(tabs).forEach(tabId => {
+        const tab = document.getElementById(tabId);
+        tab.className = 'px-4 py-2 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400';
+      });
+      
+      // Activate current tab
+      const activeTab = Object.keys(tabs).find(key => tabs[key] === degreeKey);
+      document.getElementById(activeTab).className = 'px-4 py-2 bg-emerald-600 text-white rounded-lg transition-colors hover:bg-emerald-700';
+      
+      // Update content
+      const degree = degreeComparisons[degreeKey];
+      content.innerHTML = `
+        <h3 class="text-xl font-semibold text-emerald-800 mb-4">${degree.name}</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-stone-800 mb-2">Primary Focus</h4>
+            <p class="text-stone-700 text-sm mb-4">${degree.focus}</p>
+            <h4 class="font-semibold text-stone-800 mb-2">Career Preparation</h4>
+            <p class="text-stone-700 text-sm">${degree.career_preparation}</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-stone-800 mb-2">Graduate School</h4>
+            <p class="text-stone-700 text-sm mb-4">${degree.graduate_school}</p>
+            <h4 class="font-semibold text-stone-800 mb-2">Licensure Path</h4>
+            <p class="text-stone-700 text-sm">${degree.licensure}</p>
+          </div>
+        </div>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold text-stone-800 mb-1">Salary Range</h4>
+            <p class="text-stone-600 text-sm">${degree.salary_range}</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold text-stone-800 mb-1">Job Outlook</h4>
+            <p class="text-stone-600 text-sm">${degree.job_outlook}</p>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Add click handlers
+    Object.keys(tabs).forEach(tabId => {
+      document.getElementById(tabId).addEventListener('click', () => {
+        showDegreeInfo(tabs[tabId]);
+      });
+    });
+    
+    // Initialize with BSW
+    showDegreeInfo('bsw');
+  });
+</script>

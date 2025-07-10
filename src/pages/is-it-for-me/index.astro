@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { seoData } from '../../data/seo';
+import { prosConsData } from '../../data/proscons';
+---
+
+<Layout seo={seoData['is-it-for-me']}>
+  <Header currentPage="is-it-for-me" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">
+        Is Social Work <span class="text-emerald-700">Right for You?</span>
+      </h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+        Discover if social work aligns with your personality, values, and career goals. Explore the traits of successful social workers and weigh the rewards against the challenges.
+      </p>
+    </div>
+
+    <!-- Personality Traits Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Key Personality Traits for Social Work Success</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🤝</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Empathy</h3>
+          <p class="text-stone-600 text-sm mt-1">Understanding and sharing others' emotions</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">💪</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Resilience</h3>
+          <p class="text-stone-600 text-sm mt-1">Bouncing back from challenging situations</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🗣️</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Communication</h3>
+          <p class="text-stone-600 text-sm mt-1">Clear, compassionate verbal and written skills</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">⚖️</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Advocacy</h3>
+          <p class="text-stone-600 text-sm mt-1">Standing up for clients and social justice</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🤔</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Critical Thinking</h3>
+          <p class="text-stone-600 text-sm mt-1">Analyzing complex problems and solutions</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🌍</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Cultural Awareness</h3>
+          <p class="text-stone-600 text-sm mt-1">Understanding diverse backgrounds and perspectives</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pros vs Cons Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6 text-center">The Honest Truth About Social Work</h2>
+      <div class="text-center mb-6">
+        <button id="pros-btn" class="px-6 py-3 bg-emerald-600 text-white rounded-lg mr-4 transition-colors hover:bg-emerald-700">
+          The Rewards
+        </button>
+        <button id="cons-btn" class="px-6 py-3 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400">
+          The Challenges
+        </button>
+      </div>
+      <div id="pros-cons-content" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Content will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- NASW Ethics Section -->
+    <div class="mt-12 bg-emerald-50 p-8 rounded-xl border border-emerald-200">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-4">NASW Code of Ethics</h2>
+      <p class="text-stone-700 mb-4">
+        The National Association of Social Workers (NASW) Code of Ethics guides all professional social work practice. The core values include:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Service</h3>
+          <p class="text-stone-600 text-sm">Helping people in need and addressing social problems</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Social Justice</h3>
+          <p class="text-stone-600 text-sm">Challenging social injustice and promoting change</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Dignity & Worth</h3>
+          <p class="text-stone-600 text-sm">Respecting the inherent dignity of all people</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Human Relationships</h3>
+          <p class="text-stone-600 text-sm">Recognizing relationships as vehicles for change</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Integrity</h3>
+          <p class="text-stone-600 text-sm">Acting honestly and responsibly</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg">
+          <h3 class="font-semibold text-emerald-800">Competence</h3>
+          <p class="text-stone-600 text-sm">Practicing within areas of competence</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<script define:vars={{ prosConsData }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    const prosBtn = document.getElementById('pros-btn');
+    const consBtn = document.getElementById('cons-btn');
+    const content = document.getElementById('pros-cons-content');
+    
+    function showPros() {
+      prosBtn.className = 'px-6 py-3 bg-emerald-600 text-white rounded-lg mr-4 transition-colors hover:bg-emerald-700';
+      consBtn.className = 'px-6 py-3 bg-stone-300 text-stone-700 rounded-lg transition-colors hover:bg-stone-400';
+      
+      content.innerHTML = prosConsData.pros.map(item => `
+        <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+          <h4 class="font-semibold text-emerald-800 mb-2">${item.title}</h4>
+          <p class="text-stone-700">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+    
+    function showCons() {
+      prosBtn.className = 'px-6 py-3 bg-stone-300 text-stone-700 rounded-lg mr-4 transition-colors hover:bg-stone-400';
+      consBtn.className = 'px-6 py-3 bg-amber-600 text-white rounded-lg transition-colors hover:bg-amber-700';
+      
+      content.innerHTML = prosConsData.cons.map(item => `
+        <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+          <h4 class="font-semibold text-amber-800 mb-2">${item.title}</h4>
+          <p class="text-stone-700">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+    
+    prosBtn.addEventListener('click', showPros);
+    consBtn.addEventListener('click', showCons);
+    
+    // Initialize with pros
+    showPros();
+  });
+</script>

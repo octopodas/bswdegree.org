@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { seoData } from '../../data/seo';
+import { licensureData } from '../../data/licensure';
+---
+
+<Layout seo={seoData['next-steps']}>
+  <Header currentPage="next-steps" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">
+        Your <span class="text-emerald-700">Next Steps</span>
+      </h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+        Ready to pursue your BSW? Find accredited programs, understand licensure requirements, and plan your path to becoming a licensed social worker.
+      </p>
+    </div>
+
+    <!-- Program Selection Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Finding the Right BSW Program</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Key Factors to Consider</h3>
+          <ul class="space-y-2 text-stone-700">
+            <li>• CSWE Accreditation (essential)</li>
+            <li>• Program format (on-campus, online, hybrid)</li>
+            <li>• Field placement opportunities</li>
+            <li>• Faculty expertise and research</li>
+            <li>• Location and cost</li>
+            <li>• Student support services</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-emerald-800 mb-3">Program Options</h3>
+          <div class="space-y-3">
+            <div class="bg-emerald-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-emerald-800">Traditional 4-Year</h4>
+              <p class="text-stone-700 text-sm">Complete program, typically 120 credit hours</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-emerald-800">Transfer-Friendly</h4>
+              <p class="text-stone-700 text-sm">2-year completion for transfer students</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-emerald-800">Online & Hybrid</h4>
+              <p class="text-stone-700 text-sm">Flexible options for working students</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application Process Section -->
+    <div class="mt-12 bg-emerald-50 p-8 rounded-xl border border-emerald-200">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-6">Application Process</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="bg-emerald-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+            <span class="font-bold">1</span>
+          </div>
+          <h3 class="font-semibold text-emerald-800 mb-2">Research Programs</h3>
+          <p class="text-stone-700 text-sm">Find CSWE-accredited programs in your area</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+            <span class="font-bold">2</span>
+          </div>
+          <h3 class="font-semibold text-emerald-800 mb-2">Meet Prerequisites</h3>
+          <p class="text-stone-700 text-sm">Complete required coursework and GPA requirements</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+            <span class="font-bold">3</span>
+          </div>
+          <h3 class="font-semibold text-emerald-800 mb-2">Apply & Interview</h3>
+          <p class="text-stone-700 text-sm">Submit applications and prepare for interviews</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+            <span class="font-bold">4</span>
+          </div>
+          <h3 class="font-semibold text-emerald-800 mb-2">Begin Studies</h3>
+          <p class="text-stone-700 text-sm">Start your BSW journey</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Licensure Requirements Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">State Licensure Requirements</h2>
+      <p class="text-stone-600 mb-6">
+        Licensure requirements vary by state. Use the table below to understand requirements in your state.
+      </p>
+      
+      <div class="mb-4">
+        <label for="state-filter" class="block text-sm font-medium text-stone-700 mb-2">Filter by State:</label>
+        <select id="state-filter" class="border border-stone-300 rounded-md px-3 py-2 bg-white">
+          <option value="">All States</option>
+        </select>
+      </div>
+      
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-stone-200 rounded-lg">
+          <thead class="bg-stone-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">State</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">BSW License</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">MSW License</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Supervision</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">Exam</th>
+            </tr>
+          </thead>
+          <tbody id="licensure-table-body" class="bg-white divide-y divide-stone-200">
+            <!-- Table content will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Financial Aid Section -->
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+      <h2 class="text-2xl font-bold text-stone-800 mb-6">Financial Aid & Scholarships</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">💰</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Federal Aid</h3>
+          <p class="text-stone-600 text-sm mt-1">Pell Grants, student loans, work-study programs</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🏆</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Social Work Scholarships</h3>
+          <p class="text-stone-600 text-sm mt-1">NASW, CSWE, and program-specific scholarships</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-emerald-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🎓</span>
+          </div>
+          <h3 class="font-semibold text-stone-800">Loan Forgiveness</h3>
+          <p class="text-stone-600 text-sm mt-1">Public Service Loan Forgiveness programs</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<script define:vars={{ licensureData }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    const stateFilter = document.getElementById('state-filter');
+    const tableBody = document.getElementById('licensure-table-body');
+    
+    function populateStateFilter() {
+      const states = [...new Set(licensureData.map(item => item.state))].sort();
+      states.forEach(state => {
+        const option = document.createElement('option');
+        option.value = state;
+        option.textContent = state;
+        stateFilter.appendChild(option);
+      });
+    }
+    
+    function populateLicensureTable(filterState = '') {
+      const filteredData = filterState ? 
+        licensureData.filter(item => item.state === filterState) : 
+        licensureData;
+      
+      tableBody.innerHTML = filteredData.map(item => `
+        <tr class="hover:bg-stone-50">
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-900">${item.state}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-900">${item.bsw_license}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-900">${item.msw_license}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-900">${item.supervision_hours}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-stone-900">${item.exam_required}</td>
+        </tr>
+      `).join('');
+    }
+    
+    stateFilter.addEventListener('change', (e) => {
+      populateLicensureTable(e.target.value);
+    });
+    
+    // Initialize
+    populateStateFilter();
+    populateLicensureTable();
+  });
+</script>

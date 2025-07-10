@@ -1,0 +1,113 @@
+---
+import type { SEOData } from '../types';
+
+interface Props {
+  seo: SEOData;
+}
+
+const { seo } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{seo.title}</title>
+  <meta name="description" content={seo.description}>
+  <meta name="keywords" content={seo.keywords}>
+  <meta name="author" content="BSW Navigator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={seo.canonical}>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content={seo.ogType || 'website'}>
+  <meta property="og:url" content={seo.canonical}>
+  <meta property="og:title" content={seo.ogTitle || seo.title}>
+  <meta property="og:description" content={seo.ogDescription || seo.description}>
+  <meta property="og:site_name" content="BSW Navigator">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={seo.canonical}>
+  <meta property="twitter:title" content={seo.twitterTitle || seo.title}>
+  <meta property="twitter:description" content={seo.twitterDescription || seo.description}>
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#047857">
+  <meta name="msapplication-TileColor" content="#047857">
+  <meta name="application-name" content="BSW Navigator">
+  <meta name="apple-mobile-web-app-title" content="BSW Navigator">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.svg">
+  
+  <!-- External Dependencies -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .nav-link { transition: all 0.3s ease; }
+    .nav-link.active { color: #047857; border-bottom-color: #047857; }
+    .fade-in { animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .chart-container { position: relative; width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; height: 400px; max-height: 50vh; }
+    @media (min-width: 768px) { .chart-container { height: 450px; } }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+  <slot />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BSW Navigator",
+    "url": "https://bsfdegree.org/",
+    "description": "Interactive guide to the Bachelor of Social Work (BSW) degree, career paths, salary expectations, and program requirements.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BSW Navigator"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bsfdegree.org/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "BSW Navigator",
+    "description": "Comprehensive guide to Bachelor of Social Work education and career information",
+    "url": "https://bsfdegree.org/",
+    "sameAs": [],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "BSW Degree Information",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "name": "Bachelor of Social Work",
+          "description": "Professional degree preparing students for entry-level social work practice",
+          "provider": {
+            "@type": "Organization",
+            "name": "CSWE Accredited Programs"
+          },
+          "educationalCredentialAwarded": "Bachelor of Social Work (BSW)"
+        }
+      ]
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+---
+import type { SalaryDataItem } from '../types';
+
+interface Props {
+  data: SalaryDataItem[];
+  chartId: string;
+  className?: string;
+}
+
+const { data, chartId, className = '' } = Astro.props;
+---
+
+<div class={`chart-container ${className}`}>
+  <canvas id={chartId}></canvas>
+</div>
+
+<script define:vars={{ data, chartId }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById(chartId);
+    if (ctx && typeof Chart !== 'undefined') {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: data.map(item => item.label),
+          datasets: [{
+            label: 'Median Annual Salary',
+            data: data.map(item => item.value),
+            backgroundColor: data.map(item => item.color || 'rgba(5, 150, 105, 0.7)'),
+            borderColor: 'rgba(4, 120, 87, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              beginAtZero: true,
+              ticks: {
+                callback: function(value) {
+                  return '$' + (value / 1000).toFixed(0) + 'k';
+                }
+              }
+            },
+            y: {
+              ticks: {
+                maxRotation: 0,
+                font: {
+                  size: 12
+                }
+              }
+            }
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    maximumFractionDigits: 0
+                  }).format(context.parsed.x);
+                }
+              }
+            },
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+  });
+</script>

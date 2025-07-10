@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Counter from '../components/Counter.astro';
+import { seoData } from '../data/seo';
+import type { CounterConfig } from '../types';
+
+const counters: CounterConfig[] = [
+  { target: 7, suffix: '%' },
+  { target: 61330, prefix: '$' },
+  { target: 600, suffix: '+' }
+];
+---
+
+<Layout seo={seoData.home}>
+  <Header currentPage="home" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 tracking-tight">
+        Your Path to a Career in <span class="text-emerald-700">Social Work</span>.
+      </h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600">
+        This interactive guide helps you explore the Bachelor of Social Work (BSW) degree, from understanding if it's the right fit for you to navigating the academic journey and launching a fulfilling career.
+      </p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+        <Counter config={counters[0]} />
+        <p class="mt-2 text-lg font-semibold text-stone-800">% Job Growth</p>
+        <p class="mt-1 text-stone-600">Faster than the average for all occupations (2023-2033).</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+        <Counter config={counters[1]} />
+        <p class="mt-2 text-lg font-semibold text-stone-800">Median Annual Salary</p>
+        <p class="mt-1 text-stone-600">Significantly higher than the median for all occupations.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg border border-stone-200">
+        <Counter config={counters[2]} />
+        <p class="mt-2 text-lg font-semibold text-stone-800">Accredited Programs</p>
+        <p class="mt-1 text-stone-600">Ensuring a high standard of education across the U.S.</p>
+      </div>
+    </div>
+    
+    <div class="mt-12 bg-emerald-50 p-8 rounded-xl border border-emerald-200 text-center">
+      <h2 class="text-2xl font-bold text-emerald-800">Why a BSW?</h2>
+      <p class="mt-2 max-w-3xl mx-auto text-stone-700">
+        A Bachelor of Social Work is a professional degree that prepares you for entry-level practice, advocacy, and social justice work. It's the most direct path to becoming a licensed social worker and serves as a powerful foundation for graduate studies.
+      </p>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
