@@ -1,0 +1,347 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+
+function createSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const colleges = await getCollection('colleges');
+  
+  return colleges.map((college) => {
+    const slug = college.data.id;
+    return {
+      params: { slug },
+      props: { college }
+    };
+  });
+};
+
+
+function formatCurrency(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(amount);
+}
+
+function formatNumber(num: number): string {
+  return new Intl.NumberFormat('en-US').format(num);
+}
+
+const { college } = Astro.props;
+const { institution, general_information, estimated_expenses, special_learning_opportunities, student_services } = college.data;
+
+const seoData = {
+  title: `${institution.name} - Social Work Programs | BSW Navigator`,
+  description: `Learn about social work programs at ${institution.name}. View tuition costs, student population, campus information, and application details.`,
+  keywords: `${institution.name}, social work program, BSW, tuition, admissions, ${institution.address.split(',').slice(-1)[0].trim()}`,
+  canonical: `https://bswdegree.org/colleges/${createSlug(institution.name)}/`,
+  ogType: 'article'
+};
+
+const isPublic = institution.type.includes('Public');
+const currentYear = '2024-2025';
+const expenses = estimated_expenses[currentYear];
+---
+
+<Layout seo={seoData}>
+  <Header currentPage="colleges" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="mb-8">
+      <nav class="flex items-center space-x-2 text-sm text-stone-600 mb-4">
+        <a href="/" class="hover:text-emerald-600">Home</a>
+        <span>/</span>
+        <a href="/colleges/" class="hover:text-emerald-600">Colleges</a>
+        <span>/</span>
+        <span class="text-stone-900">{institution.name}</span>
+      </nav>
+      
+      <div class="flex items-start justify-between">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold text-stone-900 tracking-tight">
+            {institution.name}
+          </h1>
+          <p class="mt-2 text-lg text-stone-600">{institution.address}</p>
+          <div class="mt-3 flex items-center space-x-4">
+            <span class={`px-3 py-1 text-sm font-medium rounded-full ${
+              isPublic 
+                ? 'bg-blue-100 text-blue-800' 
+                : 'bg-purple-100 text-purple-800'
+            }`}>
+              {institution.type}
+            </span>
+            <span class="text-sm text-stone-600">{institution.campus_setting}</span>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a 
+            href={general_information.apply_online_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors duration-200 text-center"
+          >
+            Apply Online
+          </a>
+          <a 
+            href={institution.website.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-emerald-600 text-emerald-600 px-6 py-2 rounded-lg font-medium hover:bg-emerald-50 transition-colors duration-200 text-center"
+          >
+            Visit Website
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- Key Statistics -->
+        <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+          <h2 class="text-xl font-bold text-stone-900 mb-4">Key Statistics</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-emerald-600">{formatNumber(institution.student_population.total)}</div>
+              <div class="text-sm text-stone-600">Total Students</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-emerald-600">{formatNumber(institution.student_population.undergraduate)}</div>
+              <div class="text-sm text-stone-600">Undergraduates</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-emerald-600">{institution.student_faculty_ratio}</div>
+              <div class="text-sm text-stone-600">Student-Faculty Ratio</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-emerald-600">{institution.campus_housing ? 'Yes' : 'No'}</div>
+              <div class="text-sm text-stone-600">Campus Housing</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuition & Costs -->
+        <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+          <h2 class="text-xl font-bold text-stone-900 mb-4">Tuition & Costs (2024-2025)</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Tuition -->
+            <div>
+              <h3 class="font-semibold text-stone-800 mb-3">Tuition & Fees</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-stone-600">In-State:</span>
+                  <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.in_state)}</span>
+                </div>
+                {expenses.tuition_and_fees.out_of_state !== expenses.tuition_and_fees.in_state && (
+                  <div class="flex justify-between">
+                    <span class="text-stone-600">Out-of-State:</span>
+                    <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.out_of_state)}</span>
+                  </div>
+                )}
+                <div class="flex justify-between">
+                  <span class="text-stone-600">Books & Supplies:</span>
+                  <span class="font-semibold">{formatCurrency(expenses.books_and_supplies)}</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Living Costs -->
+            <div>
+              <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
+              <div class="space-y-2">
+                {expenses.living_arrangement.on_campus && (
+                  <div class="flex justify-between">
+                    <span class="text-stone-600">On Campus:</span>
+                    <span class="font-semibold">{formatCurrency(expenses.living_arrangement.on_campus.food_and_housing)}</span>
+                  </div>
+                )}
+                <div class="flex justify-between">
+                  <span class="text-stone-600">Off Campus:</span>
+                  <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus.food_and_housing)}</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-600">With Family:</span>
+                  <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus_with_family.food_and_housing)}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Costs -->
+          <div class="mt-6 pt-4 border-t border-stone-200">
+            <h3 class="font-semibold text-stone-800 mb-3">Total Annual Costs</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {expenses.total_expenses.in_state_on_campus && (
+                <div class="text-center p-3 bg-stone-50 rounded-lg">
+                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_on_campus)}</div>
+                  <div class="text-sm text-stone-600">In-State (On Campus)</div>
+                </div>
+              )}
+              <div class="text-center p-3 bg-stone-50 rounded-lg">
+                <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_off_campus)}</div>
+                <div class="text-sm text-stone-600">In-State (Off Campus)</div>
+              </div>
+              {expenses.total_expenses.out_of_state_on_campus && (
+                <div class="text-center p-3 bg-stone-50 rounded-lg">
+                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.out_of_state_on_campus)}</div>
+                  <div class="text-sm text-stone-600">Out-of-State (On Campus)</div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Degrees Offered -->
+        <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+          <h2 class="text-xl font-bold text-stone-900 mb-4">Degrees & Awards Offered</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {institution.awards_offered.map((award) => (
+              <div class="flex items-center space-x-2">
+                <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-stone-700">{award}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Special Opportunities -->
+        {special_learning_opportunities.length > 0 && (
+          <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+            <h2 class="text-xl font-bold text-stone-900 mb-4">Special Learning Opportunities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {special_learning_opportunities.map((opportunity) => (
+                <div class="flex items-center space-x-2">
+                  <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-stone-700">{opportunity}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Student Services -->
+        {student_services.length > 0 && (
+          <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+            <h2 class="text-xl font-bold text-stone-900 mb-4">Student Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {student_services.map((service) => (
+                <div class="flex items-center space-x-2">
+                  <svg class="h-4 w-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-stone-700">{service}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        
+        <!-- Contact Information -->
+        <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+          <h3 class="font-bold text-stone-900 mb-4">Contact Information</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="text-sm font-medium text-stone-600">Phone</div>
+              <div class="text-stone-900">{institution.phone}</div>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-stone-600">Address</div>
+              <div class="text-stone-900">{institution.address}</div>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-stone-600">IPEDS ID</div>
+              <div class="text-stone-900">{institution.IPEDS_ID}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
+          <h3 class="font-bold text-stone-900 mb-4">Quick Links</h3>
+          <div class="space-y-2">
+            <a 
+              href={general_information.admissions_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block text-emerald-600 hover:text-emerald-700 text-sm"
+            >
+              Admissions Information →
+            </a>
+            <a 
+              href={general_information.financial_aid_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block text-emerald-600 hover:text-emerald-700 text-sm"
+            >
+              Financial Aid →
+            </a>
+            <a 
+              href={general_information.net_price_calculator_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block text-emerald-600 hover:text-emerald-700 text-sm"
+            >
+              Net Price Calculator →
+            </a>
+            <a 
+              href={general_information.disability_services_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block text-emerald-600 hover:text-emerald-700 text-sm"
+            >
+              Disability Services →
+            </a>
+          </div>
+        </div>
+
+        <!-- Federal Aid -->
+        <div class="bg-emerald-50 rounded-xl border border-emerald-200 p-6">
+          <h3 class="font-bold text-emerald-800 mb-3">Federal Financial Aid</h3>
+          <p class="text-sm text-emerald-700">{college.data.federal_aid}</p>
+        </div>
+
+        <!-- Back to Search -->
+        <div class="text-center">
+          <a 
+            href="/colleges/"
+            class="inline-flex items-center text-stone-600 hover:text-emerald-600 text-sm"
+          >
+            <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to All Colleges
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

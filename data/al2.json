@@ -1,0 +1,305 @@
+{
+    "search_criteria": {
+      "state": "Alabama",
+      "program": "Social Work",
+      "program_code": "44.0701",
+      "level": "93",
+      "total_results": 16,
+      "pages": 2
+    },
+    "schools": [
+      {
+        "id": "100830",
+        "name": "Auburn University at Montgomery",
+        "location": {
+          "address": "7440 East Drive, Montgomery, Alabama 36117-3596",
+          "city": "Montgomery",
+          "state": "Alabama",
+          "zip": "36117-3596"
+        },
+        "basic_info": {
+          "phone": "(334) 244-3000",
+          "website": "www.aum.edu/",
+          "type": "4-year, Public",
+          "campus_setting": "City: Midsize",
+          "campus_housing": "Yes",
+          "student_population": {
+            "total": 5189,
+            "undergraduate": 3407,
+            "graduate": 1782
+          },
+          "student_faculty_ratio": "15 to 1",
+          "ipeds_id": "100830",
+          "ope_id": "00831000"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "Less than one year certificate",
+            "Bachelor's degree",
+            "Postbaccalaureate certificate",
+            "Master's degree",
+            "Post-master's certificate",
+            "Doctor's degree - research/scholarship",
+            "Doctor's degree - professional practice"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees_in_state": 9700,
+            "tuition_and_fees_out_of_state": 20668,
+            "books_supplies": 1500,
+            "on_campus_total": 23113,
+            "off_campus_total": 28507,
+            "off_campus_family_total": 15745
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 99,
+            "pct_receiving_grants": 99,
+            "avg_grant_amount": 7496,
+            "pct_receiving_loans": 45,
+            "avg_loan_amount": 5188
+          },
+          "admissions": {
+            "application_fee": null,
+            "acceptance_rate": 93,
+            "enrolled_rate": 20,
+            "test_scores": {
+              "sat_reading_writing": {
+                "25th_percentile": 500,
+                "50th_percentile": 540,
+                "75th_percentile": 595
+              },
+              "sat_math": {
+                "25th_percentile": 500,
+                "50th_percentile": 560,
+                "75th_percentile": 615
+              },
+              "act_composite": {
+                "25th_percentile": 18,
+                "50th_percentile": 21,
+                "75th_percentile": 24
+              }
+            }
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 36,
+            "transfer_out_rate": 29,
+            "four_year_rate": 14,
+            "six_year_rate": 36
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 15,
+            "master_completions_2023_24": 0,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Southern Association of Colleges and Schools, Commission on Colleges",
+            "programmatic": [
+              "American Speech-Language-Hearing Association, Council on Academic Accreditation in Audiology and Speech-Language Pathology",
+              "Commission on Collegiate Nursing Education"
+            ]
+          },
+          "characteristics": [
+            "Master's Colleges & Universities: Larger Programs"
+          ]
+        }
+      },
+      {
+        "id": "449348",
+        "name": "Huntsville Bible College",
+        "location": {
+          "address": "906 Oakwood Ave, Huntsville, Alabama 35811",
+          "city": "Huntsville",
+          "state": "Alabama",
+          "zip": "35811"
+        },
+        "basic_info": {
+          "phone": "(256) 469-7536",
+          "website": "www.huntsvillebiblecollege.org/",
+          "type": "4-year, primarily associate's, Private not-for-profit",
+          "campus_setting": "City: Midsize",
+          "campus_housing": "No",
+          "student_population": {
+            "total": 121,
+            "undergraduate": 82,
+            "graduate": 39
+          },
+          "student_faculty_ratio": "7 to 1",
+          "ipeds_id": "449348",
+          "ope_id": "03894300"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "One but less than two years certificate",
+            "Associate's degree",
+            "Bachelor's degree",
+            "Master's degree",
+            "Doctor's degree - research/scholarship"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees": 4730,
+            "books_supplies": 550,
+            "off_campus_total": 17595,
+            "off_campus_family_total": 8805
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 100,
+            "pct_receiving_grants": 100,
+            "avg_grant_amount": null,
+            "pct_receiving_loans": 100,
+            "avg_loan_amount": null
+          },
+          "admissions": {
+            "application_fee": 35,
+            "acceptance_rate": null,
+            "enrolled_rate": null,
+            "test_scores": {
+              "sat_reading_writing": {
+                "25th_percentile": null,
+                "50th_percentile": null,
+                "75th_percentile": null
+              },
+              "sat_math": {
+                "25th_percentile": null,
+                "50th_percentile": null,
+                "75th_percentile": null
+              },
+              "act_composite": {
+                "25th_percentile": null,
+                "50th_percentile": null,
+                "75th_percentile": null
+              }
+            }
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 0,
+            "transfer_out_rate": null,
+            "four_year_rate": null,
+            "six_year_rate": null
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 0,
+            "master_completions_2023_24": 0,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Association for Biblical Higher Education, Commission on Accreditation",
+            "programmatic": []
+          },
+          "characteristics": [
+            "Special Focus Four-Year: Faith-Related Institutions",
+            "Interdenominational"
+          ]
+        }
+      },
+      {
+        "id": "101480",
+        "name": "Jacksonville State University",
+        "location": {
+          "address": "700 Pelham Road North, Jacksonville, Alabama 36265",
+          "city": "Jacksonville",
+          "state": "Alabama",
+          "zip": "36265"
+        },
+        "basic_info": {
+          "phone": "(256) 782-5781",
+          "website": "www.jsu.edu/",
+          "type": "4-year, Public",
+          "campus_setting": "Suburb: Small",
+          "campus_housing": "Yes",
+          "student_population": {
+            "total": 9672,
+            "undergraduate": 8378,
+            "graduate": 1294
+          },
+          "student_faculty_ratio": "19 to 1",
+          "ipeds_id": "101480",
+          "ope_id": "00102000"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "Less than one year certificate",
+            "Bachelor's degree",
+            "Postbaccalaureate certificate",
+            "Master's degree",
+            "Post-master's certificate",
+            "Doctor's degree - research/scholarship",
+            "Doctor's degree - professional practice"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees_in_state": 12894,
+            "tuition_and_fees_out_of_state": 23334,
+            "books_supplies": 970,
+            "on_campus_total": 27240,
+            "off_campus_total": 31098,
+            "off_campus_family_total": 19344
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 100,
+            "pct_receiving_grants": 100,
+            "avg_grant_amount": 8826,
+            "pct_receiving_loans": 60,
+            "avg_loan_amount": 8560
+          },
+          "admissions": {
+            "application_fee": 35,
+            "acceptance_rate": 76,
+            "enrolled_rate": 20,
+            "test_scores": {
+              "sat_reading_writing": {
+                "25th_percentile": 490,
+                "50th_percentile": 540,
+                "75th_percentile": 620
+              },
+              "sat_math": {
+                "25th_percentile": 480,
+                "50th_percentile": 550,
+                "75th_percentile": 640
+              },
+              "act_composite": {
+                "25th_percentile": 17,
+                "50th_percentile": 20,
+                "75th_percentile": 24
+              }
+            }
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 51,
+            "transfer_out_rate": 25,
+            "four_year_rate": 32,
+            "six_year_rate": 51
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 48,
+            "master_completions_2023_24": 41,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Southern Association of Colleges and Schools, Commission on Colleges",
+            "programmatic": [
+              "Academy of Nutrition and Dietetics, Accreditation Council for Education in Nutrition and Dietetics",
+              "Commission on Collegiate Nursing Education"
+            ]
+          },
+          "characteristics": [
+            "Master's Colleges & Universities: Larger Programs"
+          ]
+        }
+      }
+    ],
+    "metadata": {
+      "scraped_date": "2025-07-10",
+      "data_source": "NCES College Navigator",
+      "search_url": "https://nces.ed.gov/collegenavigator/?s=AL&p=44.0701&l=93",
+      "notes": [
+        "Data includes schools 4-6 from the 16 schools offering social work programs in Alabama",
+        "All tuition and fee data is for 2024-2025 academic year",
+        "Social work program completion data is for 2023-2024 academic year",
+        "IPEDS ID and OPE ID are federal identification numbers",
+        "Level 93 refers to advanced/graduate level social work programs",
+        "Auburn University at Montgomery has the lowest graduation rate at 36%",
+        "Huntsville Bible College is a faith-based institution with very small enrollment (121 total)",
+        "Jacksonville State University has the largest social work program among these three schools",
+        "Auburn University at Montgomery has the lowest tuition among these schools",
+        "Huntsville Bible College has open admission policy and all part-time faculty"
+      ]
+    }
+  }

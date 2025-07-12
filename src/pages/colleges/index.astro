@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const colleges = await getCollection('colleges');
+
+const seoData = {
+  title: 'Social Work Colleges & Universities | BSW Navigator',
+  description: 'Find accredited social work programs at colleges and universities across the United States. Compare tuition, student populations, and program offerings.',
+  keywords: 'social work colleges, BSW programs, social work universities, accredited programs, social work education',
+  canonical: 'https://bswdegree.org/colleges/',
+  ogType: 'website'
+};
+
+---
+
+<Layout seo={seoData}>
+  <Header currentPage="colleges" />
+  
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">
+        Social Work <span class="text-emerald-700">Colleges & Universities</span>
+      </h1>
+      <p class="mt-4 max-w-3xl mx-auto text-lg text-stone-600">
+        Explore accredited social work programs at colleges and universities across the United States. Find the right fit for your education and career goals.
+      </p>
+    </div>
+
+    <div class="mb-8">
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="flex-1 max-w-md">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search colleges..." 
+            class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          >
+        </div>
+        <div class="flex gap-2">
+          <select id="type-filter" class="px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            <option value="">All Types</option>
+            <option value="Public">Public</option>
+            <option value="Private">Private</option>
+          </select>
+          <select id="size-filter" class="px-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+            <option value="">All Sizes</option>
+            <option value="small">Small (&lt; 5,000)</option>
+            <option value="medium">Medium (5,000-15,000)</option>
+            <option value="large">Large (&gt; 15,000)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <p class="text-stone-600">
+        Showing <span id="results-count">{colleges.length}</span> colleges
+      </p>
+    </div>
+
+    <div id="colleges-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {colleges.map((college) => {
+        const { id, institution, estimated_expenses } = college.data;
+        const isPublic = institution.type.includes('Public');
+        const studentSize = institution.student_population.total < 5000 ? 'small' : 
+                           institution.student_population.total < 15000 ? 'medium' : 'large';
+        
+        return (
+          <div 
+            class="college-card bg-white rounded-xl shadow-lg border border-stone-200 hover:shadow-xl transition-shadow duration-300"
+            data-name={institution.name.toLowerCase()}
+            data-type={isPublic ? 'Public' : 'Private'}
+            data-size={studentSize}
+          >
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-lg font-semibold text-stone-900 line-clamp-2">
+                  {institution.name}
+                </h3>
+                <span class={`px-2 py-1 text-xs font-medium rounded-full ${
+                  isPublic 
+                    ? 'bg-blue-100 text-blue-800' 
+                    : 'bg-purple-100 text-purple-800'
+                }`}>
+                  {isPublic ? 'Public' : 'Private'}
+                </span>
+              </div>
+              
+              <div class="space-y-2 text-sm text-stone-600 mb-4">
+                <p>
+                  <span class="font-medium">Location:</span> {institution.address.split(',').slice(-2).join(',').trim()}
+                </p>
+                <p>
+                  <span class="font-medium">Students:</span> {institution.student_population.total.toLocaleString()}
+                </p>
+                <p>
+                  <span class="font-medium">Setting:</span> {institution.campus_setting}
+                </p>
+                <p>
+                  <span class="font-medium">Student-Faculty Ratio:</span> {institution.student_faculty_ratio}
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="font-medium text-stone-700">Tuition (In-State):</span>
+                  <span class="font-semibold text-emerald-700">
+                    ${estimated_expenses['2024-2025'].tuition_and_fees.in_state.toLocaleString()}
+                  </span>
+                </div>
+                {!isPublic || estimated_expenses['2024-2025'].tuition_and_fees.out_of_state !== estimated_expenses['2024-2025'].tuition_and_fees.in_state ? (
+                  <div class="flex justify-between items-center text-sm mt-1">
+                    <span class="font-medium text-stone-700">Tuition (Out-of-State):</span>
+                    <span class="font-semibold text-stone-600">
+                      ${estimated_expenses['2024-2025'].tuition_and_fees.out_of_state.toLocaleString()}
+                    </span>
+                  </div>
+                ) : null}
+              </div>
+
+              <a 
+                href={`/colleges/${id}/`}
+                class="w-full bg-emerald-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-emerald-700 transition-colors duration-200 inline-block text-center"
+              >
+                View Details
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <div id="no-results" class="hidden text-center py-12">
+      <div class="text-stone-400">
+        <svg class="mx-auto h-12 w-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
+        </svg>
+        <h3 class="text-lg font-medium text-stone-900 mb-2">No colleges found</h3>
+        <p class="text-stone-600">Try adjusting your search criteria.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const typeFilter = document.getElementById('type-filter') as HTMLSelectElement;
+    const sizeFilter = document.getElementById('size-filter') as HTMLSelectElement;
+    const collegesGrid = document.getElementById('colleges-grid') as HTMLElement;
+    const noResults = document.getElementById('no-results') as HTMLElement;
+    const resultsCount = document.getElementById('results-count') as HTMLElement;
+    const collegeCards = document.querySelectorAll('.college-card') as NodeListOf<HTMLElement>;
+
+    function filterColleges() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const typeValue = typeFilter.value;
+      const sizeValue = sizeFilter.value;
+      
+      let visibleCount = 0;
+
+      collegeCards.forEach(card => {
+        const name = card.dataset.name || '';
+        const type = card.dataset.type || '';
+        const size = card.dataset.size || '';
+
+        const matchesSearch = !searchTerm || name.includes(searchTerm);
+        const matchesType = !typeValue || type === typeValue;
+        const matchesSize = !sizeValue || size === sizeValue;
+
+        if (matchesSearch && matchesType && matchesSize) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      resultsCount.textContent = visibleCount.toString();
+      
+      if (visibleCount === 0) {
+        collegesGrid.style.display = 'none';
+        noResults.classList.remove('hidden');
+      } else {
+        collegesGrid.style.display = 'grid';
+        noResults.classList.add('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', filterColleges);
+    typeFilter.addEventListener('change', filterColleges);
+    sizeFilter.addEventListener('change', filterColleges);
+  });
+</script>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

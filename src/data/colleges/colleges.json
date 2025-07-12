@@ -1,0 +1,2743 @@
+[
+  {
+    "id": "university-of-alabama-at-birmingham",
+    "institution": {
+      "name": "University of Alabama at Birmingham",
+      "address": "Administration Bldg Suite 1070, Birmingham, Alabama 35294-0110",
+      "phone": "(205) 934-4011",
+      "website": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/",
+      "type": "4-year, Public",
+      "awards_offered": [
+        "Less than one year certificate",
+        "One but less than two years certificate",
+        "Bachelor's degree",
+        "Postbaccalaureate certificate",
+        "Master's degree",
+        "Post-master's certificate",
+        "Doctor's degree - research/scholarship",
+        "Doctor's degree - professional practice"
+      ],
+      "campus_setting": "City: Midsize",
+      "campus_housing": true,
+      "student_population": {
+        "total": 21160,
+        "undergraduate": 12382,
+        "graduate": 8778
+      },
+      "student_faculty_ratio": "18 to 1",
+      "IPEDS_ID": "100663",
+      "OPE_ID": "00105200"
+    },
+    "general_information": {
+      "admissions_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/admissions/",
+      "apply_online_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/admissions/apply",
+      "financial_aid_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/cost-aid/",
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?sec=true&location=tcc.ruffalonl.com/University%20of%20Alabama%20at%20Birmingham/Freshman-Students",
+      "disability_services_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/students/disability/",
+      "mission_statement_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.uab.edu/plan/the-plan/mission-vision-shared-values"
+    },
+    "special_learning_opportunities": [
+      "Credit for life experiences",
+      "Distance education – undergraduate programs offered",
+      "Distance education – graduate programs offered",
+      "ROTC (Army, Air Force)",
+      "Study abroad",
+      "Undergraduate research (co-curricula)",
+      "Teacher certification (below the postsecondary level)"
+    ],
+    "student_services": [
+      "Academic/career counseling service",
+      "Employment services for students",
+      "Placement services for completers"
+    ],
+    "undergraduate_disability_services_percentage_fall_2023": 6.66,
+    "high_school_students_enrolled_2023_2024": 116,
+    "carnegie_classification": "Doctoral Universities: Very High Research Activity",
+    "religious_affiliation": "Not applicable",
+    "other_characteristics": [],
+    "federal_aid": "Eligible students may receive Pell Grants and other federal aid (e.g. Direct Loans).",
+    "for_credit_instruction_programs_offered": [
+      "Academic",
+      "Continuing professional"
+    ],
+    "noncredit_education_offered": [
+      "Developmental Education",
+      "English as a Second Language",
+      "Continuing Professional Education"
+    ],
+    "credit_accepted": [
+      "Advanced placement (AP) credits"
+    ],
+    "faculty_and_graduate_assistants_fall_2023": {
+      "faculty": {
+        "full_time_total": 2756,
+        "part_time_total": 450,
+        "full_time_instructional": 2756,
+        "part_time_instructional": 450,
+        "full_time_research_public_service": 0,
+        "part_time_research_public_service": 0
+      },
+      "graduate_assistants": {
+        "full_time": null,
+        "part_time": 541
+      }
+    },
+    "estimated_expenses": {
+      "2024-2025": {
+        "tuition_and_fees": {
+          "in_state": 9098,
+          "out_of_state": 22562,
+          "percent_change": 3
+        },
+        "books_and_supplies": 1200,
+        "living_arrangement": {
+          "on_campus": {
+            "food_and_housing": 14170,
+            "other_expenses": 5781
+          },
+          "off_campus": {
+            "food_and_housing": 14840,
+            "other_expenses": 6031
+          },
+          "off_campus_with_family": {
+            "food_and_housing": 6290,
+            "other_expenses": 6031,
+            "percent_change_other_expenses": 0.4
+          }
+        },
+        "total_expenses": {
+          "in_state_on_campus": 30249,
+          "in_state_off_campus": 31169,
+          "in_state_off_campus_with_family": 16329,
+          "out_of_state_on_campus": 43713,
+          "out_of_state_off_campus": 44633,
+          "out_of_state_off_campus_with_family": 29793
+        },
+        "percent_change_total_expenses_2023_2024_to_2024_2025": {
+          "in_state_on_campus": 3,
+          "in_state_off_campus": 1.8,
+          "in_state_off_campus_with_family": 1.8,
+          "out_of_state_on_campus": 3.1,
+          "out_of_state_off_campus": 2.2,
+          "out_of_state_off_campus_with_family": 2.5
+        }
+      }
+    },
+    "multiyear_tuition_calculator": {
+      "graduate_student_average_2024_2025": {
+        "in_state_tuition": 8640,
+        "in_state_fees": 0,
+        "out_of_state_tuition": 21168,
+        "out_of_state_fees": 0
+      }
+    },
+    "alternative_tuition_plans_and_promise_program": {
+      "tuition_payment_plan": true,
+      "tuition_guarantee_plan": false,
+      "prepaid_tuition_plan": false,
+      "other_alternative_tuition_plan": false,
+      "participates_in_promise_program": false
+    },
+    "undergraduate_financial_aid_2022_2023": {
+      "beginning_undergraduate_students": {
+        "total_awarded": 2107,
+        "percent_awarded": 97,
+        "grant_or_scholarship": {
+          "number": 2059,
+          "percent": 95,
+          "total_amount": 23333975,
+          "average_amount": 11333
+        },
+        "federal_grants": {
+          "number": 891,
+          "percent": 41,
+          "total_amount": 5581018,
+          "average_amount": 6264
+        },
+        "pell_grants": {
+          "number": 891,
+          "percent": 41,
+          "total_amount": 5335268,
+          "average_amount": 5988
+        },
+        "other_federal_grants": {
+          "number": 177,
+          "percent": 8,
+          "total_amount": 245750,
+          "average_amount": 1388
+        },
+        "state_local_grants": {
+          "number": 95,
+          "percent": 4,
+          "total_amount": 78369,
+          "average_amount": 825
+        },
+        "institutional_grants": {
+          "number": 1915,
+          "percent": 88,
+          "total_amount": 17674588,
+          "average_amount": 9230
+        },
+        "student_loan_aid": {
+          "number": 1106,
+          "percent": 51,
+          "total_amount": 7271857,
+          "average_amount": 6575
+        },
+        "federal_student_loans": {
+          "number": 1087,
+          "percent": 50,
+          "total_amount": 5565993,
+          "average_amount": 5121
+        },
+        "other_student_loans": {
+          "number": 124,
+          "percent": 6,
+          "total_amount": 1705864,
+          "average_amount": 13757
+        }
+      },
+      "all_undergraduate_students": {
+        "degree_seeking": {
+          "grant_or_scholarship": {
+            "number": 9645,
+            "percent": 75,
+            "total_amount": 101800616,
+            "average_amount": 10555
+          },
+          "pell_grants": {
+            "number": 4324,
+            "percent": 34,
+            "total_amount": 26529097,
+            "average_amount": 6135
+          },
+          "federal_student_loans": {
+            "number": 5339,
+            "percent": 42,
+            "total_amount": 36242972,
+            "average_amount": 6788
+          }
+        },
+        "non_degree_non_certificate_seeking": {
+          "grant_or_scholarship": {
+            "number": 51,
+            "percent": 20,
+            "total_amount": 141666,
+            "average_amount": 2778
+          }
+        }
+      }
+    },
+    "net_price": {
+      "average_net_price": {
+        "2020-2021": 16990,
+        "2021-2022": 16834,
+        "2022-2023": 17413
+      },
+      "average_net_price_by_income_2022_2023": {
+        "0-30000": 14816,
+        "30001-48000": 15876,
+        "48001-75000": 18310,
+        "75001-110000": 20913,
+        "110001+": 21326
+      },
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?sec=true&location=tcc.ruffalonl.com/University%20of%20Alabama%20at%20Birmingham/Freshman-Students"
+    },
+    "enrollment_fall_2023": {
+      "total": 21160,
+      "undergraduate": 12382,
+      "undergraduate_transfer_in": 1060,
+      "graduate": 8778,
+      "undergraduate_attendance_status": {
+        "full_time": 79,
+        "part_time": 21
+      },
+      "undergraduate_gender": {
+        "male": 37,
+        "female": 63
+      },
+      "undergraduate_race_ethnicity": {
+        "American Indian or Alaska Native": 0,
+        "Asian": 9,
+        "Black or African American": 27,
+        "Hispanic/Latino": 8,
+        "Native Hawaiian or other Pacific Islander": 0,
+        "White": 48,
+        "Two or more races": 5,
+        "Race/ethnicity unknown": 1,
+        "US Nonresident": 2
+      },
+      "undergraduate_age": {
+        "24_and_under": 83,
+        "25_and_over": 17,
+        "age_unknown": 0
+      },
+      "undergraduate_residence": {
+        "in_state": 82,
+        "out_of_state": 16,
+        "foreign_countries": 1,
+        "unknown": 0
+      },
+      "undergraduate_distance_education_status": {
+        "exclusively_distance": 19,
+        "some_distance": 57,
+        "no_distance": 24
+      },
+      "graduate_attendance_status": {
+        "full_time": 57,
+        "part_time": 43
+      },
+      "graduate_distance_education_status": {
+        "exclusively_distance": 40,
+        "some_distance": 20,
+        "no_distance": 41
+      }
+    },
+    "admissions_fall_2023": {
+      "application_fee": 40,
+      "applicants": {
+        "total": 10919,
+        "male": 3973,
+        "female": 6918
+      },
+      "percent_admitted": {
+        "total": 88,
+        "male": 84,
+        "female": 91
+      },
+      "percent_admitted_who_enrolled": {
+        "total": 22,
+        "male": 21,
+        "female": 22
+      },
+      "admissions_considerations": {
+        "secondary_school_GPA": "Required",
+        "secondary_school_rank": "Not considered",
+        "secondary_school_record": "Required",
+        "college_preparatory_completion": "Required",
+        "recommendations": "Not considered",
+        "formal_demonstration_of_competencies": "Not considered",
+        "work_experience": "Not considered",
+        "personal_statement": "Not considered",
+        "legacy_status": "Not considered"
+      },
+      "test_scores_requirements": {
+        "SAT_ACT": "Not required, but considered (Test Optional)",
+        "other_tests": "Not considered",
+        "english_proficiency_test": "Not considered"
+      },
+      "students_submitting_scores": {
+        "SAT": {
+          "number": 112,
+          "percent": 5
+        },
+        "ACT": {
+          "number": 1021,
+          "percent": 49
+        }
+      },
+      "test_score_percentiles": {
+        "SAT_EBRW": {
+          "25th": 570,
+          "50th": 640,
+          "75th": 700
+        },
+        "SAT_Math": {
+          "25th": 560,
+          "50th": 620,
+          "75th": 700
+        },
+        "ACT_Composite": {
+          "25th": 22,
+          "50th": 26,
+          "75th": 30
+        },
+        "ACT_English": {
+          "25th": 22,
+          "50th": 26,
+          "75th": 33
+        },
+        "ACT_Math": {
+          "25th": 20,
+          "50th": 24,
+          "75th": 27
+        }
+      }
+    },
+    "retention_and_graduation_rates": {
+      "first_to_second_year_retention": {
+        "full_time": 82,
+        "part_time": 47
+      },
+      "overall_graduation_and_transfer_out": {
+        "graduation_rate": 63,
+        "transfer_out_rate": 20,
+        "cohort_year": "Fall 2017"
+      },
+      "bachelors_degree_graduation_rates": {
+        "began_fall_2015": {
+          "4_year": 42,
+          "6_year": 62,
+          "8_year": 65
+        },
+        "began_fall_2017": {
+          "4_year": 43,
+          "6_year": 62
+        }
+      },
+      "6_year_graduation_rate_by_gender": {
+        "male": 57,
+        "female": 66
+      },
+      "6_year_graduation_rate_by_race_ethnicity": {
+        "American Indian or Alaska Native": 67,
+        "Asian": 87,
+        "Black or African American": 55,
+        "Hispanic/Latino": 47,
+        "Native Hawaiian or other Pacific Islander": null,
+        "White": 63,
+        "Two or more races": 55,
+        "Race/ethnicity unknown": 56,
+        "US Nonresident": 82
+      }
+    },
+    "outcome_measures_entering_2015_16": {
+      "full_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 64,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 20
+        },
+        "Pell": {
+          "bachelors_degree": 53,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 25
+        },
+        "non_Pell": {
+          "bachelors_degree": 70,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 18
+        }
+      },
+      "part_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 22,
+          "enrolled_same_institution": 3,
+          "enrolled_different_institution": 36
+        },
+        "Pell": {
+          "bachelors_degree": 44,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 22
+        },
+        "non_Pell": {
+          "bachelors_degree": 15,
+          "enrolled_same_institution": 4,
+          "enrolled_different_institution": 41
+        }
+      },
+      "full_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 62,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 18
+        },
+        "Pell": {
+          "bachelors_degree": 60,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 17
+        },
+        "non_Pell": {
+          "bachelors_degree": 64,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 18
+        }
+      },
+      "part_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 36,
+          "enrolled_same_institution": 2,
+          "enrolled_different_institution": 29
+        },
+        "Pell": {
+          "bachelors_degree": 40,
+          "enrolled_same_institution": 2,
+          "enrolled_different_institution": 30
+        },
+        "non_Pell": {
+          "bachelors_degree": 35,
+          "enrolled_same_institution": 2,
+          "enrolled_different_institution": 28
+        }
+      }
+    },
+    "completions_2023_2024": {
+      "Area, Ethnic, Cultural, Gender, and Group Studies": {
+        "African-American/Black Studies": {
+          "bachelor": 2
+        }
+      },
+      "Biological and Biomedical Sciences": {
+        "Anatomy": {
+          "master": 3
+        },
+        "Bioinformatics": {
+          "bachelor": 6
+        },
+        "Biology/Biological Sciences, General": {
+          "postgraduate_certificate": 1,
+          "bachelor": 101,
+          "master": 11,
+          "doctor": 3
+        },
+        "Biomedical Sciences, General": {
+          "bachelor": 134,
+          "master": 122
+        },
+        "Biostatistics": {
+          "master": 2,
+          "doctor": 2
+        },
+        "Biotechnology": {
+          "postgraduate_certificate": 8,
+          "master": 22
+        },
+        "Cell/Cellular Biology and Histology": {
+          "doctor": 5
+        },
+        "Epidemiology": {
+          "doctor": 0
+        },
+        "Exercise Physiology and Kinesiology": {
+          "postgraduate_certificate": 3
+        },
+        "Genetics, General": {
+          "bachelor": 26
+        },
+        "Human/Medical Genetics": {
+          "doctor": 3
+        },
+        "Immunology": {
+          "bachelor": 19
+        },
+        "Microbiology, General": {
+          "doctor": 10
+        },
+        "Molecular Biochemistry": {
+          "doctor": 9
+        },
+        "Molecular Physiology": {
+          "doctor": 7
+        },
+        "Neurobiology and Anatomy": {
+          "doctor": 9
+        },
+        "Neuroscience": {
+          "bachelor": 110
+        },
+        "Oncology and Cancer Biology": {
+          "bachelor": 8
+        },
+        "Pathology/Experimental Pathology": {
+          "doctor": 5
+        },
+        "Pharmacology and Toxicology": {
+          "doctor": 0
+        },
+        "Vision Science/Physiological Optics": {
+          "master": 1,
+          "doctor": 5
+        }
+      },
+      "Business, Management, Marketing, and Related Support Services": {
+        "Accounting": {
+          "undergraduate_certificate": 15,
+          "bachelor": 125,
+          "master": 69
+        },
+        "Business Administration and Management, General": {
+          "postgraduate_certificate": 3,
+          "bachelor": 78,
+          "master": 384
+        },
+        "Business Administration, Management and Operations, Other": {
+          "bachelor": 56
+        },
+        "Business/Managerial Economics": {
+          "bachelor": 9
+        },
+        "Digital Marketing": {
+          "postgraduate_certificate": 2
+        },
+        "Entrepreneurship/Entrepreneurial Studies": {
+          "bachelor": 9
+        },
+        "Finance, General": {
+          "bachelor": 90
+        },
+        "Human Resources Management/Personnel Administration, General": {
+          "bachelor": 44
+        },
+        "Management Information Systems, General": {
+          "undergraduate_certificate": 12,
+          "postgraduate_certificate": 31,
+          "bachelor": 56,
+          "master": 47
+        },
+        "Marketing/Marketing Management, General": {
+          "undergraduate_certificate": 0,
+          "bachelor": 96
+        },
+        "Non-Profit/Public/Organizational Management": {
+          "undergraduate_certificate": 2
+        },
+        "Organizational Leadership": {
+          "postgraduate_certificate": 15
+        },
+        "Selling Skills and Sales Operations": {
+          "undergraduate_certificate": 28
+        }
+      },
+      "Communication, Journalism, and Related Programs": {
+        "Speech Communication and Rhetoric": {
+          "bachelor": 79,
+          "master": 11
+        },
+        "Technical and Scientific Communication": {
+          "postgraduate_certificate": 8
+        }
+      },
+      "Computer and Information Sciences and Support Services": {
+        "Computer and Information Sciences, General": {
+          "bachelor": 86,
+          "master": 121,
+          "doctor": 2
+        },
+        "Computer and Information Systems Security/Auditing/Information Assurance": {
+          "postgraduate_certificate": 1,
+          "master": 32
+        },
+        "Information Science/Studies": {
+          "master": 77
+        }
+      },
+      "Education": {
+        "Art Teacher Education": {
+          "master": 6
+        },
+        "Counselor Education/School Counseling and Guidance Services": {
+          "postgraduate_certificate": 5,
+          "master": 33
+        },
+        "Curriculum and Instruction": {
+          "master": 15
+        },
+        "Early Childhood Education and Teaching": {
+          "bachelor": 16,
+          "master": 5,
+          "doctor": 4
+        },
+        "Education, General": {
+          "postgraduate_certificate": 9,
+          "master": 2
+        },
+        "Educational Assessment, Testing, and Measurement": {
+          "master": 26
+        },
+        "Educational Leadership and Administration, General": {
+          "postgraduate_certificate": 3,
+          "master": 6,
+          "doctor": 2
+        },
+        "Elementary Education and Teaching": {
+          "bachelor": 39,
+          "master": 8
+        },
+        "Health Teacher Education": {
+          "postgraduate_certificate": 11
+        },
+        "Higher Education/Higher Education Administration": {
+          "postgraduate_certificate": 17,
+          "master": 8
+        },
+        "Physical Education Teaching and Coaching": {
+          "bachelor": 127,
+          "master": 13
+        },
+        "Reading Teacher Education": {
+          "master": 2
+        },
+        "Secondary Education and Teaching": {
+          "bachelor": 4,
+          "master": 21
+        },
+        "Special Education and Teaching, General": {
+          "postgraduate_certificate": 1,
+          "master": 12
+        },
+        "Teaching English as a Second or Foreign Language/ESL Language Instructor": {
+          "postgraduate_certificate": 14,
+          "master": 28
+        }
+      },
+      "Engineering": {
+        "Bioengineering and Biomedical Engineering": {
+          "bachelor": 51,
+          "master": 4,
+          "doctor": 7
+        },
+        "Civil Engineering, General": {
+          "bachelor": 37,
+          "master": 12,
+          "doctor": 2
+        },
+        "Computer Engineering, General": {
+          "doctor": 4
+        },
+        "Construction Engineering": {
+          "postgraduate_certificate": 0
+        },
+        "Electrical and Computer Engineering": {
+          "master": 17
+        },
+        "Electrical and Electronics Engineering": {
+          "bachelor": 37
+        },
+        "Engineering, General": {
+          "bachelor": 2,
+          "master": 166
+        },
+        "Engineering, Other": {
+          "master": 10,
+          "doctor": 1
+        },
+        "Materials Engineering": {
+          "bachelor": 14,
+          "master": 5,
+          "doctor": 2
+        },
+        "Mechanical Engineering": {
+          "bachelor": 35,
+          "master": 11
+        }
+      },
+      "English Language and Literature/Letters": {
+        "English Language and Literature, General": {
+          "bachelor": 42,
+          "master": 8
+        }
+      },
+      "Foreign Languages, Literatures, and Linguistics": {
+        "Foreign Languages and Literatures, General": {
+          "bachelor": 14
+        },
+        "Spanish Language and Literature": {
+          "undergraduate_certificate": 1
+        }
+      },
+      "Health Professions and Related Programs": {
+        "Behavioral Aspects of Health": {
+          "doctor": 0
+        },
+        "Clinical Laboratory Science/Medical Technology/Technologist": {
+          "master": 22
+        },
+        "Clinical Nutrition/Nutritionist": {
+          "postgraduate_certificate": 14,
+          "master": 40
+        },
+        "Clinical/Medical Laboratory Science and Allied Professions, Other": {
+          "master": 0
+        },
+        "Clinical/Medical Social Work": {
+          "master": 35
+        },
+        "Dental Assisting/Assistant": {
+          "undergraduate_certificate": 10
+        },
+        "Dental Clinical Sciences, General": {
+          "master": 16
+        },
+        "Dentistry": {
+          "doctor": 79
+        },
+        "Environmental Health": {
+          "doctor": 2
+        },
+        "Genetic Counseling/Counselor": {
+          "master": 8
+        },
+        "Health and Medical Administrative Services, Other": {
+          "postgraduate_certificate": 5,
+          "master": 32
+        },
+        "Health and Wellness, General": {
+          "postgraduate_certificate": 11,
+          "bachelor": 12,
+          "master": 11
+        },
+        "Health/Health Care Administration/Management": {
+          "postgraduate_certificate": 2,
+          "bachelor": 93,
+          "master": 63,
+          "doctor": 19
+        },
+        "Health/Medical Physics": {
+          "master": 4
+        },
+        "Medicine": {
+          "doctor": 168
+        },
+        "Mental Health Counseling/Counselor": {
+          "undergraduate_certificate": 23,
+          "postgraduate_certificate": 0
+        },
+        "Nuclear Medical Technology/Technologist": {
+          "master": 3
+        },
+        "Nurse Anesthetist": {
+          "master": 0
+        },
+        "Nursing Practice": {
+          "doctor": 167
+        },
+        "Nursing Science": {
+          "doctor": 10
+        },
+        "Occupational Therapy/Therapist": {
+          "master": 61,
+          "doctor": 23
+        },
+        "Optometry": {
+          "doctor": 40
+        },
+        "Patient Safety and Healthcare Quality": {
+          "postgraduate_certificate": 50,
+          "master": 25
+        },
+        "Physical Therapy/Therapist": {
+          "doctor": 51
+        },
+        "Physician Assistant": {
+          "master": 68
+        },
+        "Public Health, General": {
+          "postgraduate_certificate": 25,
+          "bachelor": 109,
+          "master": 248,
+          "doctor": 1
+        },
+        "Registered Nursing/Registered Nurse": {
+          "bachelor": 363,
+          "master": 588
+        },
+        "Rehabilitation and Therapeutic Professions, Other": {
+          "postgraduate_certificate": 25,
+          "doctor": 4
+        }
+      },
+      "History": {
+        "History, General": {
+          "bachelor": 38,
+          "master": 4
+        }
+      },
+      "Homeland Security, Law Enforcement, Firefighting and Related Protective Services": {
+        "Corrections and Criminal Justice, Other": {
+          "bachelor": 87,
+          "master": 7
+        },
+        "Cyber/Computer Forensics and Counterterrorism": {
+          "bachelor": 17
+        },
+        "Forensic Science and Technology": {
+          "master": 12
+        }
+      },
+      "Liberal Arts and Sciences, General Studies and Humanities": {
+        "General Studies": {
+          "bachelor": 84
+        },
+        "Liberal Arts and Sciences, General Studies and Humanities, Other": {
+          "bachelor": 13
+        }
+      },
+      "Mathematics and Statistics": {
+        "Applied Mathematics, General": {
+          "doctor": 4
+        },
+        "Mathematics, General": {
+          "bachelor": 14,
+          "master": 12
+        },
+        "Statistics, Other": {
+          "postgraduate_certificate": 2
+        }
+      },
+      "Multi/Interdisciplinary Studies": {
+        "Intercultural/Multicultural and Diversity Studies": {
+          "doctor": 4
+        },
+        "Multi-/Interdisciplinary Studies, Other": {
+          "postgraduate_certificate": 8,
+          "master": 16
+        },
+        "Nutrition Sciences": {
+          "doctor": 7
+        },
+        "Science, Technology and Society": {
+          "postgraduate_certificate": 2
+        },
+        "Systems Science and Theory": {
+          "postgraduate_certificate": 0,
+          "master": 8
+        }
+      },
+      "Parks, Recreation, Leisure, Fitness, and Kinesiology": {
+        "Sports, Kinesiology, and Physical Education/Fitness, Other": {
+          "doctor": 9
+        }
+      },
+      "Philosophy and Religious Studies": {
+        "Philosophy": {
+          "bachelor": 12
+        }
+      },
+      "Physical Sciences": {
+        "Chemistry, General": {
+          "bachelor": 60,
+          "master": 5,
+          "doctor": 1
+        },
+        "Materials Science": {
+          "doctor": 1
+        },
+        "Physics, General": {
+          "bachelor": 10,
+          "master": 9,
+          "doctor": 6
+        }
+      },
+      "Psychology": {
+        "Psychology, General": {
+          "bachelor": 249,
+          "master": 11,
+          "doctor": 12
+        }
+      },
+      "Public Administration and Social Service Professions": {
+        "Public Administration": {
+          "postgraduate_certificate": 14,
+          "master": 23
+        },
+        "Social Work": {
+          "bachelor": 39
+        }
+      },
+      "Science Technologies/Technicians": {
+        "Science Technologies/Technicians, General": {
+          "undergraduate_certificate": 0
+        }
+      },
+      "Social Sciences": {
+        "Anthropology, General": {
+          "bachelor": 17
+        },
+        "Anthropology, Other": {
+          "master": 7
+        },
+        "Political Science and Government, General": {
+          "bachelor": 38
+        },
+        "Research Methodology and Quantitative Methods": {
+          "postgraduate_certificate": 9
+        },
+        "Social Sciences, Other": {
+          "bachelor": 12
+        },
+        "Sociology, General": {
+          "bachelor": 21,
+          "master": 18,
+          "doctor": 2
+        }
+      },
+      "Visual and Performing Arts": {
+        "Art History, Criticism and Conservation": {
+          "master": 2
+        },
+        "Art/Art Studies, General": {
+          "bachelor": 56
+        },
+        "Drama and Dramatics/Theatre Arts, General": {
+          "bachelor": 14
+        },
+        "Music, General": {
+          "bachelor": 15
+        },
+        "Musical Theatre": {
+          "bachelor": 12
+        }
+      }
+    },
+    "servicemembers_and_veterans": {
+      "services": [
+        "Yellow Ribbon Program (officially known as Post-9/11 GI Bill, Yellow Ribbon Program)",
+        "Credit for military training",
+        "Dedicated point of contact for support services for veterans, military servicemembers, and their families",
+        "Recognized student veteran organization",
+        "Member of Department of Defense Voluntary Educational Partnership Memorandum of Understanding"
+      ],
+      "benefits_2022_2023": {
+        "post_9_11_GI_Bill_undergraduates": {
+          "number": 269,
+          "average_amount": 9223
+        },
+        "post_9_11_GI_Bill_graduates": {
+          "number": 152,
+          "average_amount": 12505
+        },
+        "DoD_tuition_assistance_undergraduates": {
+          "number": 44,
+          "average_amount": 2852
+        },
+        "DoD_tuition_assistance_graduates": {
+          "number": 16,
+          "average_amount": 2742
+        }
+      },
+      "benefit_user_retention_rate_for_bachelors": 80
+    },
+    "varsity_athletics": {
+      "sanction_body": "NCAA Division I-FBS",
+      "teams": {
+        "All Track Combined": {
+          "men": 0,
+          "women": 98
+        },
+        "Baseball": {
+          "men": 40,
+          "women": 0
+        },
+        "Basketball": {
+          "men": 15,
+          "women": 17
+        },
+        "Beach Volleyball": {
+          "men": 0,
+          "women": 14
+        },
+        "Bowling": {
+          "men": 0,
+          "women": 8
+        },
+        "Football": {
+          "men": 132,
+          "women": 0
+        },
+        "Golf": {
+          "men": 9,
+          "women": 7
+        },
+        "Rifle": {
+          "men": 1,
+          "women": 7
+        },
+        "Soccer": {
+          "men": 39,
+          "women": 27
+        },
+        "Softball": {
+          "men": 0,
+          "women": 23
+        },
+        "Tennis": {
+          "men": 13,
+          "women": 8
+        },
+        "Volleyball": {
+          "men": 0,
+          "women": 22
+        }
+      }
+    },
+    "accreditation": {
+      "institutional": [
+        {
+          "accreditor": "Accreditation Commission for Midwifery Education",
+          "status": "Preaccredited since (02/16/2022)",
+          "next_review_date": "02/28/2027"
+        },
+        {
+          "accreditor": "Southern Association of Colleges and Schools, Commission on Colleges",
+          "status": "Accredited since (07/01/1970)",
+          "next_review_date": "12/09/2025"
+        }
+      ],
+      "programmatic": [
+        {
+          "accreditor": "Academy of Nutrition and Dietetics, Accreditation Council for Education in Nutrition and Dietetics",
+          "program": "Didactic Program in Dietetics",
+          "status": "Preaccredited since (10/23/2023)",
+          "next_review_date": "10/23/2027"
+        },
+        {
+          "accreditor": "Academy of Nutrition and Dietetics, Accreditation Council for Education in Nutrition and Dietetics",
+          "program": "Dietetics (DIET) - Coordinated Program in Dietetics",
+          "status": "Accredited since (01/26/2018)",
+          "next_review_date": "12/31/2029"
+        },
+        {
+          "accreditor": "Accreditation Commission for Midwifery Education",
+          "program": "Nurse Midwifery (MIDWF) - Basic certificate and graduate nurse-midwifery education programs for registered nurses",
+          "status": "Preaccredited since (02/16/2022)",
+          "next_review_date": "02/28/2027"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Endodontics",
+          "status": "Accredited since (12/09/1966)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Oral and Maxillofacial Surgery (OMS)",
+          "status": "Accredited since (05/24/1968)",
+          "next_review_date": "12/31/2025"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Oral and Maxillofacial Surgery - Fellowship",
+          "status": "Accredited since (08/10/2023)",
+          "next_review_date": "12/31/2028"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Orthodontics & Dentofacial Orthopedics",
+          "status": "Accredited since (12/09/1966)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Pediatric Dentistry",
+          "status": "Accredited since (12/09/1966)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Periodontics",
+          "status": "Accredited since (12/09/1966)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Prosthodontics (including maxillofacial prosthetics and combined prosthodontics/maxillofacial prosthetics)",
+          "status": "Accredited since (12/09/1966)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Dental Association, Commission on Dental Accreditation",
+          "program": "Prosthodontics (including maxillofacial prosthetics and combined prosthodontics/maxillofacial prosthetics)",
+          "status": "Accredited since (05/06/1993)",
+          "next_review_date": "12/30/2029"
+        },
+        {
+          "accreditor": "American Occupational Therapy Association, Accreditation Council for Occupational Therapy Education",
+          "program": "Occupational Therapy (OTD) - Programs leading to a Doctoral Degree",
+          "status": "Accredited since (12/02/2023)",
+          "next_review_date": "07/31/2030"
+        },
+        {
+          "accreditor": "American Occupational Therapy Association, Accreditation Council for Occupational Therapy Education",
+          "program": "Occupational Therapy (OTM) - Programs leading to a Master's Degree",
+          "status": "Accredited since (01/01/1970)",
+          "next_review_date": "07/31/2023"
+        },
+        {
+          "accreditor": "American Optometric Association, Accreditation Council on Optometric Education",
+          "program": "Optometry (OPT) - Professional degree programs",
+          "status": "Accredited since (04/15/1973)",
+          "next_review_date": "12/31/2025"
+        },
+        {
+          "accreditor": "American Physical Therapy Association, Commission on Accreditation in Physical Therapy Education",
+          "program": "Physical Therapy (PT) - Professional programs for the physical therapist",
+          "status": "Accredited since (05/01/1967)",
+          "next_review_date": "06/30/2030"
+        },
+        {
+          "accreditor": "American Psychological Association, Commission on Accreditation",
+          "program": "Clinical Psychology (CLPSY) - PhD Doctoral programs",
+          "status": "Accredited since (03/20/1985)",
+          "next_review_date": "12/31/2023"
+        },
+        {
+          "accreditor": "Association for Clinical Pastoral Education, Inc., Accreditation Commission (No Longer Recognized)",
+          "program": "(CPE) - Clinical pastoral education (CPE) centers offering CPE programs",
+          "status": "Accredited (01/01/1995 - 11/04/2024)",
+          "next_review_date": null
+        },
+        {
+          "accreditor": "Commission on Accreditation of Healthcare Management Education (No Longer Recognized)",
+          "program": "Health Services Administration (HSA) - Graduate programs in health services administration",
+          "status": "Accredited since (07/01/1968)",
+          "next_review_date": "12/31/2015"
+        },
+        {
+          "accreditor": "Commission on Collegiate Nursing Education",
+          "program": "Nursing (CNDNP) - Nursing education programs at the doctorate degree levels",
+          "status": "Accredited since (04/12/2010)",
+          "next_review_date": "12/31/2029"
+        },
+        {
+          "accreditor": "Commission on Collegiate Nursing Education",
+          "program": "Nursing (CNURED) - Nursing education programs at the baccalaureate degree levels",
+          "status": "Accredited since (03/03/2000)",
+          "next_review_date": "12/31/2029"
+        },
+        {
+          "accreditor": "Commission on Collegiate Nursing Education",
+          "program": "Nursing (CNURED) - Nursing education programs at the graduate degree levels",
+          "status": "Accredited since (03/03/2000)",
+          "next_review_date": "12/31/2029"
+        },
+        {
+          "accreditor": "Commission on English Language Program Accreditation",
+          "program": "English Language",
+          "status": "Accredited since (10/26/2013)",
+          "next_review_date": "04/30/2029"
+        },
+        {
+          "accreditor": "Council on Accreditation of Nurse Anesthesia Educational Programs",
+          "program": "Nurse Anesthesia (ANEST) - Institutions and programs at the master's degree, post master's certificate or doctoral degree levels",
+          "status": "Accredited since (07/10/1981)",
+          "next_review_date": "05/01/2031"
+        },
+        {
+          "accreditor": "Council on Education for Public Health",
+          "program": "Public Health (PHBG) - Baccalaureate and Graduate level school of public health",
+          "status": "Accredited since (10/17/1978)",
+          "next_review_date": "12/31/2030"
+        },
+        {
+          "accreditor": "Joint Review Committee on Education in Radiologic Technology",
+          "program": "Radiologic Technology (RAD) - Programs for radiographers",
+          "status": "Accredited (01/01/1975 - 12/31/2009)",
+          "next_review_date": null
+        },
+        {
+          "accreditor": "Joint Review Committee on Education in Radiologic Technology",
+          "program": "Radiologic Technology (RADTT) - Programs for radiation therapists",
+          "status": "Accredited (07/01/1990 - 12/31/2011)",
+          "next_review_date": null
+        },
+        {
+          "accreditor": "Joint Review Committee on Educational Programs in Nuclear Medicine Technology (No Longer Recognized)",
+          "program": "Nuclear Medicine Technologist (NMT) - Programs for the nuclear medicine technologist",
+          "status": "Accredited (06/27/1973 - 06/13/2011)",
+          "next_review_date": null
+        },
+        {
+          "accreditor": "Liaison Committee on Medical Education",
+          "program": "Medicine (MED) - Programs leading to the M.D. degree",
+          "status": "Accredited since (07/01/1946)",
+          "next_review_date": "12/31/2029"
+        },
+        {
+          "accreditor": "National Council for Accreditation of Teacher Education (No Longer Recognized)",
+          "program": "Teacher Education (TED) - Baccalaureate and graduate programs for the preparation of teachers and other professional personnel for elementary and secondary schools",
+          "status": "Accredited since (01/01/1973)",
+          "next_review_date": null
+        }
+      ]
+    },
+    "campus_security_and_safety": {
+      "on_campus_criminal_offenses": {
+        "2019": {
+          "rape": 6,
+          "fondling": 15,
+          "burglary": 11,
+          "others": 10
+        },
+        "2020": {
+          "rape": 5,
+          "fondling": 3,
+          "burglary": 14,
+          "others": 18
+        },
+        "2021": {
+          "rape": 6,
+          "fondling": 18,
+          "burglary": 21,
+          "others": 13
+        }
+      },
+      "on_campus_VAWA_offenses": {
+        "2019": {
+          "domestic_violence": 17,
+          "dating_violence": 22,
+          "stalking": 13
+        },
+        "2020": {
+          "domestic_violence": 16,
+          "dating_violence": 20,
+          "stalking": 10
+        },
+        "2021": {
+          "domestic_violence": 12,
+          "dating_violence": 13,
+          "stalking": 12
+        }
+      },
+      "on_campus_arrests": {
+        "2019": {
+          "weapons": 2,
+          "drug_abuse": 29,
+          "liquor_law": 0
+        },
+        "2020": {
+          "weapons": 0,
+          "drug_abuse": 12,
+          "liquor_law": 0
+        },
+        "2021": {
+          "weapons": 1,
+          "drug_abuse": 18,
+          "liquor_law": 0
+        }
+      },
+      "on_campus_disciplinary_actions": {
+        "2019": {
+          "weapons": 3,
+          "drug_abuse": 26,
+          "liquor_law": 93
+        },
+        "2020": {
+          "weapons": 2,
+          "drug_abuse": 26,
+          "liquor_law": 48
+        },
+        "2021": {
+          "weapons": 0,
+          "drug_abuse": 20,
+          "liquor_law": 69
+        }
+      },
+      "on_campus_housing_incidents": {
+        "2019": {
+          "rape": 3,
+          "fondling": 5,
+          "burglary": 3,
+          "weapons_arrests": 0,
+          "drug_arrests": 1,
+          "drug_disciplinary": 26
+        },
+        "2020": {
+          "rape": 2,
+          "fondling": 2,
+          "burglary": 0,
+          "weapons_arrests": 0,
+          "drug_arrests": 0,
+          "drug_disciplinary": 25
+        },
+        "2021": {
+          "rape": 4,
+          "fondling": 5,
+          "burglary": 0,
+          "weapons_arrests": 0,
+          "drug_arrests": 0,
+          "drug_disciplinary": 20
+        }
+      }
+    },
+    "cohort_default_rates": {
+      "2019": {
+        "default_rate": 1.2,
+        "number_in_default": 59,
+        "number_in_repayment": 4887
+      },
+      "2020": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 4673
+      },
+      "2021": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 4585
+      }
+    },
+    "aid_programs": [
+      "Federal Direct Loan (Direct Loan)"
+    ]
+  },
+  {
+    "id": "alabama-a-m-university",
+    "institution": {
+      "name": "Alabama A & M University",
+      "address": "4900 Meridian Street, Normal, Alabama 35762",
+      "phone": "(256) 372-5000",
+      "website": "http://nces.ed.gov/transfer.asp?location=www.aamu.edu/",
+      "type": "4-year, Public",
+      "awards_offered": [
+        "Bachelor's degree",
+        "Master's degree",
+        "Post-master's certificate",
+        "Doctor's degree - research/scholarship"
+      ],
+      "campus_setting": "City: Midsize",
+      "campus_housing": true,
+      "student_population": {
+        "total": 6614,
+        "undergraduate": 5845,
+        "graduate": 769
+      },
+      "student_faculty_ratio": "19 to 1",
+      "IPEDS_ID": "100654",
+      "OPE_ID": "00100200"
+    },
+    "general_information": {
+      "admissions_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.aamu.edu/admissions-aid/index.html",
+      "apply_online_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.aamu.edu/admissions-aid/undergraduate-admissions/apply-today.html",
+      "financial_aid_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.aamu.edu/admissions-aid/financial-aid/",
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?location=www.aamu.edu/admissions-aid/tuition-fees/net-price-calculator.html",
+      "disability_services_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.aamu.edu/administrativeoffices/VADS/Pages/Disability-Services.aspx",
+      "mission_statement_url": "http://nces.ed.gov/transfer.asp?location=www.aamu.edu/about/strategic-plan/mission-vision-values.html"
+    },
+    "special_learning_opportunities": [
+      "Distance education – undergraduate programs offered",
+      "Distance education – graduate programs offered",
+      "ROTC (Army)",
+      "Study abroad",
+      "Weekend/evening college",
+      "Undergraduate research (co-curricula)",
+      "Teacher certification (below the postsecondary level)"
+    ],
+    "student_services": [
+      "Academic/career counseling service",
+      "Employment services for students",
+      "Placement services for completers",
+      "On-campus day care for students' children"
+    ],
+    "undergraduate_disability_services_percentage_fall_2023": 3.42,
+    "high_school_students_enrolled_2023_2024": 119,
+    "carnegie_classification": "Master's Colleges & Universities: Larger Programs",
+    "religious_affiliation": "Not applicable",
+    "other_characteristics": [
+      "Historically Black College or University"
+    ],
+    "federal_aid": "Eligible students may receive Pell Grants and other federal aid (e.g. Direct Loans).",
+    "for_credit_instruction_programs_offered": [
+      "Academic"
+    ],
+    "noncredit_education_offered": [
+      "Developmental Education"
+    ],
+    "credit_accepted": [
+      "Advanced placement (AP) credits"
+    ],
+    "faculty_and_graduate_assistants_fall_2023": {
+      "faculty": {
+        "full_time_total": 271,
+        "part_time_total": 113,
+        "full_time_instructional": 266,
+        "part_time_instructional": 113,
+        "full_time_research_public_service": 5,
+        "part_time_research_public_service": 0
+      },
+      "graduate_assistants": {
+        "full_time": 0,
+        "part_time": 0
+      }
+    },
+    "estimated_expenses": {
+      "2024-2025": {
+        "tuition_and_fees": {
+          "in_state": 10024,
+          "out_of_state": 18634,
+          "percent_change": 0
+        },
+        "books_and_supplies": 2270,
+        "living_arrangement": {
+          "on_campus": {
+            "food_and_housing": 11402,
+            "other_expenses": 4036
+          },
+          "off_campus": {
+            "food_and_housing": 11402,
+            "other_expenses": 4036
+          },
+          "off_campus_with_family": {
+            "food_and_housing": 11402,
+            "other_expenses": 4036,
+            "percent_change_other_expenses": -5.5
+          }
+        },
+        "total_expenses": {
+          "in_state_on_campus": 27732,
+          "in_state_off_campus": 27732,
+          "in_state_off_campus_with_family": 16330,
+          "out_of_state_on_campus": 36342,
+          "out_of_state_off_campus": 36342,
+          "out_of_state_off_campus_with_family": 24940
+        },
+        "percent_change_total_expenses_2023_2024_to_2024_2025": {
+          "in_state_on_campus": 0.9,
+          "in_state_off_campus": 0.9,
+          "in_state_off_campus_with_family": -1,
+          "out_of_state_on_campus": 0.7,
+          "out_of_state_off_campus": 0.7,
+          "out_of_state_off_campus_with_family": -0.6
+        }
+      }
+    },
+    "multiyear_tuition_calculator": {
+      "graduate_student_average_2024_2025": {
+        "in_state_tuition": 7596,
+        "in_state_fees": 1414,
+        "out_of_state_tuition": 15192,
+        "out_of_state_fees": 1414
+      }
+    },
+    "alternative_tuition_plans_and_promise_program": {
+      "tuition_payment_plan": true,
+      "tuition_guarantee_plan": false,
+      "prepaid_tuition_plan": false,
+      "other_alternative_tuition_plan": false,
+      "participates_in_promise_program": false
+    },
+    "undergraduate_financial_aid_2022_2023": {
+      "beginning_undergraduate_students": {
+        "total_awarded": 1359,
+        "percent_awarded": 88,
+        "grant_or_scholarship": {
+          "number": 1323,
+          "percent": 86,
+          "total_amount": 15362449,
+          "average_amount": 11612
+        },
+        "federal_grants": {
+          "number": 1033,
+          "percent": 67,
+          "total_amount": 6366369,
+          "average_amount": 6163
+        },
+        "pell_grants": {
+          "number": 1033,
+          "percent": 67,
+          "total_amount": 6185419,
+          "average_amount": 5988
+        },
+        "other_federal_grants": {
+          "number": 91,
+          "percent": 6,
+          "total_amount": 180950,
+          "average_amount": 1988
+        },
+        "state_local_grants": {
+          "number": 29,
+          "percent": 2,
+          "total_amount": 50810,
+          "average_amount": 1752
+        },
+        "institutional_grants": {
+          "number": 1024,
+          "percent": 66,
+          "total_amount": 8945270,
+          "average_amount": 8736
+        },
+        "student_loan_aid": {
+          "number": 887,
+          "percent": 57,
+          "total_amount": 5664417,
+          "average_amount": 6386
+        },
+        "federal_student_loans": {
+          "number": 880,
+          "percent": 57,
+          "total_amount": 5322609,
+          "average_amount": 6048
+        },
+        "other_student_loans": {
+          "number": 26,
+          "percent": 2,
+          "total_amount": 341808,
+          "average_amount": 13146
+        }
+      },
+      "all_undergraduate_students": {
+        "degree_seeking": {
+          "grant_or_scholarship": {
+            "number": 4326,
+            "percent": 83,
+            "total_amount": 50168163,
+            "average_amount": 11597
+          },
+          "pell_grants": {
+            "number": 3353,
+            "percent": 64,
+            "total_amount": 19363202,
+            "average_amount": 5775
+          },
+          "federal_student_loans": {
+            "number": 3050,
+            "percent": 59,
+            "total_amount": 20538077,
+            "average_amount": 6734
+          }
+        },
+        "non_degree_non_certificate_seeking": {
+          "grant_or_scholarship": {
+            "number": 0,
+            "percent": 0,
+            "total_amount": 0,
+            "average_amount": 0
+          }
+        }
+      }
+    },
+    "net_price": {
+      "average_net_price": {
+        "2020-2021": 12921,
+        "2021-2022": 14600,
+        "2022-2023": 14064
+      },
+      "average_net_price_by_income_2022_2023": {
+        "0-30000": 13776,
+        "30001-48000": 13923,
+        "48001-75000": 16471,
+        "75001-110000": 19057,
+        "110001+": 18200
+      },
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?location=www.aamu.edu/admissions-aid/tuition-fees/net-price-calculator.html"
+    },
+    "enrollment_fall_2023": {
+      "total": 6614,
+      "undergraduate": 5845,
+      "undergraduate_transfer_in": 280,
+      "graduate": 769,
+      "undergraduate_attendance_status": {
+        "full_time": 89,
+        "part_time": 11
+      },
+      "undergraduate_gender": {
+        "male": 41,
+        "female": 59
+      },
+      "undergraduate_race_ethnicity": {
+        "American Indian or Alaska Native": 0,
+        "Asian": 0,
+        "Black or African American": 89,
+        "Hispanic/Latino": 1,
+        "Native Hawaiian or other Pacific Islander": 0,
+        "White": 2,
+        "Two or more races": 2,
+        "Race/ethnicity unknown": 4,
+        "US Nonresident": 2
+      },
+      "undergraduate_age": {
+        "24_and_under": 92,
+        "25_and_over": 7,
+        "age_unknown": 1
+      },
+      "undergraduate_residence": {
+        "in_state": 51,
+        "out_of_state": 38,
+        "foreign_countries": 0,
+        "unknown": 10
+      },
+      "undergraduate_distance_education_status": {
+        "exclusively_distance": 5,
+        "some_distance": 41,
+        "no_distance": 54
+      },
+      "graduate_attendance_status": {
+        "full_time": 57,
+        "part_time": 43
+      },
+      "graduate_distance_education_status": {
+        "exclusively_distance": 18,
+        "some_distance": 29,
+        "no_distance": 53
+      }
+    },
+    "admissions_fall_2023": {
+      "application_fee": 30,
+      "applicants": {
+        "total": 15628,
+        "male": 5247,
+        "female": 10381
+      },
+      "percent_admitted": {
+        "total": 66,
+        "male": 65,
+        "female": 67
+      },
+      "percent_admitted_who_enrolled": {
+        "total": 19,
+        "male": 23,
+        "female": 17
+      },
+      "admissions_considerations": {
+        "secondary_school_GPA": "Required",
+        "secondary_school_rank": "Not considered",
+        "secondary_school_record": "Required",
+        "college_preparatory_completion": "Not considered",
+        "recommendations": "Not considered",
+        "formal_demonstration_of_competencies": "Not considered",
+        "work_experience": "Not considered",
+        "personal_statement": "Not considered",
+        "legacy_status": "Not applicable"
+      },
+      "test_scores_requirements": {
+        "SAT_ACT": "Not required, but considered (Test Optional)",
+        "other_tests": "Not considered",
+        "english_proficiency_test": "Required"
+      },
+      "students_submitting_scores": {
+        "SAT": {
+          "number": 462,
+          "percent": 24
+        },
+        "ACT": {
+          "number": 1312,
+          "percent": 67
+        }
+      },
+      "test_score_percentiles": {
+        "SAT_EBRW": {
+          "25th": 420,
+          "50th": 480,
+          "75th": 540
+        },
+        "SAT_Math": {
+          "25th": 390,
+          "50th": 460,
+          "75th": 520
+        },
+        "ACT_Composite": {
+          "25th": 14,
+          "50th": 17,
+          "75th": 19
+        },
+        "ACT_English": {
+          "25th": 13,
+          "50th": 15,
+          "75th": 20
+        },
+        "ACT_Math": {
+          "25th": 14,
+          "50th": 16,
+          "75th": 17
+        }
+      }
+    },
+    "retention_and_graduation_rates": {
+      "first_to_second_year_retention": {
+        "full_time": 64,
+        "part_time": 40
+      },
+      "overall_graduation_and_transfer_out": {
+        "graduation_rate": 29,
+        "transfer_out_rate": 31,
+        "cohort_year": "Fall 2017"
+      },
+      "bachelors_degree_graduation_rates": {
+        "began_fall_2015": {
+          "4_year": 11,
+          "6_year": 28,
+          "8_year": 30
+        },
+        "began_fall_2017": {
+          "4_year": 15,
+          "6_year": 29
+        }
+      },
+      "6_year_graduation_rate_by_gender": {
+        "male": 22,
+        "female": 33
+      },
+      "6_year_graduation_rate_by_race_ethnicity": {
+        "American Indian or Alaska Native": 50,
+        "Asian": 50,
+        "Black or African American": 28,
+        "Hispanic/Latino": 38,
+        "Native Hawaiian or other Pacific Islander": 100,
+        "White": 21,
+        "Two or more races": 21,
+        "Race/ethnicity unknown": 43,
+        "US Nonresident": 56
+      }
+    },
+    "outcome_measures_entering_2015_16": {
+      "full_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 29,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 36
+        },
+        "Pell": {
+          "bachelors_degree": 29,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 34
+        },
+        "non_Pell": {
+          "bachelors_degree": 29,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 42
+        }
+      },
+      "part_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 6,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 37
+        },
+        "Pell": {
+          "bachelors_degree": 7,
+          "enrolled_same_institution": 1,
+          "enrolled_different_institution": 40
+        },
+        "non_Pell": {
+          "bachelors_degree": 5,
+          "enrolled_same_institution": 2,
+          "enrolled_different_institution": 29
+        }
+      },
+      "full_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 53,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 25
+        },
+        "Pell": {
+          "bachelors_degree": 48,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 26
+        },
+        "non_Pell": {
+          "bachelors_degree": 59,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 25
+        }
+      },
+      "part_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 27,
+          "enrolled_same_institution": 2,
+          "enrolled_different_institution": 44
+        },
+        "Pell": {
+          "bachelors_degree": 34,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 46
+        },
+        "non_Pell": {
+          "bachelors_degree": 17,
+          "enrolled_same_institution": 4,
+          "enrolled_different_institution": 42
+        }
+      }
+    },
+    "completions_2023_2024": {
+      "Agricultural/Animal/Plant/Veterinary Science and Related Fields": {
+        "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other": {
+          "bachelor": 2,
+          "master": 2
+        },
+        "Animal Sciences, Other": {
+          "bachelor": 18
+        },
+        "Food Science": {
+          "bachelor": 8,
+          "master": 6,
+          "doctor": 2
+        }
+      },
+      "Architecture and Related Services": {
+        "City/Urban, Community, and Regional Planning": {
+          "bachelor": 1,
+          "master": 4
+        }
+      },
+      "Biological and Biomedical Sciences": {
+        "Biology/Biological Sciences, General": {
+          "bachelor": 76,
+          "master": 15
+        }
+      },
+      "Business, Management, Marketing, and Related Support Services": {
+        "Accounting": {
+          "bachelor": 9
+        },
+        "Business Administration and Management, General": {
+          "bachelor": 35,
+          "master": 39
+        },
+        "Entrepreneurship/Entrepreneurial Studies": {
+          "bachelor": 2
+        },
+        "Finance, General": {
+          "bachelor": 9
+        },
+        "Logistics, Materials, and Supply Chain Management": {
+          "bachelor": 4
+        },
+        "Marketing/Marketing Management, General": {
+          "bachelor": 15
+        }
+      },
+      "Communication, Journalism, and Related Programs": {
+        "Communication and Media Studies, Other": {
+          "master": 8
+        }
+      },
+      "Communications Technologies/Technicians and Support Services": {
+        "Radio and Television Broadcasting Technology/Technician": {
+          "bachelor": 24
+        }
+      },
+      "Computer and Information Sciences and Support Services": {
+        "Computer and Information Sciences, General": {
+          "bachelor": 26,
+          "master": 11
+        }
+      },
+      "Education": {
+        "Early Childhood Education and Teaching": {
+          "bachelor": 0,
+          "master": 1
+        },
+        "Education, General": {
+          "postgraduate_certificate": 0
+        },
+        "Education/Teaching of Individuals with Speech or Language Impairments": {
+          "bachelor": 12
+        },
+        "Educational Leadership and Administration, General": {
+          "master": 3
+        },
+        "Elementary Education and Teaching": {
+          "bachelor": 6,
+          "master": 3
+        },
+        "Physical Education Teaching and Coaching": {
+          "bachelor": 1
+        },
+        "Reading Teacher Education": {
+          "doctor": 0
+        },
+        "Secondary Education and Teaching": {
+          "master": 0
+        },
+        "Special Education and Teaching, General": {
+          "bachelor": 2,
+          "master": 0
+        }
+      },
+      "Engineering": {
+        "Civil Engineering, General": {
+          "bachelor": 15
+        },
+        "Electrical and Electronics Engineering": {
+          "bachelor": 22,
+          "master": 4
+        },
+        "Engineering, Other": {
+          "master": 26
+        },
+        "Mechanical Engineering": {
+          "bachelor": 20
+        }
+      },
+      "Engineering/Engineering-related Technologies/Technicians": {
+        "Construction Engineering Technology/Technician": {
+          "bachelor": 19
+        }
+      },
+      "English Language and Literature/Letters": {
+        "English Language and Literature, General": {
+          "bachelor": 7
+        }
+      },
+      "Family and Consumer Sciences/Human Sciences": {
+        "Family and Consumer Sciences/Human Sciences, General": {
+          "bachelor": 10,
+          "master": 4
+        }
+      },
+      "Health Professions and Related Programs": {
+        "Speech-Language Pathology/Pathologist": {
+          "master": 15
+        }
+      },
+      "Homeland Security, Law Enforcement, Firefighting and Related Protective Services": {
+        "Criminal Justice/Law Enforcement Administration": {
+          "bachelor": 32
+        }
+      },
+      "Liberal Arts and Sciences, General Studies and Humanities": {
+        "General Studies": {
+          "bachelor": 25
+        }
+      },
+      "Mathematics and Statistics": {
+        "Mathematics, General": {
+          "bachelor": 5
+        }
+      },
+      "Natural Resources and Conservation": {
+        "Forestry, Other": {
+          "bachelor": 4
+        }
+      },
+      "Parks, Recreation, Leisure, Fitness, and Kinesiology": {
+        "Exercise Science and Kinesiology": {
+          "master": 6
+        },
+        "Sport and Fitness Administration/Management": {
+          "bachelor": 24
+        }
+      },
+      "Physical Sciences": {
+        "Chemistry, General": {
+          "bachelor": 6
+        },
+        "Physics, General": {
+          "bachelor": 1,
+          "master": 0
+        },
+        "Physics, Other": {
+          "doctor": 1
+        }
+      },
+      "Psychology": {
+        "Counseling Psychology": {
+          "master": 14
+        },
+        "Psychology, General": {
+          "bachelor": 34
+        }
+      },
+      "Public Administration and Social Service Professions": {
+        "Social Work": {
+          "bachelor": 23,
+          "master": 56
+        }
+      },
+      "Social Sciences": {
+        "Political Science and Government, General": {
+          "bachelor": 9
+        },
+        "Sociology, General": {
+          "bachelor": 1
+        }
+      },
+      "Visual and Performing Arts": {
+        "Art/Art Studies, General": {
+          "bachelor": 0
+        },
+        "Fine/Studio Arts, General": {
+          "bachelor": 1
+        },
+        "Music, General": {
+          "bachelor": 3
+        }
+      }
+    },
+    "servicemembers_and_veterans": {
+      "services": [
+        "Credit for military training",
+        "Dedicated point of contact for support services for veterans, military servicemembers, and their families",
+        "Recognized student veteran organization",
+        "Member of Department of Defense Voluntary Educational Partnership Memorandum of Understanding"
+      ],
+      "benefits_2022_2023": {
+        "post_9_11_GI_Bill_undergraduates": {
+          "number": 221,
+          "average_amount": 5399
+        },
+        "post_9_11_GI_Bill_graduates": {
+          "number": 9,
+          "average_amount": 4182
+        },
+        "DoD_tuition_assistance_undergraduates": {
+          "number": 0
+        },
+        "DoD_tuition_assistance_graduates": {
+          "number": 0
+        }
+      },
+      "benefit_user_retention_rate_for_bachelors": 67
+    },
+    "varsity_athletics": {
+      "sanction_body": "NCAA Division I-FCS",
+      "teams": {
+        "Baseball": {
+          "men": 39,
+          "women": 0
+        },
+        "Basketball": {
+          "men": 16,
+          "women": 15
+        },
+        "Bowling": {
+          "men": 0,
+          "women": 14
+        },
+        "Football": {
+          "men": 112,
+          "women": 0
+        },
+        "Golf": {
+          "men": 8,
+          "women": 0
+        },
+        "Soccer": {
+          "men": 0,
+          "women": 32
+        },
+        "Softball": {
+          "men": 0,
+          "women": 28
+        },
+        "Tennis": {
+          "men": 9,
+          "women": 7
+        },
+        "Track and Field Indoor": {
+          "men": 22,
+          "women": 22
+        },
+        "Track and Field Outdoor": {
+          "men": 22,
+          "women": 22
+        },
+        "Track and Field X-Country": {
+          "men": 0,
+          "women": 8
+        },
+        "Volleyball": {
+          "men": 0,
+          "women": 20
+        }
+      }
+    },
+    "accreditation": {
+      "institutional": [
+        {
+          "accreditor": "Southern Association of Colleges and Schools, Commission on Colleges",
+          "status": "Accredited since 07/01/1963",
+          "next_review_date": "12/10/2024"
+        }
+      ],
+      "programmatic": [
+        {
+          "accreditor": "Academy of Nutrition and Dietetics, Accreditation Council for Education in Nutrition and Dietetics",
+          "program": "Didactic Program in Dietetics",
+          "status": "Accredited since (12/01/1979)",
+          "next_review_date": "12/31/2030"
+        },
+        {
+          "accreditor": "American Speech-Language-Hearing Association, Council on Academic Accreditation in Audiology and Speech-Language Pathology",
+          "program": "Speech-Language Pathology (SLP) - Graduate degree programs",
+          "status": "Accredited since (10/01/1994)",
+          "next_review_date": "08/01/2026"
+        },
+        {
+          "accreditor": "National Council for Accreditation of Teacher Education (No Longer Recognized)",
+          "program": "Teacher Education (TED) - Baccalaureate and graduate programs for the preparation of teachers and other professional personnel for elementary and secondary schools",
+          "status": "Accredited since (01/01/1973)",
+          "next_review_date": null
+        }
+      ]
+    },
+    "campus_security_and_safety": {
+      "on_campus_criminal_offenses": {
+        "2019": {
+          "rape": 4,
+          "fondling": 2,
+          "burglary": 19
+        },
+        "2020": {
+          "rape": 2,
+          "fondling": 0,
+          "burglary": 5
+        },
+        "2021": {
+          "rape": 2,
+          "fondling": 1,
+          "burglary": 8
+        }
+      },
+      "on_campus_VAWA_offenses": {
+        "2019": {
+          "domestic_violence": 20,
+          "dating_violence": 4,
+          "stalking": 0
+        },
+        "2020": {
+          "domestic_violence": 4,
+          "dating_violence": 1,
+          "stalking": 0
+        },
+        "2021": {
+          "domestic_violence": 2,
+          "dating_violence": 3,
+          "stalking": 1
+        }
+      },
+      "on_campus_arrests": {
+        "2019": {
+          "weapons": 12,
+          "drug_abuse": 28,
+          "liquor_law": 0
+        },
+        "2020": {
+          "weapons": 4,
+          "drug_abuse": 9,
+          "liquor_law": 0
+        },
+        "2021": {
+          "weapons": 1,
+          "drug_abuse": 7,
+          "liquor_law": 0
+        }
+      },
+      "on_campus_disciplinary_actions": {
+        "2019": {
+          "weapons": 5,
+          "drug_abuse": 124,
+          "liquor_law": 9
+        },
+        "2020": {
+          "weapons": 2,
+          "drug_abuse": 87,
+          "liquor_law": 1
+        },
+        "2021": {
+          "weapons": 3,
+          "drug_abuse": 47,
+          "liquor_law": 5
+        }
+      },
+      "on_campus_housing_incidents": {
+        "2019": {
+          "rape": 3,
+          "fondling": 1,
+          "burglary": 19,
+          "weapons_arrests": 5,
+          "drug_arrests": 13,
+          "drug_disciplinary": 90
+        },
+        "2020": {
+          "rape": 2,
+          "fondling": 0,
+          "burglary": 5,
+          "weapons_arrests": 4,
+          "drug_arrests": 5,
+          "drug_disciplinary": 79
+        },
+        "2021": {
+          "rape": 2,
+          "fondling": 0,
+          "burglary": 8,
+          "weapons_arrests": 1,
+          "drug_arrests": 4,
+          "drug_disciplinary": 30
+        }
+      }
+    },
+    "cohort_default_rates": {
+      "2019": {
+        "default_rate": 4.5,
+        "number_in_default": 86,
+        "number_in_repayment": 1884
+      },
+      "2020": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 1976
+      },
+      "2021": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 1893
+      }
+    },
+    "aid_programs": [
+      "Federal Direct Loan (Direct Loan)"
+    ]
+  },
+  {
+    "id": "amridge-university",
+    "institution": {
+      "name": "Amridge University",
+      "address": "1200 Taylor Rd, Montgomery, Alabama 36117-3553",
+      "phone": "(334) 387-3877 x7550",
+      "website": "http://nces.ed.gov/transfer.asp?sec=true&location=www.amridgeuniversity.edu/",
+      "type": "4-year, Private not-for-profit",
+      "awards_offered": [
+        "Associate's degree",
+        "Bachelor's degree",
+        "Master's degree",
+        "Doctor's degree - research/scholarship"
+      ],
+      "campus_setting": "City: Midsize",
+      "campus_housing": false,
+      "student_population": {
+        "total": 636,
+        "undergraduate": 226,
+        "graduate": 410
+      },
+      "student_faculty_ratio": "12 to 1",
+      "IPEDS_ID": "100690",
+      "OPE_ID": "02503400"
+    },
+    "general_information": {
+      "admissions_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.amridgeuniversity.edu/admissions/",
+      "apply_online_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.amridgeuniversity.edu/myamridge/",
+      "financial_aid_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.amridgeuniversity.edu/financialaid/",
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www2.amridgeuniversity.edu:9091/",
+      "disability_services_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www.amridgeuniversity.edu/studentservices/",
+      "mission_statement_url": null
+    },
+    "special_learning_opportunities": [
+      "Credit for life experiences",
+      "Advanced placement (AP) credits",
+      "Distance education – undergraduate programs offered",
+      "Distance education – graduate programs offered"
+    ],
+    "student_services": [
+      "Academic/career counseling service",
+      "Employment services for students"
+    ],
+    "undergraduate_disability_services_percentage_fall_2023": null,
+    "high_school_students_enrolled_2023_2024": 3,
+    "carnegie_classification": "Master's Colleges & Universities: Small Programs",
+    "religious_affiliation": "Churches of Christ",
+    "other_characteristics": [],
+    "federal_aid": "Eligible students may receive Pell Grants and other federal aid (e.g. Direct Loans).",
+    "for_credit_instruction_programs_offered": [
+      "Academic"
+    ],
+    "noncredit_education_offered": [],
+    "credit_accepted": [
+      "Credit for life experiences",
+      "Advanced placement (AP) credits"
+    ],
+    "faculty_and_graduate_assistants_fall_2023": {
+      "faculty": {
+        "full_time_total": 31,
+        "part_time_total": 0,
+        "full_time_instructional": 31,
+        "part_time_instructional": 0,
+        "full_time_research_public_service": 0,
+        "part_time_research_public_service": 0
+      },
+      "graduate_assistants": {
+        "full_time": null,
+        "part_time": 0
+      }
+    },
+    "estimated_expenses": {
+      "2024-2025": {
+        "tuition_and_fees": {
+          "in_state": 7590,
+          "out_of_state": 7590,
+          "percent_change": null
+        },
+        "books_and_supplies": 900,
+        "living_arrangement": {
+          "on_campus": null,
+          "off_campus": {
+            "food_and_housing": 9600,
+            "other_expenses": 2540
+          },
+          "off_campus_with_family": {
+            "food_and_housing": 6720,
+            "other_expenses": 2540,
+            "percent_change_other_expenses": null
+          }
+        },
+        "total_expenses": {
+          "in_state_on_campus": null,
+          "in_state_off_campus": 20630,
+          "in_state_off_campus_with_family": 11030,
+          "out_of_state_on_campus": null,
+          "out_of_state_off_campus": 20630,
+          "out_of_state_off_campus_with_family": 11030
+        },
+        "percent_change_total_expenses_2023_2024_to_2024_2025": null
+      }
+    },
+    "multiyear_tuition_calculator": {
+      "graduate_student_average_2024_2025": {
+        "in_state_tuition": 11700,
+        "in_state_fees": 1390,
+        "out_of_state_tuition": 11700,
+        "out_of_state_fees": 1390
+      }
+    },
+    "alternative_tuition_plans_and_promise_program": {
+      "tuition_payment_plan": false,
+      "tuition_guarantee_plan": false,
+      "prepaid_tuition_plan": false,
+      "other_alternative_tuition_plan": false,
+      "participates_in_promise_program": false
+    },
+    "undergraduate_financial_aid_2022_2023": {
+      "beginning_undergraduate_students": null,
+      "all_undergraduate_students": {
+        "degree_seeking": {
+          "grant_or_scholarship": {
+            "number": 216,
+            "percent": 95,
+            "total_amount": 473411,
+            "average_amount": 2192
+          },
+          "pell_grants": {
+            "number": 156,
+            "percent": 68,
+            "total_amount": 329636,
+            "average_amount": 2113
+          },
+          "federal_student_loans": {
+            "number": 165,
+            "percent": 72,
+            "total_amount": 1317500,
+            "average_amount": 7985
+          }
+        },
+        "non_degree_non_certificate_seeking": null
+      }
+    },
+    "net_price": {
+      "average_net_price": null,
+      "average_net_price_by_income_2022_2023": null,
+      "net_price_calculator_url": "http://nces.ed.gov/transfer.asp?sec=true&location=www2.amridgeuniversity.edu:9091/"
+    },
+    "enrollment_fall_2023": {
+      "total": 636,
+      "undergraduate": 226,
+      "undergraduate_transfer_in": 170,
+      "graduate": 410,
+      "undergraduate_attendance_status": {
+        "full_time": 57,
+        "part_time": 43
+      },
+      "undergraduate_gender": {
+        "male": 37,
+        "female": 63
+      },
+      "undergraduate_race_ethnicity": {
+        "American Indian or Alaska Native": 0,
+        "Asian": 0,
+        "Black or African American": 67,
+        "Hispanic/Latino": 3,
+        "Native Hawaiian or other Pacific Islander": 0,
+        "White": 28,
+        "Two or more races": 0,
+        "Race/ethnicity unknown": 1,
+        "US Nonresident": 0
+      },
+      "undergraduate_age": {
+        "24_and_under": 14,
+        "25_and_over": 86,
+        "age_unknown": 0
+      },
+      "undergraduate_residence": null,
+      "undergraduate_distance_education_status": {
+        "exclusively_distance": 100,
+        "some_distance": 0,
+        "no_distance": 0
+      },
+      "graduate_attendance_status": {
+        "full_time": 32,
+        "part_time": 68
+      },
+      "graduate_distance_education_status": {
+        "exclusively_distance": 100,
+        "some_distance": 0,
+        "no_distance": 0
+      }
+    },
+    "admissions_fall_2023": {
+      "application_fee": 50,
+      "applicants": null,
+      "percent_admitted": null,
+      "percent_admitted_who_enrolled": null,
+      "admissions_considerations": null,
+      "test_scores_requirements": null,
+      "students_submitting_scores": null,
+      "test_score_percentiles": null
+    },
+    "retention_and_graduation_rates": {
+      "first_to_second_year_retention": null,
+      "overall_graduation_and_transfer_out": {
+        "graduation_rate": 40,
+        "transfer_out_rate": 20,
+        "cohort_year": "Fall 2017"
+      },
+      "bachelors_degree_graduation_rates": {
+        "began_fall_2015": {
+          "4_year": 67,
+          "6_year": 67,
+          "8_year": 67
+        },
+        "began_fall_2017": {
+          "4_year": 40,
+          "6_year": 40
+        }
+      },
+      "6_year_graduation_rate_by_gender": {
+        "male": 33,
+        "female": 50
+      },
+      "6_year_graduation_rate_by_race_ethnicity": {
+        "American Indian or Alaska Native": null,
+        "Asian": null,
+        "Black or African American": 40,
+        "Hispanic/Latino": null,
+        "Native Hawaiian or other Pacific Islander": null,
+        "White": null,
+        "Two or more races": null,
+        "Race/ethnicity unknown": null,
+        "US Nonresident": null
+      }
+    },
+    "outcome_measures_entering_2015_16": {
+      "full_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 38,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 31
+        },
+        "Pell": {
+          "bachelors_degree": 29,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 36
+        },
+        "non_Pell": {
+          "bachelors_degree": 100,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 0
+        }
+      },
+      "part_time_first_time": {
+        "all_students": {
+          "bachelors_degree": 53,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 11
+        },
+        "Pell": {
+          "bachelors_degree": 47,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 13
+        },
+        "non_Pell": {
+          "bachelors_degree": 75,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 0
+        }
+      },
+      "full_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 50,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 5
+        },
+        "Pell": {
+          "bachelors_degree": 43,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 7
+        },
+        "non_Pell": {
+          "bachelors_degree": 71,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 0
+        }
+      },
+      "part_time_non_first_time": {
+        "all_students": {
+          "bachelors_degree": 37,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 11
+        },
+        "Pell": {
+          "bachelors_degree": 29,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 7
+        },
+        "non_Pell": {
+          "bachelors_degree": 60,
+          "enrolled_same_institution": 0,
+          "enrolled_different_institution": 20
+        }
+      }
+    },
+    "completions_2023_2024": {
+      "Business, Management, Marketing, and Related Support Services": {
+        "Business Administration and Management, General": {
+          "associate": 6,
+          "bachelor": 10,
+          "master": 10
+        },
+        "Human Resources Management/Personnel Administration, General": {
+          "associate": 10,
+          "bachelor": 3,
+          "master": 9
+        },
+        "Management Information Systems and Services, Other": {
+          "associate": 1,
+          "bachelor": 1
+        },
+        "Organizational Leadership": {
+          "master": 5,
+          "doctor": 0
+        }
+      },
+      "Education": {
+        "Higher Education/Higher Education Administration": {
+          "doctor": 0
+        }
+      },
+      "Family and Consumer Sciences/Human Sciences": {
+        "Family and Community Services": {
+          "master": 15
+        },
+        "Human Development and Family Studies, General": {
+          "associate": 1,
+          "bachelor": 8
+        }
+      },
+      "Health Professions and Related Programs": {
+        "Marriage and Family Therapy/Counseling": {
+          "master": 5,
+          "doctor": 4
+        }
+      },
+      "Homeland Security, Law Enforcement, Firefighting and Related Protective Services": {
+        "Criminal Justice/Safety Studies": {
+          "associate": 6,
+          "bachelor": 2
+        }
+      },
+      "Legal Professions and Studies": {
+        "Legal Studies": {
+          "associate": 0
+        }
+      },
+      "Liberal Arts and Sciences, General Studies and Humanities": {
+        "Liberal Arts and Sciences/Liberal Studies": {
+          "associate": 0
+        }
+      },
+      "Multi/Interdisciplinary Studies": {
+        "Multi-/Interdisciplinary Studies, General": {
+          "doctor": 6
+        }
+      },
+      "Philosophy and Religious Studies": {
+        "Christian Studies": {
+          "master": 9
+        }
+      },
+      "Theology and Religious Vocations": {
+        "Bible/Biblical Studies": {
+          "associate": 3,
+          "bachelor": 16,
+          "master": 6,
+          "doctor": 5
+        },
+        "Divinity/Ministry": {
+          "master": 20
+        },
+        "Pastoral Studies/Counseling": {
+          "master": 7,
+          "doctor": 2
+        },
+        "Religious Education": {
+          "master": 1
+        },
+        "Theological and Ministerial Studies, Other": {
+          "doctor": 0
+        }
+      }
+    },
+    "servicemembers_and_veterans": {
+      "services": [
+        "Yellow Ribbon Program (officially known as Post-9/11 GI Bill, Yellow Ribbon Program)",
+        "Credit for military training",
+        "Dedicated point of contact for support services for veterans, military servicemembers, and their families",
+        "Member of Department of Defense Voluntary Educational Partnership Memorandum of Understanding"
+      ],
+      "benefits_2022_2023": {
+        "post_9_11_GI_Bill_undergraduates": {
+          "number": 7,
+          "average_amount": 7953
+        },
+        "post_9_11_GI_Bill_graduates": {
+          "number": 19,
+          "average_amount": 5631
+        },
+        "DoD_tuition_assistance_undergraduates": {
+          "number": 9,
+          "average_amount": 2981
+        },
+        "DoD_tuition_assistance_graduates": {
+          "number": 29,
+          "average_amount": 2953
+        }
+      },
+      "benefit_user_retention_rate_for_bachelors": null
+    },
+    "varsity_athletics": {
+      "sanction_body": null,
+      "teams": null
+    },
+    "accreditation": {
+      "institutional": [
+        {
+          "accreditor": "Southern Association of Colleges and Schools, Commission on Colleges",
+          "status": "Accredited since (01/01/1989)",
+          "next_review_date": "12/09/2025"
+        }
+      ],
+      "programmatic": [
+        {
+          "accreditor": "Commission on Accrediting of the Association of Theological Schools",
+          "program": "Theology (THEOL) - Freestanding schools, as well as programs affiliated with larger institutions, offering graduate professional education for ministry and graduate study of theology",
+          "status": "Preaccredited (06/01/2012 - 03/30/2013)",
+          "next_review_date": null
+        }
+      ]
+    },
+    "campus_security_and_safety": {
+      "on_campus_criminal_offenses": null,
+      "on_campus_VAWA_offenses": null,
+      "on_campus_arrests": null,
+      "on_campus_disciplinary_actions": null,
+      "on_campus_housing_incidents": null
+    },
+    "cohort_default_rates": {
+      "2019": {
+        "default_rate": 6,
+        "number_in_default": 20,
+        "number_in_repayment": 332
+      },
+      "2020": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 353
+      },
+      "2021": {
+        "default_rate": 0,
+        "number_in_default": 0,
+        "number_in_repayment": 286
+      }
+    },
+    "aid_programs": [
+      "Federal Direct Loan (Direct Loan)"
+    ]
+  }
+]

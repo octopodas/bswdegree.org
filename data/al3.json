@@ -1,0 +1,231 @@
+{
+    "search_criteria": {
+      "state": "Alabama",
+      "program": "Social Work",
+      "program_code": "44.0701",
+      "level": "93",
+      "total_results": 16,
+      "pages": 2
+    },
+    "schools": [
+      {
+        "id": "101675",
+        "name": "Miles College",
+        "location": {
+          "address": "5500 Myron Massey Blvd, Fairfield, Alabama 35064-2621",
+          "city": "Fairfield",
+          "state": "Alabama",
+          "zip": "35064-2621"
+        },
+        "basic_info": {
+          "phone": "(205) 929-1000 x1645",
+          "website": "www.miles.edu/",
+          "type": "4-year, Private not-for-profit",
+          "campus_setting": "Suburb: Large",
+          "campus_housing": "Yes",
+          "student_population": {
+            "total": 1151,
+            "undergraduate": 1151,
+            "graduate": 0
+          },
+          "student_faculty_ratio": "12 to 1",
+          "ipeds_id": "101675",
+          "ope_id": "00102800"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "Bachelor's degree"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees": 13314,
+            "books_supplies": 250,
+            "on_campus_total": 23744,
+            "off_campus_total": 27401,
+            "off_campus_family_total": 16556
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 98,
+            "pct_receiving_grants": 94,
+            "avg_grant_amount": 11031,
+            "pct_receiving_loans": 75,
+            "avg_loan_amount": 6590
+          },
+          "admissions": {
+            "application_fee": null,
+            "acceptance_rate": null,
+            "enrolled_rate": null,
+            "test_scores": null
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 26,
+            "transfer_out_rate": null,
+            "four_year_rate": 16,
+            "six_year_rate": 26
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 17,
+            "master_completions_2023_24": 0,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Southern Association of Colleges and Schools, Commission on Colleges",
+            "programmatic": []
+          }
+        }
+      },
+      {
+        "id": "101912",
+        "name": "Oakwood University",
+        "location": {
+          "address": "7000 Adventist Blvd NW, Huntsville, Alabama 35896",
+          "city": "Huntsville",
+          "state": "Alabama",
+          "zip": "35896"
+        },
+        "basic_info": {
+          "phone": "(256) 726-7000",
+          "website": "www2.oakwood.edu/",
+          "type": "4-year, Private not-for-profit",
+          "campus_setting": "City: Midsize",
+          "campus_housing": "Yes",
+          "student_population": {
+            "total": 1319,
+            "undergraduate": 1279,
+            "graduate": 40
+          },
+          "student_faculty_ratio": "10 to 1",
+          "ipeds_id": "101912",
+          "ope_id": "00103300"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "Associate's degree",
+            "Two but less than 4 years certificate",
+            "Bachelor's degree",
+            "Postbaccalaureate certificate",
+            "Master's degree"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees": 22512,
+            "books_supplies": 1200,
+            "on_campus_total": 41096,
+            "off_campus_total": 45022,
+            "off_campus_family_total": 31712
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 93,
+            "pct_receiving_grants": 93,
+            "avg_grant_amount": 15780,
+            "pct_receiving_loans": 42,
+            "avg_loan_amount": 6228
+          },
+          "admissions": {
+            "application_fee": 50,
+            "acceptance_rate": 51,
+            "enrolled_rate": 24,
+            "test_scores": {
+              "sat_reading_writing": null,
+              "sat_math": null,
+              "act_composite": null
+            }
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 49,
+            "transfer_out_rate": 1,
+            "four_year_rate": 31,
+            "six_year_rate": 50
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 7,
+            "master_completions_2023_24": 0,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Southern Association of Colleges and Schools, Commission on Colleges",
+            "programmatic": [
+              "Accreditation Council for Education in Nutrition and Dietetics",
+              "Commission on Accrediting of the Association of Theological Schools"
+            ]
+          }
+        }
+      },
+      {
+        "id": "102298",
+        "name": "Talladega College",
+        "location": {
+          "address": "627 West Battle Street, Talladega, Alabama 35160",
+          "city": "Talladega",
+          "state": "Alabama",
+          "zip": "35160"
+        },
+        "basic_info": {
+          "phone": "(256) 761-6100",
+          "website": "www.talladega.edu/",
+          "type": "4-year, Private not-for-profit",
+          "campus_setting": "Town: Distant",
+          "campus_housing": "Yes",
+          "student_population": {
+            "total": 837,
+            "undergraduate": 782,
+            "graduate": 55
+          },
+          "student_faculty_ratio": "19 to 1",
+          "ipeds_id": "102298",
+          "ope_id": "00104600"
+        },
+        "detailed_info": {
+          "awards_offered": [
+            "Associate's degree",
+            "Bachelor's degree",
+            "Master's degree"
+          ],
+          "tuition_fees_2024_25": {
+            "tuition_and_fees": 15650,
+            "books_supplies": 1200,
+            "on_campus_total": 25654,
+            "off_campus_total": 22150,
+            "off_campus_family_total": 18950
+          },
+          "financial_aid": {
+            "pct_receiving_aid": 98,
+            "pct_receiving_grants": 94,
+            "avg_grant_amount": 11031,
+            "pct_receiving_loans": 75,
+            "avg_loan_amount": 6590
+          },
+          "admissions": {
+            "application_fee": 25,
+            "acceptance_rate": 99,
+            "enrolled_rate": 2,
+            "test_scores": null
+          },
+          "graduation_rates": {
+            "overall_graduation_rate": 65,
+            "transfer_out_rate": null,
+            "four_year_rate": 59,
+            "six_year_rate": 65
+          },
+          "social_work_programs": {
+            "bachelor_completions_2023_24": 5,
+            "master_completions_2023_24": 0,
+            "doctoral_completions_2023_24": 0
+          },
+          "accreditation": {
+            "institutional": "Southern Association of Colleges and Schools, Commission on Colleges",
+            "programmatic": []
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "scraped_date": "2025-07-10",
+      "data_source": "NCES College Navigator",
+      "search_url": "https://nces.ed.gov/collegenavigator/?s=AL&p=44.0701&l=93",
+      "notes": [
+        "Data includes schools offering social work programs in Alabama",
+        "All tuition and fee data is for 2024-2025 academic year",
+        "Social work program completion data is for 2023-2024 academic year",
+        "IPEDS ID and OPE ID are federal identification numbers"
+      ]
+    }
+  }
