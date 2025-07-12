@@ -4,12 +4,32 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-const colleges = await getCollection('colleges');
+// Utility function to check if a college has Social Work programs
+function hasSocialWorkProgram(college: any): boolean {
+  const completions = college.data.completions_2023_2024;
+  if (!completions) return false;
+
+  // Check for general Social Work programs
+  const socialWorkPrograms = completions["Public Administration and Social Service Professions"]?.["Social Work"];
+  
+  // Check for Clinical/Medical Social Work programs
+  const clinicalSocialWork = completions["Health Professions and Related Programs"]?.["Clinical/Medical Social Work"];
+  
+  // Return true if any Social Work program has completions > 0
+  const hasSocialWork = socialWorkPrograms && Object.values(socialWorkPrograms).some((count: any) => count > 0);
+  const hasClinicalSocialWork = clinicalSocialWork && Object.values(clinicalSocialWork).some((count: any) => count > 0);
+  
+  return hasSocialWork || hasClinicalSocialWork;
+}
+
+// Filter colleges to only those with Social Work programs
+const allColleges = await getCollection('colleges');
+const colleges = allColleges.filter(hasSocialWorkProgram);
 
 const seoData = {
-  title: 'Social Work Colleges & Universities | BSW Navigator',
-  description: 'Find accredited social work programs at colleges and universities across the United States. Compare tuition, student populations, and program offerings.',
-  keywords: 'social work colleges, BSW programs, social work universities, accredited programs, social work education',
+  title: `Active Social Work Programs - ${colleges.length} Colleges with BSW/MSW Graduates | BSW Navigator`,
+  description: `Find ${colleges.length} colleges and universities with active Social Work programs that graduated students in 2023-2024. Compare BSW and MSW programs, tuition costs, and program outcomes.`,
+  keywords: 'active social work programs, BSW graduates, MSW graduates, social work colleges 2024, proven social work programs, social work completions',
   canonical: 'https://bswdegree.org/colleges/',
   ogType: 'website'
 };
@@ -23,11 +43,18 @@ const seoData = {
     
     <div class="text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">
-        Social Work <span class="text-emerald-700">Colleges & Universities</span>
+        Active Social Work <span class="text-emerald-700">Programs</span>
       </h1>
       <p class="mt-4 max-w-3xl mx-auto text-lg text-stone-600">
-        Explore accredited social work programs at colleges and universities across the United States. Find the right fit for your education and career goals.
+        Colleges and universities with active Social Work programs that graduated students in 2023-2024. 
+        These institutions offer proven BSW and MSW programs with recent completions.
       </p>
+      <div class="mt-6 inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        Showing only colleges with 2023-2024 Social Work graduates
+      </div>
     </div>
 
     <div class="mb-8">
@@ -58,7 +85,7 @@ const seoData = {
 
     <div class="mb-6">
       <p class="text-stone-600">
-        Showing <span id="results-count">{colleges.length}</span> colleges
+        Showing <span id="results-count">{colleges.length}</span> colleges with active Social Work programs
       </p>
     </div>
 

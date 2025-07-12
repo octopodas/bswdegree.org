@@ -431,6 +431,18 @@
           ],
           "additionalProperties": false
         },
+        "completions_2023_2024": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          }
+        },
         "$schema": {
           "type": "string"
         }

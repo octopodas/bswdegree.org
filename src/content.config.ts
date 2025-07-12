@@ -98,6 +98,7 @@ const colleges = defineCollection({
         }).nullable(),
       }),
     }),
+    completions_2023_2024: z.record(z.record(z.record(z.number()))).optional(),
   }),
 });
 
