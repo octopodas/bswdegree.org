@@ -90,7 +90,7 @@ const expenses = estimated_expenses[currentYear];
         
         <div class="flex flex-col sm:flex-row gap-3">
           <a 
-            href={general_information.apply_online_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+            href={`https://${general_information.apply_online_url}`}
             target="_blank"
             rel="noopener noreferrer"
             class="bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors duration-200 text-center"
@@ -98,7 +98,7 @@ const expenses = estimated_expenses[currentYear];
             Apply Online
           </a>
           <a 
-            href={institution.website.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+            href={`https://${institution.website}`}
             target="_blank"
             rel="noopener noreferrer"
             class="border border-emerald-600 text-emerald-600 px-6 py-2 rounded-lg font-medium hover:bg-emerald-50 transition-colors duration-200 text-center"
@@ -156,57 +156,65 @@ const expenses = estimated_expenses[currentYear];
                     <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.out_of_state)}</span>
                   </div>
                 )}
-                <div class="flex justify-between">
-                  <span class="text-stone-600">Books & Supplies:</span>
-                  <span class="font-semibold">{formatCurrency(expenses.books_and_supplies)}</span>
-                </div>
+                {expenses.books_and_supplies && (
+                  <div class="flex justify-between">
+                    <span class="text-stone-600">Books & Supplies:</span>
+                    <span class="font-semibold">{formatCurrency(expenses.books_and_supplies)}</span>
+                  </div>
+                )}
               </div>
             </div>
             
             <!-- Living Costs -->
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
-              <div class="space-y-2">
-                {expenses.living_arrangement.on_campus && (
+            {expenses.living_arrangement && (
+              <div>
+                <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
+                <div class="space-y-2">
+                  {expenses.living_arrangement.on_campus && (
+                    <div class="flex justify-between">
+                      <span class="text-stone-600">On Campus:</span>
+                      <span class="font-semibold">{formatCurrency(expenses.living_arrangement.on_campus.food_and_housing)}</span>
+                    </div>
+                  )}
                   <div class="flex justify-between">
-                    <span class="text-stone-600">On Campus:</span>
-                    <span class="font-semibold">{formatCurrency(expenses.living_arrangement.on_campus.food_and_housing)}</span>
+                    <span class="text-stone-600">Off Campus:</span>
+                    <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus.food_and_housing)}</span>
                   </div>
-                )}
-                <div class="flex justify-between">
-                  <span class="text-stone-600">Off Campus:</span>
-                  <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus.food_and_housing)}</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-stone-600">With Family:</span>
-                  <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus_with_family.food_and_housing)}</span>
+                  {expenses.living_arrangement.off_campus_with_family?.food_and_housing && (
+                    <div class="flex justify-between">
+                      <span class="text-stone-600">With Family:</span>
+                      <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus_with_family.food_and_housing)}</span>
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
           <!-- Total Costs -->
-          <div class="mt-6 pt-4 border-t border-stone-200">
-            <h3 class="font-semibold text-stone-800 mb-3">Total Annual Costs</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {expenses.total_expenses.in_state_on_campus && (
+          {expenses.total_expenses && (
+            <div class="mt-6 pt-4 border-t border-stone-200">
+              <h3 class="font-semibold text-stone-800 mb-3">Total Annual Costs</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {expenses.total_expenses.in_state_on_campus && (
+                  <div class="text-center p-3 bg-stone-50 rounded-lg">
+                    <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_on_campus)}</div>
+                    <div class="text-sm text-stone-600">In-State (On Campus)</div>
+                  </div>
+                )}
                 <div class="text-center p-3 bg-stone-50 rounded-lg">
-                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_on_campus)}</div>
-                  <div class="text-sm text-stone-600">In-State (On Campus)</div>
+                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_off_campus)}</div>
+                  <div class="text-sm text-stone-600">In-State (Off Campus)</div>
                 </div>
-              )}
-              <div class="text-center p-3 bg-stone-50 rounded-lg">
-                <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_off_campus)}</div>
-                <div class="text-sm text-stone-600">In-State (Off Campus)</div>
+                {expenses.total_expenses.out_of_state_on_campus && (
+                  <div class="text-center p-3 bg-stone-50 rounded-lg">
+                    <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.out_of_state_on_campus)}</div>
+                    <div class="text-sm text-stone-600">Out-of-State (On Campus)</div>
+                  </div>
+                )}
               </div>
-              {expenses.total_expenses.out_of_state_on_campus && (
-                <div class="text-center p-3 bg-stone-50 rounded-lg">
-                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.out_of_state_on_campus)}</div>
-                  <div class="text-sm text-stone-600">Out-of-State (On Campus)</div>
-                </div>
-              )}
             </div>
-          </div>
+          )}
         </div>
 
         <!-- Degrees Offered -->
@@ -286,7 +294,7 @@ const expenses = estimated_expenses[currentYear];
           <h3 class="font-bold text-stone-900 mb-4">Quick Links</h3>
           <div class="space-y-2">
             <a 
-              href={general_information.admissions_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              href={`https://${general_information.admissions_url}`}
               target="_blank"
               rel="noopener noreferrer"
               class="block text-emerald-600 hover:text-emerald-700 text-sm"
@@ -294,23 +302,25 @@ const expenses = estimated_expenses[currentYear];
               Admissions Information →
             </a>
             <a 
-              href={general_information.financial_aid_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              href={`https://${general_information.financial_aid_url}`}
               target="_blank"
               rel="noopener noreferrer"
               class="block text-emerald-600 hover:text-emerald-700 text-sm"
             >
               Financial Aid →
             </a>
+            {general_information.net_price_calculator_url && (
+              <a 
+                href={`https://${general_information.net_price_calculator_url}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-emerald-600 hover:text-emerald-700 text-sm"
+              >
+                Net Price Calculator →
+              </a>
+            )}
             <a 
-              href={general_information.net_price_calculator_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block text-emerald-600 hover:text-emerald-700 text-sm"
-            >
-              Net Price Calculator →
-            </a>
-            <a 
-              href={general_information.disability_services_url.replace('http://nces.ed.gov/transfer.asp?sec=true&location=', '')}
+              href={`https://${general_information.disability_services_url}`}
               target="_blank"
               rel="noopener noreferrer"
               class="block text-emerald-600 hover:text-emerald-700 text-sm"
