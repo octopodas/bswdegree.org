@@ -83,10 +83,19 @@ const seoData = {
       </div>
     </div>
 
-    <div class="mb-6">
+    <div class="mb-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
       <p class="text-stone-600">
-        Showing <span id="results-count">{colleges.length}</span> colleges with active Social Work programs
+        Showing <span id="results-start">1</span>-<span id="results-end">6</span> of <span id="results-total">{colleges.length}</span> colleges with active Social Work programs
       </p>
+      <div class="flex items-center gap-2">
+        <label for="per-page-select" class="text-sm text-stone-600">Per page:</label>
+        <select id="per-page-select" class="px-3 py-1 border border-stone-300 rounded focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm">
+          <option value="6" selected>6</option>
+          <option value="12">12</option>
+          <option value="24">24</option>
+          <option value="all">All</option>
+        </select>
+      </div>
     </div>
 
     <div id="colleges-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,6 +170,36 @@ const seoData = {
       })}
     </div>
 
+    <!-- Pagination Controls -->
+    <div id="pagination" class="mt-8 flex items-center justify-center">
+      <nav class="flex items-center space-x-2" aria-label="Pagination">
+        <button 
+          id="prev-page" 
+          class="px-3 py-2 text-sm font-medium text-stone-500 bg-white border border-stone-300 rounded-md hover:bg-stone-50 hover:text-stone-700 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled
+        >
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Previous
+        </button>
+        
+        <div id="page-numbers" class="flex space-x-1">
+          <!-- Page numbers will be dynamically generated -->
+        </div>
+        
+        <button 
+          id="next-page" 
+          class="px-3 py-2 text-sm font-medium text-stone-500 bg-white border border-stone-300 rounded-md hover:bg-stone-50 hover:text-stone-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Next
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
     <div id="no-results" class="hidden text-center py-12">
       <div class="text-stone-400">
         <svg class="mx-auto h-12 w-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,19 +220,28 @@ const seoData = {
     const searchInput = document.getElementById('search-input') as HTMLInputElement;
     const typeFilter = document.getElementById('type-filter') as HTMLSelectElement;
     const sizeFilter = document.getElementById('size-filter') as HTMLSelectElement;
+    const perPageSelect = document.getElementById('per-page-select') as HTMLSelectElement;
     const collegesGrid = document.getElementById('colleges-grid') as HTMLElement;
     const noResults = document.getElementById('no-results') as HTMLElement;
-    const resultsCount = document.getElementById('results-count') as HTMLElement;
-    const collegeCards = document.querySelectorAll('.college-card') as NodeListOf<HTMLElement>;
+    const pagination = document.getElementById('pagination') as HTMLElement;
+    const prevButton = document.getElementById('prev-page') as HTMLButtonElement;
+    const nextButton = document.getElementById('next-page') as HTMLButtonElement;
+    const pageNumbers = document.getElementById('page-numbers') as HTMLElement;
+    const resultsStart = document.getElementById('results-start') as HTMLElement;
+    const resultsEnd = document.getElementById('results-end') as HTMLElement;
+    const resultsTotal = document.getElementById('results-total') as HTMLElement;
+    const collegeCards = Array.from(document.querySelectorAll('.college-card')) as HTMLElement[];
+
+    let currentPage = 1;
+    let itemsPerPage = 12;
+    let filteredCards: HTMLElement[] = [];
 
     function filterColleges() {
       const searchTerm = searchInput.value.toLowerCase().trim();
       const typeValue = typeFilter.value;
       const sizeValue = sizeFilter.value;
-      
-      let visibleCount = 0;
 
-      collegeCards.forEach(card => {
+      filteredCards = collegeCards.filter(card => {
         const name = card.dataset.name || '';
         const type = card.dataset.type || '';
         const size = card.dataset.size || '';
@@ -202,28 +250,150 @@ const seoData = {
         const matchesType = !typeValue || type === typeValue;
         const matchesSize = !sizeValue || size === sizeValue;
 
-        if (matchesSearch && matchesType && matchesSize) {
-          card.style.display = 'block';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
+        return matchesSearch && matchesType && matchesSize;
       });
 
-      resultsCount.textContent = visibleCount.toString();
-      
-      if (visibleCount === 0) {
+      currentPage = 1; // Reset to first page when filtering
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const totalItems = filteredCards.length;
+      const totalPages = itemsPerPage === -1 ? 1 : Math.ceil(totalItems / itemsPerPage);
+
+      // Hide all cards first
+      collegeCards.forEach(card => card.style.display = 'none');
+
+      if (totalItems === 0) {
         collegesGrid.style.display = 'none';
         noResults.classList.remove('hidden');
+        pagination.style.display = 'none';
+        resultsStart.textContent = '0';
+        resultsEnd.textContent = '0';
+        resultsTotal.textContent = '0';
+        return;
+      }
+
+      // Show filtered cards for current page
+      collegesGrid.style.display = 'grid';
+      noResults.classList.add('hidden');
+
+      let startIndex, endIndex;
+      if (itemsPerPage === -1) {
+        // Show all items
+        startIndex = 0;
+        endIndex = totalItems;
+        pagination.style.display = 'none';
       } else {
-        collegesGrid.style.display = 'grid';
-        noResults.classList.add('hidden');
+        startIndex = (currentPage - 1) * itemsPerPage;
+        endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+        pagination.style.display = totalPages > 1 ? 'flex' : 'none';
+      }
+
+      for (let i = startIndex; i < endIndex; i++) {
+        filteredCards[i].style.display = 'block';
+      }
+
+      // Update results count
+      resultsStart.textContent = totalItems > 0 ? (startIndex + 1).toString() : '0';
+      resultsEnd.textContent = endIndex.toString();
+      resultsTotal.textContent = totalItems.toString();
+
+      if (itemsPerPage !== -1) {
+        updatePaginationControls(totalPages);
       }
     }
 
+    function updatePaginationControls(totalPages: number) {
+      // Update prev/next buttons
+      prevButton.disabled = currentPage === 1;
+      nextButton.disabled = currentPage === totalPages;
+
+      // Generate page numbers
+      pageNumbers.innerHTML = '';
+      
+      const maxVisiblePages = 5;
+      let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+      
+      // Adjust start if we're near the end
+      if (endPage - startPage + 1 < maxVisiblePages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+
+      // Add first page if not visible
+      if (startPage > 1) {
+        addPageButton(1);
+        if (startPage > 2) {
+          addEllipsis();
+        }
+      }
+
+      // Add visible pages
+      for (let i = startPage; i <= endPage; i++) {
+        addPageButton(i);
+      }
+
+      // Add last page if not visible
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          addEllipsis();
+        }
+        addPageButton(totalPages);
+      }
+    }
+
+    function addPageButton(pageNum: number) {
+      const button = document.createElement('button');
+      button.textContent = pageNum.toString();
+      button.className = `px-3 py-2 text-sm font-medium border rounded-md ${
+        pageNum === currentPage
+          ? 'bg-emerald-600 text-white border-emerald-600'
+          : 'text-stone-500 bg-white border-stone-300 hover:bg-stone-50 hover:text-stone-700'
+      }`;
+      button.addEventListener('click', () => {
+        currentPage = pageNum;
+        updateDisplay();
+      });
+      pageNumbers.appendChild(button);
+    }
+
+    function addEllipsis() {
+      const ellipsis = document.createElement('span');
+      ellipsis.textContent = '...';
+      ellipsis.className = 'px-3 py-2 text-sm text-stone-500';
+      pageNumbers.appendChild(ellipsis);
+    }
+
+    // Event listeners
     searchInput.addEventListener('input', filterColleges);
     typeFilter.addEventListener('change', filterColleges);
     sizeFilter.addEventListener('change', filterColleges);
+    
+    perPageSelect.addEventListener('change', () => {
+      itemsPerPage = perPageSelect.value === 'all' ? -1 : parseInt(perPageSelect.value);
+      currentPage = 1;
+      updateDisplay();
+    });
+
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updateDisplay();
+      }
+    });
+
+    nextButton.addEventListener('click', () => {
+      const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        updateDisplay();
+      }
+    });
+
+    // Initialize
+    filteredCards = collegeCards;
+    updateDisplay();
   });
 </script>
 
