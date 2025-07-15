@@ -242,7 +242,10 @@
                       ]
                     },
                     "part_time": {
-                      "type": "number"
+                      "type": [
+                        "number",
+                        "null"
+                      ]
                     }
                   },
                   "required": [
@@ -273,10 +276,16 @@
                   "type": "object",
                   "properties": {
                     "in_state": {
-                      "type": "number"
+                      "type": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "out_of_state": {
-                      "type": "number"
+                      "type": [
+                        "number",
+                        "null"
+                      ]
                     },
                     "percent_change": {
                       "type": [
@@ -285,11 +294,6 @@
                       ]
                     }
                   },
-                  "required": [
-                    "in_state",
-                    "out_of_state",
-                    "percent_change"
-                  ],
                   "additionalProperties": false
                 },
                 "books_and_supplies": {
@@ -396,10 +400,16 @@
                           ]
                         },
                         "in_state_off_campus": {
-                          "type": "number"
+                          "type": [
+                            "number",
+                            "null"
+                          ]
                         },
                         "in_state_off_campus_with_family": {
-                          "type": "number"
+                          "type": [
+                            "number",
+                            "null"
+                          ]
                         },
                         "out_of_state_on_campus": {
                           "type": [
@@ -408,20 +418,18 @@
                           ]
                         },
                         "out_of_state_off_campus": {
-                          "type": "number"
+                          "type": [
+                            "number",
+                            "null"
+                          ]
                         },
                         "out_of_state_off_campus_with_family": {
-                          "type": "number"
+                          "type": [
+                            "number",
+                            "null"
+                          ]
                         }
                       },
-                      "required": [
-                        "in_state_on_campus",
-                        "in_state_off_campus",
-                        "in_state_off_campus_with_family",
-                        "out_of_state_on_campus",
-                        "out_of_state_off_campus",
-                        "out_of_state_off_campus_with_family"
-                      ],
                       "additionalProperties": false
                     },
                     {
@@ -471,14 +479,6 @@
                           ]
                         }
                       },
-                      "required": [
-                        "in_state_on_campus",
-                        "in_state_off_campus",
-                        "in_state_off_campus_with_family",
-                        "out_of_state_on_campus",
-                        "out_of_state_off_campus",
-                        "out_of_state_off_campus_with_family"
-                      ],
                       "additionalProperties": false
                     },
                     {
@@ -488,11 +488,8 @@
                 }
               },
               "required": [
-                "tuition_and_fees",
                 "books_and_supplies",
-                "living_arrangement",
-                "total_expenses",
-                "percent_change_total_expenses_2023_2024_to_2024_2025"
+                "living_arrangement"
               ],
               "additionalProperties": false
             }
@@ -519,7 +516,6 @@
         }
       },
       "required": [
-        "id",
         "institution",
         "general_information",
         "special_learning_opportunities",

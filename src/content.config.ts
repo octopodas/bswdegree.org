@@ -3,9 +3,15 @@ import { file } from 'astro/loaders'; // Not available with legacy API
 
 
 const colleges = defineCollection({
-  loader: file("src/data/colleges/colleges.json"),
+  loader: file("src/data/colleges/colleges.json", {
+    parser: (text) => {
+      const data = JSON.parse(text);
+      // Filter out items without id or slug
+      return Array.isArray(data) ? data.filter(item => item.id || item.slug) : data;
+    }
+  }),
   schema: z.object({
-    id: z.string(),
+    id: z.string().optional(),
     institution: z.object({
       name: z.string(),
       address: z.string(),
@@ -54,16 +60,16 @@ const colleges = defineCollection({
       }),
       graduate_assistants: z.object({
         full_time: z.number().nullable(),
-        part_time: z.number(),
+        part_time: z.number().nullable(),
       }).nullable(),
     }),
     estimated_expenses: z.object({
       "2024-2025": z.object({
         tuition_and_fees: z.object({
-          in_state: z.number(),
-          out_of_state: z.number(),
-          percent_change: z.number().nullable(),
-        }),
+          in_state: z.number().nullable().optional(),
+          out_of_state: z.number().nullable().optional(),
+          percent_change: z.number().nullable().optional(),
+        }).optional(),
         books_and_supplies: z.number().nullable(),
         living_arrangement: z.object({
           on_campus: z.object({
@@ -81,21 +87,21 @@ const colleges = defineCollection({
           }),
         }).nullable(),
         total_expenses: z.object({
-          in_state_on_campus: z.number().nullable(),
-          in_state_off_campus: z.number(),
-          in_state_off_campus_with_family: z.number(),
-          out_of_state_on_campus: z.number().nullable(),
-          out_of_state_off_campus: z.number(),
-          out_of_state_off_campus_with_family: z.number(),
-        }).nullable(),
+          in_state_on_campus: z.number().nullable().optional(),
+          in_state_off_campus: z.number().nullable().optional(),
+          in_state_off_campus_with_family: z.number().nullable().optional(),
+          out_of_state_on_campus: z.number().nullable().optional(),
+          out_of_state_off_campus: z.number().nullable().optional(),
+          out_of_state_off_campus_with_family: z.number().nullable().optional(),
+        }).nullable().optional(),
         percent_change_total_expenses_2023_2024_to_2024_2025: z.object({
-          in_state_on_campus: z.number().nullable(),
-          in_state_off_campus: z.number().nullable(),
-          in_state_off_campus_with_family: z.number().nullable(),
-          out_of_state_on_campus: z.number().nullable(),
-          out_of_state_off_campus: z.number().nullable(),
-          out_of_state_off_campus_with_family: z.number().nullable(),
-        }).nullable(),
+          in_state_on_campus: z.number().nullable().optional(),
+          in_state_off_campus: z.number().nullable().optional(),
+          in_state_off_campus_with_family: z.number().nullable().optional(),
+          out_of_state_on_campus: z.number().nullable().optional(),
+          out_of_state_off_campus: z.number().nullable().optional(),
+          out_of_state_off_campus_with_family: z.number().nullable().optional(),
+        }).nullable().optional(),
       }),
     }),
     completions_2023_2024: z.record(z.record(z.record(z.number()))).optional(),
