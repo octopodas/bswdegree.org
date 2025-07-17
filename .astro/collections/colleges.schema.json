@@ -41,10 +41,16 @@
               "type": "object",
               "properties": {
                 "total": {
-                  "type": "number"
+                  "type": [
+                    "number",
+                    "null"
+                  ]
                 },
                 "undergraduate": {
-                  "type": "number"
+                  "type": [
+                    "number",
+                    "null"
+                  ]
                 },
                 "graduate": {
                   "type": [
@@ -53,50 +59,46 @@
                   ]
                 }
               },
-              "required": [
-                "total",
-                "undergraduate",
-                "graduate"
-              ],
               "additionalProperties": false
             },
             "student_faculty_ratio": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "IPEDS_ID": {
               "type": "string"
             },
             "OPE_ID": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
-          "required": [
-            "name",
-            "address",
-            "phone",
-            "website",
-            "type",
-            "awards_offered",
-            "campus_setting",
-            "campus_housing",
-            "student_population",
-            "student_faculty_ratio",
-            "IPEDS_ID",
-            "OPE_ID"
-          ],
           "additionalProperties": false
         },
         "general_information": {
           "type": "object",
           "properties": {
             "admissions_url": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "apply_online_url": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "financial_aid_url": {
-              "type": "string"
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "net_price_calculator_url": {
               "type": [
@@ -114,21 +116,20 @@
               ]
             }
           },
-          "required": [
-            "admissions_url",
-            "apply_online_url",
-            "financial_aid_url",
-            "net_price_calculator_url",
-            "disability_services_url",
-            "mission_statement_url"
-          ],
           "additionalProperties": false
         },
         "special_learning_opportunities": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "student_services": {
           "type": "array",
@@ -137,9 +138,16 @@
           }
         },
         "undergraduate_disability_services_percentage_fall_2023": {
-          "type": [
-            "number",
-            "null"
+          "anyOf": [
+            {
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "type": "null"
+            }
           ]
         },
         "high_school_students_enrolled_2023_2024": {
@@ -190,348 +198,473 @@
           ]
         },
         "credit_accepted": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "faculty_and_graduate_assistants_fall_2023": {
-          "type": "object",
-          "properties": {
-            "faculty": {
+          "anyOf": [
+            {
               "type": "object",
               "properties": {
-                "full_time_total": {
-                  "type": "number"
+                "faculty": {
+                  "type": "object",
+                  "properties": {
+                    "full_time_total": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "part_time_total": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "full_time_instructional": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "part_time_instructional": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "full_time_research_public_service": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "part_time_research_public_service": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
                 },
-                "part_time_total": {
-                  "type": "number"
-                },
-                "full_time_instructional": {
-                  "type": "number"
-                },
-                "part_time_instructional": {
-                  "type": "number"
-                },
-                "full_time_research_public_service": {
-                  "type": "number"
-                },
-                "part_time_research_public_service": {
-                  "type": "number"
+                "graduate_assistants": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "full_time": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "part_time": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
                 }
               },
               "required": [
-                "full_time_total",
-                "part_time_total",
-                "full_time_instructional",
-                "part_time_instructional",
-                "full_time_research_public_service",
-                "part_time_research_public_service"
+                "faculty",
+                "graduate_assistants"
               ],
               "additionalProperties": false
             },
-            "graduate_assistants": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "full_time": {
-                      "type": [
-                        "number",
-                        "null"
-                      ]
-                    },
-                    "part_time": {
-                      "type": [
-                        "number",
-                        "null"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "full_time",
-                    "part_time"
-                  ],
-                  "additionalProperties": false
-                },
-                {
-                  "type": "null"
-                }
-              ]
+            {
+              "type": "null"
             }
-          },
-          "required": [
-            "faculty",
-            "graduate_assistants"
-          ],
-          "additionalProperties": false
+          ]
         },
         "estimated_expenses": {
-          "type": "object",
-          "properties": {
-            "2024-2025": {
+          "anyOf": [
+            {
               "type": "object",
               "properties": {
-                "tuition_and_fees": {
+                "2024-2025": {
                   "type": "object",
                   "properties": {
-                    "in_state": {
+                    "tuition_and_fees": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "in_district": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "percent_change": {
+                              "anyOf": [
+                                {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ]
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "in_district": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "in_state": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "out_of_state": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    }
+                                  },
+                                  "additionalProperties": false
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "books_and_supplies": {
                       "type": [
                         "number",
                         "null"
                       ]
                     },
-                    "out_of_state": {
-                      "type": [
-                        "number",
-                        "null"
+                    "living_arrangement": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "on_campus": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "food_and_housing": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "other_expenses": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "food_and_housing",
+                                    "other_expenses"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "off_campus": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "food_and_housing": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "other_expenses": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    }
+                                  },
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "off_campus_with_family": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "food_and_housing": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "other_expenses": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    },
+                                    "percent_change_other_expenses": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "food_and_housing",
+                                    "other_expenses"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "off_campus"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
-                    "percent_change": {
-                      "type": [
-                        "number",
-                        "null"
+                    "total_expenses": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "in_district_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_district_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_on_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_on_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "percent_change_total_expenses_2023_2024_to_2024_2025": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "in_district_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_district_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_on_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "in_state_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_on_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_off_campus": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            },
+                            "out_of_state_off_campus_with_family": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     }
                   },
                   "additionalProperties": false
-                },
-                "books_and_supplies": {
-                  "type": [
-                    "number",
-                    "null"
-                  ]
-                },
-                "living_arrangement": {
-                  "anyOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "on_campus": {
-                          "anyOf": [
-                            {
-                              "type": "object",
-                              "properties": {
-                                "food_and_housing": {
-                                  "type": "number"
-                                },
-                                "other_expenses": {
-                                  "type": "number"
-                                }
-                              },
-                              "required": [
-                                "food_and_housing",
-                                "other_expenses"
-                              ],
-                              "additionalProperties": false
-                            },
-                            {
-                              "type": "null"
-                            }
-                          ]
-                        },
-                        "off_campus": {
-                          "type": "object",
-                          "properties": {
-                            "food_and_housing": {
-                              "type": "number"
-                            },
-                            "other_expenses": {
-                              "type": "number"
-                            }
-                          },
-                          "required": [
-                            "food_and_housing",
-                            "other_expenses"
-                          ],
-                          "additionalProperties": false
-                        },
-                        "off_campus_with_family": {
-                          "type": "object",
-                          "properties": {
-                            "food_and_housing": {
-                              "type": [
-                                "number",
-                                "null"
-                              ]
-                            },
-                            "other_expenses": {
-                              "type": [
-                                "number",
-                                "null"
-                              ]
-                            },
-                            "percent_change_other_expenses": {
-                              "type": [
-                                "number",
-                                "null"
-                              ]
-                            }
-                          },
-                          "required": [
-                            "food_and_housing",
-                            "other_expenses",
-                            "percent_change_other_expenses"
-                          ],
-                          "additionalProperties": false
-                        }
-                      },
-                      "required": [
-                        "on_campus",
-                        "off_campus",
-                        "off_campus_with_family"
-                      ],
-                      "additionalProperties": false
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "total_expenses": {
-                  "anyOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "in_state_on_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "in_state_off_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "in_state_off_campus_with_family": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_on_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_off_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_off_campus_with_family": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
-                },
-                "percent_change_total_expenses_2023_2024_to_2024_2025": {
-                  "anyOf": [
-                    {
-                      "type": "object",
-                      "properties": {
-                        "in_state_on_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "in_state_off_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "in_state_off_campus_with_family": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_on_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_off_campus": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        },
-                        "out_of_state_off_campus_with_family": {
-                          "type": [
-                            "number",
-                            "null"
-                          ]
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ]
                 }
               },
-              "required": [
-                "books_and_supplies",
-                "living_arrangement"
-              ],
               "additionalProperties": false
+            },
+            {
+              "type": "null"
             }
-          },
-          "required": [
-            "2024-2025"
-          ],
-          "additionalProperties": false
+          ]
+        },
+        "multiyear_tuition_calculator": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "undergraduate_student_average_2024_2025": {
+                  "type": "object",
+                  "properties": {
+                    "in_district_tuition_and_fees": {
+                      "type": "number"
+                    },
+                    "in_state_tuition_and_fees": {
+                      "type": "number"
+                    },
+                    "out_of_state_tuition_and_fees": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "completions_2023_2024": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "object",
-            "additionalProperties": {
+          "anyOf": [
+            {
               "type": "object",
               "additionalProperties": {
-                "type": "number"
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                }
               }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "$schema": {
           "type": "string"
         }
       },
-      "required": [
-        "institution",
-        "general_information",
-        "special_learning_opportunities",
-        "student_services",
-        "undergraduate_disability_services_percentage_fall_2023",
-        "high_school_students_enrolled_2023_2024",
-        "carnegie_classification",
-        "religious_affiliation",
-        "other_characteristics",
-        "federal_aid",
-        "for_credit_instruction_programs_offered",
-        "noncredit_education_offered",
-        "credit_accepted",
-        "faculty_and_graduate_assistants_fall_2023",
-        "estimated_expenses"
-      ],
       "additionalProperties": false
     }
   },

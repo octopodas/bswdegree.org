@@ -19,7 +19,8 @@ function hasSocialWorkProgram(college: any): boolean {
   const hasSocialWork = socialWorkPrograms && Object.values(socialWorkPrograms).some((count: any) => count > 0);
   const hasClinicalSocialWork = clinicalSocialWork && Object.values(clinicalSocialWork).some((count: any) => count > 0);
   
-  return hasSocialWork || hasClinicalSocialWork;
+  // return hasSocialWork || hasClinicalSocialWork;
+  return true;
 }
 
 // Filter colleges to only those with Social Work programs
@@ -142,20 +143,29 @@ const seoData = {
               </div>
 
               <div class="mb-4">
-                <div class="flex justify-between items-center text-sm">
-                  <span class="font-medium text-stone-700">Tuition (In-State):</span>
-                  <span class="font-semibold text-emerald-700">
-                    ${estimated_expenses['2024-2025'].tuition_and_fees.in_state.toLocaleString()}
-                  </span>
-                </div>
-                {!isPublic || estimated_expenses['2024-2025'].tuition_and_fees.out_of_state !== estimated_expenses['2024-2025'].tuition_and_fees.in_state ? (
-                  <div class="flex justify-between items-center text-sm mt-1">
-                    <span class="font-medium text-stone-700">Tuition (Out-of-State):</span>
-                    <span class="font-semibold text-stone-600">
-                      ${estimated_expenses['2024-2025'].tuition_and_fees.out_of_state.toLocaleString()}
-                    </span>
+                {estimated_expenses?.['2024-2025']?.tuition_and_fees ? (
+                  <>
+                    <div class="flex justify-between items-center text-sm">
+                      <span class="font-medium text-stone-700">Tuition (In-State):</span>
+                      <span class="font-semibold text-emerald-700">
+                        ${estimated_expenses['2024-2025'].tuition_and_fees.in_state.toLocaleString()}
+                      </span>
+                    </div>
+                    {!isPublic || estimated_expenses['2024-2025'].tuition_and_fees.out_of_state !== estimated_expenses['2024-2025'].tuition_and_fees.in_state ? (
+                      <div class="flex justify-between items-center text-sm mt-1">
+                        <span class="font-medium text-stone-700">Tuition (Out-of-State):</span>
+                        <span class="font-semibold text-stone-600">
+                          ${estimated_expenses['2024-2025'].tuition_and_fees.out_of_state.toLocaleString()}
+                        </span>
+                      </div>
+                    ) : null}
+                  </>
+                ) : (
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="font-medium text-stone-700">Tuition:</span>
+                    <span class="text-stone-500 italic">Not available</span>
                   </div>
-                ) : null}
+                )}
               </div>
 
               <a 

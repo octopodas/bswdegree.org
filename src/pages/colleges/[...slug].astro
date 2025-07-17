@@ -53,7 +53,7 @@ const seoData = {
 
 const isPublic = institution.type.includes('Public');
 const currentYear = '2024-2025';
-const expenses = estimated_expenses[currentYear];
+const expenses = estimated_expenses?.[currentYear];
 ---
 
 <Layout seo={seoData}>
@@ -141,58 +141,75 @@ const expenses = estimated_expenses[currentYear];
         <div class="bg-white rounded-xl shadow-lg border border-stone-200 p-6">
           <h2 class="text-xl font-bold text-stone-900 mb-4">Tuition & Costs (2024-2025)</h2>
           
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Tuition -->
-            <div>
-              <h3 class="font-semibold text-stone-800 mb-3">Tuition & Fees</h3>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-stone-600">In-State:</span>
-                  <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.in_state)}</span>
-                </div>
-                {expenses.tuition_and_fees.out_of_state !== expenses.tuition_and_fees.in_state && (
-                  <div class="flex justify-between">
-                    <span class="text-stone-600">Out-of-State:</span>
-                    <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.out_of_state)}</span>
-                  </div>
-                )}
-                {expenses.books_and_supplies && (
-                  <div class="flex justify-between">
-                    <span class="text-stone-600">Books & Supplies:</span>
-                    <span class="font-semibold">{formatCurrency(expenses.books_and_supplies)}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            <!-- Living Costs -->
-            {expenses.living_arrangement && (
+          {expenses ? (
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Tuition -->
               <div>
-                <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
+                <h3 class="font-semibold text-stone-800 mb-3">Tuition & Fees</h3>
                 <div class="space-y-2">
-                  {expenses.living_arrangement.on_campus && (
-                    <div class="flex justify-between">
-                      <span class="text-stone-600">On Campus:</span>
-                      <span class="font-semibold">{formatCurrency(expenses.living_arrangement.on_campus.food_and_housing)}</span>
-                    </div>
+                  {expenses.tuition_and_fees ? (
+                    <>
+                      <div class="flex justify-between">
+                        <span class="text-stone-600">In-State:</span>
+                        <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.in_state)}</span>
+                      </div>
+                      {expenses.tuition_and_fees.out_of_state !== expenses.tuition_and_fees.in_state && (
+                        <div class="flex justify-between">
+                          <span class="text-stone-600">Out-of-State:</span>
+                          <span class="font-semibold">{formatCurrency(expenses.tuition_and_fees.out_of_state)}</span>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <div class="text-stone-500 italic">Tuition information not available</div>
                   )}
-                  <div class="flex justify-between">
-                    <span class="text-stone-600">Off Campus:</span>
-                    <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus.food_and_housing)}</span>
-                  </div>
-                  {expenses.living_arrangement.off_campus_with_family?.food_and_housing && (
+                  {expenses.books_and_supplies && (
                     <div class="flex justify-between">
-                      <span class="text-stone-600">With Family:</span>
-                      <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus_with_family.food_and_housing)}</span>
+                      <span class="text-stone-600">Books & Supplies:</span>
+                      <span class="font-semibold">{formatCurrency(expenses.books_and_supplies)}</span>
                     </div>
                   )}
                 </div>
               </div>
-            )}
-          </div>
+              
+              <!-- Living Costs -->
+              {expenses.living_arrangement ? (
+                <div>
+                  <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
+                  <div class="space-y-2">
+                    {expenses.living_arrangement.on_campus && (
+                      <div class="flex justify-between">
+                        <span class="text-stone-600">On Campus:</span>
+                        <span class="font-semibold">{formatCurrency(expenses.living_arrangement.on_campus.food_and_housing)}</span>
+                      </div>
+                    )}
+                    {expenses.living_arrangement.off_campus && (
+                      <div class="flex justify-between">
+                        <span class="text-stone-600">Off Campus:</span>
+                        <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus.food_and_housing)}</span>
+                      </div>
+                    )}
+                    {expenses.living_arrangement.off_campus_with_family?.food_and_housing && (
+                      <div class="flex justify-between">
+                        <span class="text-stone-600">With Family:</span>
+                        <span class="font-semibold">{formatCurrency(expenses.living_arrangement.off_campus_with_family.food_and_housing)}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <h3 class="font-semibold text-stone-800 mb-3">Living Arrangements</h3>
+                  <div class="text-stone-500 italic">Living cost information not available</div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div class="text-stone-500 italic">Cost information not available for 2024-2025</div>
+          )}
 
           <!-- Total Costs -->
-          {expenses.total_expenses && (
+          {expenses?.total_expenses && (
             <div class="mt-6 pt-4 border-t border-stone-200">
               <h3 class="font-semibold text-stone-800 mb-3">Total Annual Costs</h3>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -202,10 +219,12 @@ const expenses = estimated_expenses[currentYear];
                     <div class="text-sm text-stone-600">In-State (On Campus)</div>
                   </div>
                 )}
-                <div class="text-center p-3 bg-stone-50 rounded-lg">
-                  <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_off_campus)}</div>
-                  <div class="text-sm text-stone-600">In-State (Off Campus)</div>
-                </div>
+                {expenses.total_expenses.in_state_off_campus && (
+                  <div class="text-center p-3 bg-stone-50 rounded-lg">
+                    <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.in_state_off_campus)}</div>
+                    <div class="text-sm text-stone-600">In-State (Off Campus)</div>
+                  </div>
+                )}
                 {expenses.total_expenses.out_of_state_on_campus && (
                   <div class="text-center p-3 bg-stone-50 rounded-lg">
                     <div class="text-lg font-bold text-emerald-600">{formatCurrency(expenses.total_expenses.out_of_state_on_campus)}</div>
