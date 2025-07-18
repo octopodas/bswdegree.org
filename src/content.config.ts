@@ -126,7 +126,7 @@ const colleges = defineCollection({
         out_of_state_tuition_and_fees: z.number().optional(),
       }).optional(),
     }).nullable().optional(),
-    completions_2023_2024: z.record(z.record(z.record(z.number().nullable()))).nullable().optional(),
+    completions_2023_2024: z.record(z.record(z.record(z.union([z.number(), z.boolean()]).nullable()))).nullable().optional(),
   }),
 });
 

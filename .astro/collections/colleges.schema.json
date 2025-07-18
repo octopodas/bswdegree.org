@@ -648,9 +648,16 @@
                 "additionalProperties": {
                   "type": "object",
                   "additionalProperties": {
-                    "type": [
-                      "number",
-                      "null"
+                    "anyOf": [
+                      {
+                        "type": [
+                          "number",
+                          "boolean"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
                     ]
                   }
                 }

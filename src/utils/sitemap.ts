@@ -11,12 +11,21 @@ export function formatDateForSitemap(date: Date): string {
   return date.toISOString().split('T')[0];
 }
 
+export function escapeXML(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 export function generateSitemapXML(urls: SitemapUrl[]): string {
   const urlsXML = urls
     .map(url => {
       const elements = [
         `    <url>`,
-        `      <loc>${url.loc}</loc>`,
+        `      <loc>${escapeXML(url.loc)}</loc>`,
         url.lastmod ? `      <lastmod>${url.lastmod}</lastmod>` : null,
         url.changefreq ? `      <changefreq>${url.changefreq}</changefreq>` : null,
         url.priority ? `      <priority>${url.priority}</priority>` : null,

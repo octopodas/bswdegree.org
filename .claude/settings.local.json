@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(aws cloudformation wait:*)",
+      "Bash(aws cloudformation:*)",
+      "Bash(aws s3api get-bucket-policy:*)",
+      "Bash(curl:*)",
+      "Bash(aws acm describe-certificate:*)",
+      "Bash(./update-infrastructure.sh)",
+      "Bash(python3:*)",
+      "Bash(convert:*)",
+      "Bash(npm create:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(npm install:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(jq:*)",
+      "Bash(node:*)",
+      "Bash(xmllint:*)"
+    ],
+    "deny": []
+  }
+}
