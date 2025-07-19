@@ -9,7 +9,16 @@ const navItems = [
   { href: '/', label: 'Home', key: 'home' },
   { href: '/is-it-for-me/', label: 'Is It For Me?', key: 'is-it-for-me' },
   { href: '/the-degree/', label: 'The Degree', key: 'the-degree' },
-  { href: '/career-and-salary/', label: 'Career & Salary', key: 'career-and-salary' },
+  { 
+    href: '/career-and-salary/', 
+    label: 'Career & Salary', 
+    key: 'career-and-salary',
+    dropdown: [
+      { href: '/career-and-salary/', label: 'Overview' },
+      { href: '/career-and-salary/school-social-worker/', label: 'School Social Worker' },
+      { href: '/career-and-salary/healthcare-social-worker/', label: 'Healthcare Social Worker' }
+    ]
+  },
   { href: '/next-steps/', label: 'Next Steps', key: 'next-steps' },
   { href: '/colleges/', label: 'Colleges', key: 'colleges' }
 ];
@@ -26,14 +35,41 @@ const navItems = [
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-4">
           {navItems.map(item => (
-            <a 
-              href={item.href} 
-              class={`nav-link px-3 py-2 text-sm font-medium text-stone-600 hover:text-emerald-700 border-b-2 border-transparent ${
-                currentPage === item.key ? 'active' : ''
-              }`}
-            >
-              {item.label}
-            </a>
+            item.dropdown ? (
+              <div class="relative group">
+                <button 
+                  class={`nav-link px-3 py-2 text-sm font-medium text-stone-600 hover:text-emerald-700 border-b-2 border-transparent flex items-center ${
+                    currentPage === item.key ? 'active' : ''
+                  }`}
+                >
+                  {item.label}
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-stone-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div class="py-1">
+                    {item.dropdown.map(dropdownItem => (
+                      <a 
+                        href={dropdownItem.href}
+                        class="block px-4 py-2 text-sm text-stone-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                      >
+                        {dropdownItem.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <a 
+                href={item.href} 
+                class={`nav-link px-3 py-2 text-sm font-medium text-stone-600 hover:text-emerald-700 border-b-2 border-transparent ${
+                  currentPage === item.key ? 'active' : ''
+                }`}
+              >
+                {item.label}
+              </a>
+            )
           ))}
         </div>
       </div>
@@ -52,14 +88,37 @@ const navItems = [
     <div id="mobile-menu" class="md:hidden hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         {navItems.map(item => (
-          <a 
-            href={item.href} 
-            class={`nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-stone-600 hover:text-white hover:bg-emerald-700 ${
-              currentPage === item.key ? 'active-mobile' : ''
-            }`}
-          >
-            {item.label}
-          </a>
+          item.dropdown ? (
+            <div>
+              <a 
+                href={item.href} 
+                class={`nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-stone-600 hover:text-white hover:bg-emerald-700 ${
+                  currentPage === item.key ? 'active-mobile' : ''
+                }`}
+              >
+                {item.label}
+              </a>
+              <div class="ml-4 space-y-1">
+                {item.dropdown.map(dropdownItem => (
+                  <a 
+                    href={dropdownItem.href}
+                    class="block px-3 py-1 rounded-md text-sm font-medium text-stone-500 hover:text-white hover:bg-emerald-600"
+                  >
+                    {dropdownItem.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a 
+              href={item.href} 
+              class={`nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-stone-600 hover:text-white hover:bg-emerald-700 ${
+                currentPage === item.key ? 'active-mobile' : ''
+              }`}
+            >
+              {item.label}
+            </a>
+          )
         ))}
       </div>
     </div>
